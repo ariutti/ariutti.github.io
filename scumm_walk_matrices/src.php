@@ -4,13 +4,13 @@ What are boxes? Everything started when I tried to understand the walking algori
 
 On every player click, the SCUMM engine identifies a path and the actor starts to move following it, bypassing obstacles along the road and eventually arriving to its destination without any problem. How is all this possible?<br><br>
 
-Computer science literature <?php footnote("Millington, I., & Funge J. (2009). 'Artificial Intelligence for Games' (2nd ed.). Morgan Kaufmann", "https://www.crcpress.com/Artificial-Intelligence-for-Games/Millington-Funge/p/book/9780123747310");?><?php footnote("'Artificial Intelligence for Games' book companion code reposiotry", "https://github.com/idmillington/aicore");?>handle the topic broadly, highlighting different types of algorithms used to solve these kind of problems which are called <i>pathfinding</i> problems. The best known of these algorithms is the <b>A*</b>, a natural evolution of the simpler <b>Dijkstra</b>'s one, often used to solve <i>tactical decision making</i> problems rather that <i>pathfinding</i> problems.<br><br>
+Computer science literature<?php footnote("Millington, I., & Funge J. (2009). 'Artificial Intelligence for Games' (2nd ed.). Morgan Kaufmann", "https://www.sciencedirect.com/book/9780123747310/artificial-intelligence-for-games");?><?php footnote("'Artificial Intelligence for Games' book companion code reposiotry", "https://github.com/idmillington/aicore");?> handle the topic broadly, highlighting different types of algorithms used to solve these kind of problems which are called <i>pathfinding</i> problems. The best known of these algorithms is the <b>A*</b>, a natural evolution of the simpler <b>Dijkstra</b>'s one, often used to solve <i>tactical decision making</i> problems rather that <i>pathfinding</i> problems.<br><br>
 
 <div>
 <!--<img alt="Edsger Dijkstra" src="{{site.baseurl}}/assets/images/scumm/Dijkstra.jpg" style="float: right; padding:20px;"/>-->
 <?php img("images/Dijkstra.jpg", 21, "float:right;margin-bottom: 2ch; margin-left: 2ch; margin-right:1ch;");?>
 <p>The Dijkstra algorithm is named after its discoverer, the mathematician Edsger Dijkstra and, despite the algorithm was originally designed to solve the <em>shortest path</em> problem (a particular problem in mathematical graph theory), it was later used in videogames.</p>
-<p>Dijkstra is also famous for his 1968 well-known article "<em>GOTO statement considered harmful</em>"<?php footnote("Go-to statement considered harmful", "https://www.cs.utexas.edu/users/EWD/ewd02xx/EWD215.PDF");?>where he fought against the so called <a href="https://en.wikipedia.org/wiki/Spaghetti_code">spaghetti code</a>, low quality programs which were difficult to read or modify because of the extreme use of <em>GOTO</em> statement.</p>
+<p>Dijkstra is also famous for his 1968 well-known article "<em>GOTO statement considered harmful</em>"<?php footnote("Go-to statement considered harmful", "https://www.cs.utexas.edu/users/EWD/ewd02xx/EWD215.PDF");?> where he fought against the so called <a href="https://en.wikipedia.org/wiki/Spaghetti_code">spaghetti code</a>, low quality programs which were difficult to read or modify because of the extreme use of <em>GOTO</em> statement.</p>
 </div>
 
 
@@ -20,7 +20,7 @@ SCUMM instead uses a relatively simple system which is pretty elegant in my opin
 
 <?php h("Fingolfin docet");?>
 
-In order to better understand what we are talking about, let's examine a post by <b>Max "Fingolfin" Horn</b> (an ex-member of the ScummVM development team by now) where he talks about SCUMM pathfinding on the ScummVM forum <?php footnote("ScummVM Forum pathfinding topic", "http://forums.scummvm.org/viewtopic.php?t=4532"); ?>:
+In order to better understand what we are talking about, let's examine a post by <b>Max "Fingolfin" Horn</b> (an ex-member of the ScummVM development team by now) where he talks about SCUMM pathfinding on the ScummVM forum<?php footnote("ScummVM Forum pathfinding topic", "http://forums.scummvm.org/viewtopic.php?t=4532"); ?>:<br><br>
 
 <blockquote>
 ScummVM doesn't using anything complicated like A* at all!<br/><br/>
@@ -105,7 +105,7 @@ Now let's try the <code>matrix</code> command instead an see what the debugger s
 
 <?php img("images/console-02.png", 100, "margin-top: 2ch; margin-bottom: 2ch;");?>
 
-These values are quite criptical to interpret but fortunately the ScummVM wiki <?php footnote("ScummVM, SCUMM technical reference for Box", "http://wiki.scummvm.org/index.php/SCUMM/Technical_Reference/Box_resources");?><?php footnote("ScummVM, SCUMM technical reference for Matrix", "http://wiki.scummvm.org/index.php/SCUMM/Technical_Reference/Box_resources#BOXM");?> comes in handy. From here we read that the matrix has a line for each box, and for each one it lists a triad of values for each adjacent box to the one we are considering.<br><br>
+These values are quite criptical to interpret but fortunately the ScummVM wiki<?php footnote("ScummVM, SCUMM technical reference for Box", "http://wiki.scummvm.org/index.php/SCUMM/Technical_Reference/Box_resources");?><?php footnote("ScummVM, SCUMM technical reference for Matrix", "http://wiki.scummvm.org/index.php/SCUMM/Technical_Reference/Box_resources#BOXM");?> comes in handy. From here we read that the matrix has a line for each box, and for each one it lists a triad of values for each adjacent box to the one we are considering.<br><br>
 
 The first two values of the triad define a range (<code>start</code> and <code>end</code> values) of boxes which, in order to be reached, they force the actor to visit another box, which is the one represented by the third value.<br><br>
 
@@ -304,7 +304,7 @@ So try youself, imagine the user is clicking near box 6, are you able to find th
 <?php h("Other references");?>
 
 <ul>
-  <li><a href="https://en.wikipedia.org/wiki/Spaghetti">Spaghetti Code</a> and <a href="https://en.wikipedia.org/wiki/Structured">Structured programming</a>;
+  <li><a href="https://en.wikipedia.org/wiki/Spaghetti_code">Spaghetti Code</a> and <a href="https://en.wikipedia.org/wiki/Structured_programming">Structured programming</a>;
   </li>
   <li><a href="https://www.google.com/patents/US5425139?dq=sierra+on-line+path+finding&hl=en&sa=X&ved=0ahUKEwiqyuHVjZXVAhUF7xQKHfecCOYQ6AEIKzAB">Here</a>'s another way of looking at the pathfinding problem by <b>Sierra On-Line</b>;
   </li>

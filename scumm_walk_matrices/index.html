@@ -148,6 +148,14 @@
       background-color: #eee;
   }
 
+  table {
+    border-collapse: collapse;
+  }
+
+  table td, th {
+    border:1px solid #ccc;
+  }
+
   </style>
   <title>SCUMM walk matrices</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=12.0, minimum-scale=1.0, user-scalable=yes">
@@ -167,12 +175,12 @@ What are boxes? Everything started when I tried to understand the walking algori
 
 On every player click, the SCUMM engine identifies a path and the actor starts to move following it, bypassing obstacles along the road and eventually arriving to its destination without any problem. How is all this possible?<br><br>
 
-Computer science literature <a name="back_1" style="text-decoration: none;" href="#footnote_1"><sup>[1]</sup></a><a name="back_2" style="text-decoration: none;" href="#footnote_2"><sup>[2]</sup></a>handle the topic broadly, highlighting different types of algorithms used to solve these kind of problems which are called <i>pathfinding</i> problems. The best known of these algorithms is the <b>A*</b>, a natural evolution of the simpler <b>Dijkstra</b>'s one, often used to solve <i>tactical decision making</i> problems rather that <i>pathfinding</i> problems.<br><br>
+Computer science literature<a name="back_1" style="text-decoration: none;" href="#footnote_1"><sup>[1]</sup></a><a name="back_2" style="text-decoration: none;" href="#footnote_2"><sup>[2]</sup></a> handle the topic broadly, highlighting different types of algorithms used to solve these kind of problems which are called <i>pathfinding</i> problems. The best known of these algorithms is the <b>A*</b>, a natural evolution of the simpler <b>Dijkstra</b>'s one, often used to solve <i>tactical decision making</i> problems rather that <i>pathfinding</i> problems.<br><br>
 
 <div>
 <!--<img alt="Edsger Dijkstra" src="{{site.baseurl}}/assets/images/scumm/Dijkstra.jpg" style="float: right; padding:20px;"/>-->
 <img loading="lazy" src="images/Dijkstra.jpg" width="195" height="300" style="width: 21%; height: auto; float:right;margin-bottom: 2ch; margin-left: 2ch; margin-right:1ch;"/><p>The Dijkstra algorithm is named after its discoverer, the mathematician Edsger Dijkstra and, despite the algorithm was originally designed to solve the <em>shortest path</em> problem (a particular problem in mathematical graph theory), it was later used in videogames.</p>
-<p>Dijkstra is also famous for his 1968 well-known article "<em>GOTO statement considered harmful</em>"<a name="back_3" style="text-decoration: none;" href="#footnote_3"><sup>[3]</sup></a>where he fought against the so called <a href="https://en.wikipedia.org/wiki/Spaghetti_code">spaghetti code</a>, low quality programs which were difficult to read or modify because of the extreme use of <em>GOTO</em> statement.</p>
+<p>Dijkstra is also famous for his 1968 well-known article "<em>GOTO statement considered harmful</em>"<a name="back_3" style="text-decoration: none;" href="#footnote_3"><sup>[3]</sup></a> where he fought against the so called <a href="https://en.wikipedia.org/wiki/Spaghetti_code">spaghetti code</a>, low quality programs which were difficult to read or modify because of the extreme use of <em>GOTO</em> statement.</p>
 </div>
 
 
@@ -181,7 +189,7 @@ The <i>A*</i> algorithm is quite complex and it is very useful in situation wher
 SCUMM instead uses a relatively simple system which is pretty elegant in my opinion!
 
 <div class='heading'>Fingolfin docet</div><hr/>
-In order to better understand what we are talking about, let's examine a post by <b>Max "Fingolfin" Horn</b> (an ex-member of the ScummVM development team by now) where he talks about SCUMM pathfinding on the ScummVM forum <a name="back_4" style="text-decoration: none;" href="#footnote_4"><sup>[4]</sup></a>:
+In order to better understand what we are talking about, let's examine a post by <b>Max "Fingolfin" Horn</b> (an ex-member of the ScummVM development team by now) where he talks about SCUMM pathfinding on the ScummVM forum<a name="back_4" style="text-decoration: none;" href="#footnote_4"><sup>[4]</sup></a>:<br><br>
 
 <blockquote>
 ScummVM doesn't using anything complicated like A* at all!<br/><br/>
@@ -258,7 +266,7 @@ From the image we note indeed an interesting fact: some of these boxes may show 
 Now let's try the <code>matrix</code> command instead an see what the debugger shows up:
 
 <img loading="lazy" src="images/console-02.png" width="563" height="171" style="width: 100%; height: auto; margin-top: 2ch; margin-bottom: 2ch;"/>
-These values are quite criptical to interpret but fortunately the ScummVM wiki <a name="back_5" style="text-decoration: none;" href="#footnote_5"><sup>[5]</sup></a><a name="back_6" style="text-decoration: none;" href="#footnote_6"><sup>[6]</sup></a> comes in handy. From here we read that the matrix has a line for each box, and for each one it lists a triad of values for each adjacent box to the one we are considering.<br><br>
+These values are quite criptical to interpret but fortunately the ScummVM wiki<a name="back_5" style="text-decoration: none;" href="#footnote_5"><sup>[5]</sup></a><a name="back_6" style="text-decoration: none;" href="#footnote_6"><sup>[6]</sup></a> comes in handy. From here we read that the matrix has a line for each box, and for each one it lists a triad of values for each adjacent box to the one we are considering.<br><br>
 
 The first two values of the triad define a range (<code>start</code> and <code>end</code> values) of boxes which, in order to be reached, they force the actor to visit another box, which is the one represented by the third value.<br><br>
 
@@ -454,10 +462,10 @@ So try youself, imagine the user is clicking near box 6, are you able to find th
 
 <div class='heading'>Other references</div><hr/>
 <ul>
-  <li><a href="https://en.wikipedia.org/wiki/Spaghetti">Spaghetti Code</a> and <a href="https://en.wikipedia.org/wiki/Structured">Structured programming</a>;
+  <li><a href="https://en.wikipedia.org/wiki/Spaghetti_code">Spaghetti Code</a> and <a href="https://en.wikipedia.org/wiki/Structured_programming">Structured programming</a>;
   </li>
   <li><a href="https://www.google.com/patents/US5425139?dq=sierra+on-line+path+finding&hl=en&sa=X&ved=0ahUKEwiqyuHVjZXVAhUF7xQKHfecCOYQ6AEIKzAB">Here</a>'s another way of looking at the pathfinding problem by <b>Sierra On-Line</b>;
   </li>
 </ul>
-<style type='text/css'>td.ref {  padding-bottom: 0ch; width:0;}</style><div class='heading'>References</div><hr/><p id='paperbox' style='text-align:left;'><table><tbody style='vertical-align: top;'><tr><td class='ref' style='width:1ch;'><a name="footnote_1"></a><a href="#back_1">^</a></td><td  class='ref' style='width:4ch;'> [1]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://www.crcpress.com/Artificial-Intelligence-for-Games/Millington-Funge/p/book/9780123747310">Millington, I., & Funge J. (2009). 'Artificial Intelligence for Games' (2nd ed.). Morgan Kaufmann</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_2"></a><a href="#back_2">^</a></td><td  class='ref' style='width:4ch;'> [2]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://github.com/idmillington/aicore">'Artificial Intelligence for Games' book companion code reposiotry</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_3"></a><a href="#back_3">^</a></td><td  class='ref' style='width:4ch;'> [3]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://www.cs.utexas.edu/users/EWD/ewd02xx/EWD215.PDF">Go-to statement considered harmful</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_4"></a><a href="#back_4">^</a></td><td  class='ref' style='width:4ch;'> [4]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://forums.scummvm.org/viewtopic.php?t=4532">ScummVM Forum pathfinding topic</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_5"></a><a href="#back_5">^</a></td><td  class='ref' style='width:4ch;'> [5]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://wiki.scummvm.org/index.php/SCUMM/Technical_Reference/Box_resources">ScummVM, SCUMM technical reference for Box</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_6"></a><a href="#back_6">^</a></td><td  class='ref' style='width:4ch;'> [6]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://wiki.scummvm.org/index.php/SCUMM/Technical_Reference/Box_resources#BOXM">ScummVM, SCUMM technical reference for Matrix</a></td></tr></tbody></table></p> <hr>
+<style type='text/css'>td.ref {  padding-bottom: 0ch; width:0;}</style><div class='heading'>References</div><hr/><p id='paperbox' style='text-align:left;'><table><tbody style='vertical-align: top;'><tr><td class='ref' style='width:1ch;'><a name="footnote_1"></a><a href="#back_1">^</a></td><td  class='ref' style='width:4ch;'> [1]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://www.sciencedirect.com/book/9780123747310/artificial-intelligence-for-games">Millington, I., & Funge J. (2009). 'Artificial Intelligence for Games' (2nd ed.). Morgan Kaufmann</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_2"></a><a href="#back_2">^</a></td><td  class='ref' style='width:4ch;'> [2]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://github.com/idmillington/aicore">'Artificial Intelligence for Games' book companion code reposiotry</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_3"></a><a href="#back_3">^</a></td><td  class='ref' style='width:4ch;'> [3]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://www.cs.utexas.edu/users/EWD/ewd02xx/EWD215.PDF">Go-to statement considered harmful</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_4"></a><a href="#back_4">^</a></td><td  class='ref' style='width:4ch;'> [4]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://forums.scummvm.org/viewtopic.php?t=4532">ScummVM Forum pathfinding topic</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_5"></a><a href="#back_5">^</a></td><td  class='ref' style='width:4ch;'> [5]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://wiki.scummvm.org/index.php/SCUMM/Technical_Reference/Box_resources">ScummVM, SCUMM technical reference for Box</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_6"></a><a href="#back_6">^</a></td><td  class='ref' style='width:4ch;'> [6]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://wiki.scummvm.org/index.php/SCUMM/Technical_Reference/Box_resources#BOXM">ScummVM, SCUMM technical reference for Matrix</a></td></tr></tbody></table></p> <hr>
  <center>*

@@ -149,6 +149,14 @@
       background-color: #eee;
   }
 
+  table {
+    border-collapse: collapse;
+  }
+
+  table td, th {
+    border:1px solid #ccc;
+  }
+
   </style>
   <title><?php echo $title;?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=12.0, minimum-scale=1.0, user-scalable=yes">
