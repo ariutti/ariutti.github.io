@@ -1,3 +1,4 @@
+<?php function genheader($title, $date) { ?>
 <html>
 <head>
   <!-- <link rel="alternate" type="application/rss+xml"  title="put your RSS title here" href="/rss.xml" /> -->
@@ -109,7 +110,7 @@
   }
 
   </style>
-  <title>Nicola Ariutti's Website</title>
+  <title><?php echo $title;?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=12.0, minimum-scale=1.0, user-scalable=yes">
 </head>
   <body><br><center>
@@ -119,15 +120,7 @@
 <!--<a class="title" href="/about">ABOUT</a> &nbsp;<a class="title" href="/contact/index.html">EMAIL</a> &nbsp;<a class="title" href="../rss.xml">RSS</a> &nbsp;<a class="title" href="put here your paypal link">DONATE</a></div></div>-->
 </center><br><br>
 <div style="margin-bottom: 2ch;text-transform: none;">
+<?php echo $date;?>
 </div>
-<div class='heading'>Nicola Ariutti's Website</div><hr/>
-<p>
-This is my personal website, you can find here most of the code and ideas I came up with during my extra-professional time.</p>
-
-<div class='heading'>Articles</div><hr/>
-<p style="text-align: left;margin-bottom: 1ch;">
-
-03/08/2024: <a href="first_article/index.html">My first article</a><br>
-11/12/2018: <a href="test_article/index.html">Test article by Fabien Sanglard</a><br>
- <hr>
- <center>*
+<?php h($title);?>
+<?php } ?>

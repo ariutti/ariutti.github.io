@@ -1,0 +1,224 @@
+<html>
+<head>
+  <!-- <link rel="alternate" type="application/rss+xml"  title="put your RSS title here" href="/rss.xml" /> -->
+  <style type="text/css">
+
+    @font-face {
+      font-family: 'fabfont';
+/*      font-display: optional;*/
+      src: url('/font/DejaVuSansMono.woff2');
+    }
+
+    * {
+       font-size: 16px;
+    }
+
+    html {
+      font-family: fabfont;
+      max-width: 900px;  /* For Desktop PC (see @media for Tablets/Phones) */
+      padding-left: 2%;
+      padding-right: 3%;
+      margin: 0 auto;
+      background: #F5F5F0;
+  	}
+
+  	a {
+      color: black;
+      font-weight: bold;
+    }
+
+    img {
+      border: none;
+    }
+
+    p {
+      margin-top: 0px;
+      text-align: justify;
+    }
+    sup {
+      vertical-align: 0.3em;
+      font-size: 0.65em;
+    }
+
+    pre {
+      font-family: fabfont;
+      background-color: white;
+      border: 1px solid Black;
+      padding-left: 2%;
+      padding-top: 1ch;
+      padding-bottom: 1ch;
+      /* Only take care of X overflow since this is the only part that can be too wide.
+         The Y axis will never overflow.
+      */
+      overflow: hidden;
+    }
+
+    div.heading {
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-top: 4ch;
+    }
+
+    /** {
+      font-size: 16px;
+    }*/
+    @media (max-width: 500px) { /* For small screen decices */
+      * {
+        font-size: 12px;
+      }
+    }
+    .title {
+      text-decoration: none;
+    }
+
+    img.pixel, canvas.pixel {
+      image-rendering: pixelated;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: crisp-edges;
+    }
+
+    blockquote {
+    background-color: #f3f3f3;
+    border: dashed 1px grey;
+    width: 97.5%;
+    font-style: italic;
+    text-align: justify;
+
+    padding: 1ch;
+    padding-top: 2ch;
+    padding-bottom: 2ch;
+
+    margin : 0ch;
+    margin-bottom: 2ch;
+    margin-top: 0ch;
+  }
+
+  blockquote div {
+    text-transform: none;
+    text-align: right;
+    width: 100%;
+  }
+
+  code {
+    /*font-size: 110%;*/
+    font-weight: bold;
+    background-color: #e1e1e1;
+    border-radius: 0.5ch;
+    padding-left: 0.3ch;
+    padding-right: 0.3ch;
+  }
+
+  </style>
+  <title>How the Dreamcast copy protection was defeated</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=12.0, minimum-scale=1.0, user-scalable=yes">
+</head>
+  <body><br><center>
+    <div style="display: inline-block; vertical-align:middle;">
+<a href="/" class="title"><b>NICOLA ARIUTTI'S WEBSITE</b><br>
+</a><hr/><div style="text-align: justify;display: inline-block; width: 100%;">
+<!--<a class="title" href="/about">ABOUT</a> &nbsp;<a class="title" href="/contact/index.html">EMAIL</a> &nbsp;<a class="title" href="../rss.xml">RSS</a> &nbsp;<a class="title" href="put here your paypal link">DONATE</a></div></div>-->
+</center><br><br>
+<div style="margin-bottom: 2ch;text-transform: none;">
+December 11, 2018</div>
+<div class='heading'>How the Dreamcast copy protection was defeated</div><hr/><p>
+    <img loading="lazy" src="Dreamcast_logo.svg" width="220px" height="162px" style="width: 20%; height: auto; float:right;margin-bottom: 1ch; margin-left: 2ch;"/>  </picture>
+  After I shipped the <a href="../gebbdoom">DOOM Black Book</a>, I took some vacation in Japan where I was able to play Ikaruga on a real arcade at Taito HEY in Akihabara. The experience reignited my interest in SEGA's ultimate video game console, the Dreamcast.<br/>
+  <br/>There is a lot of documentation available online which made the studying process easier than expected. Marcus Comstedt's excellent <a href="http://mc.pp.se/dc/">website</a> which describes everything down to the GPU registers and Jockel's <a href="https://www.neogaf.com/threads/lets-build-a-sega-dreamcast-game-from-scratch-breakout.916501/">Let's build a Sega Dreamcast game from scratch</a> are two excellent resources which will rapidly bring anyone up to date.<br/>
+  <br/> Studying the machine revealed the fascinating story of how hackers cracked the game copy protection early on and doomed SEGA's last hardware hopes.<br/>
+    </p>
+
+  <div class='heading'>First protection level: GD-ROM</div><hr/><p style="margin-bottom: 0;">
+   On paper the SEGA Dreamcast's copy protection mechanism looked strong. Games shipped on a special medium called GD-ROM which only SEGA was able to manufacture. With the GD part standing for "Gigabyte Disc", its higher density brought the max capacity to 1 GiB, which was beyond what normal CD-ROM were able to provide (700 MiB).<br/>
+   <br/>
+   <picture  >
+    <source srcset="ikaruga_gdrom.webp" type="image/webp">
+    <img loading="lazy" src="ikaruga_gdrom.png" width="300" height="301" style="width: 21%; height: auto; float:left;margin-bottom: 2ch; margin-left: 2ch; margin-right:1ch;"/>  </picture>
+    <img loading="lazy" src="gd-rom.svg" width="285.55646" height="285.55646" style="width: 21%; height: auto; float:left;margin-bottom: 2ch; margin-right: 2ch;"/>    A GD-ROM had the same physical dimensions as a CD-ROM but at the macro level it was made of two areas visible with naked eyes.<br/>
+   <br/> The first (dark) section was a low density, CD-ROM compatible, area holding up to 35 MiB. It contained a voiceover audio track reminding user that the content was intended for SEGA Dreamcast and not for a CD player<a name="back_1" style="text-decoration: none;" href="#footnote_1"><sup>[1]</sup></a>.
+
+    Developer also included a track with text files such as copyright and sometimes goodies such as artwork.<br/>
+   <br/>
+ </p>
+<div style="clear:both;"></div>
+<p>
+    The (clear) high density section storing up to 984 MiB<a name="back_2" style="text-decoration: none;" href="#footnote_2"><sup>[2]</sup></a> is where all the game's content was located.
+
+   As far as hackers were concerned, it seemed there was no way to extract the game from its support and there was no way to burn it back for distribution either.
+  </p>
+
+
+
+
+ <div class='heading'>Booting from a GD-ROM: IP.BIN and 1ST_READ.BIN</div><hr/><p>
+      Before describing how pirates managed to copy games, we need to understand the boot sequence. The Dreamcast had no operating system. A common misconception is that it ran Windows CE but in fact Microsoft's OS was only an optional static library which Dreamcast developers could link against in order to use DirectX, DirectInput, and DirectSound<a name="back_3" style="text-decoration: none;" href="#footnote_3"><sup>[3]</sup></a>. Some games used WinCE<a name="back_4" style="text-decoration: none;" href="#footnote_4"><sup>[4]</sup></a> but many (like Ikaruga) did not. Regardless of what a developer used, a game was a fully-linked OS and a Dreamcast always booted in the same way.<br/>
+    <br/>
+    Under normal usage, running an official game, a freshly powered up Dreamcast's BOOTROM started by loading the bootstrap from the GD-ROM to the RAM. Located in the last track on the GD-ROM and known in the community as "IP.BIN", the tiny program was in charge of displaying SEGA's license screen and ran two bootstrap level to setup the hardware registers, create the CPU stack, and initialize the VBR<a name="back_5" style="text-decoration: none;" href="#footnote_5"><sup>[5]</sup></a>.<br/>
+    <br/>
+    More importantly, IP.BIN contained the name of the game executable. This name was looked up in the GD-ROM file-system and loaded in RAM at 0x8C010000 before execution was transfered there. Usually the filename of the game executable was "1ST_READ.BIN".<br/>
+       <br/>
+    <img loading="lazy" src="gd-rom_loading.svg" width="1384.2161" height="287.79181" style="width: 100%; height: auto; margin-top: 2ch; margin-bottom: 2ch;"/>   <br/>
+   With the CPU jumping to 0x8C010000, the game started as intended.<br/>
+ </p>
+  <div style="clear:both;"></div>
+
+
+
+ <div class='heading'>Second protection level: Scrambler</div><hr/><p>
+  The "foot in the door" came from a seemingly obscure capability of the Dreamcast to boot not from a GD-ROM but from a CD-ROM.  Originally intended to add multimedia functions to music CDs, the functionality called "MIL-CD" was never used much, accounting for a mere seven karaoke applications.<br/>
+  <br/>
+    SEGA engineers knew that MIL-CD booting could be used as an attack vector so they added a protection. When the console detected a CD-ROM, the BOOTROM loaded IP.BIN normally but scrambled 1ST_READ.BIN, seemingly at random. A valid executable was therefore turned into mashed potatoes which promptly crashed the console.<br/>
+    <img loading="lazy" src="cd-rom_loading.svg" width="1384.2161" height="287.79181" style="width: 100%; height: auto; margin-top: 2ch; margin-bottom: 2ch;"/>   From there it looked like the console was safe. The Dreamcast was able to recognize a pirated game, corrupt the executable at load time, and defeated pirates.<br/>
+  </p>
+
+
+
+   <div class='heading'>Give me my long sword, ho!</div><hr/><p>
+    The mashed potatoes problem was solved when a Katana SDK (the official Sega SDK for the Dreamcast) was stolen<a name="back_6" style="text-decoration: none;" href="#footnote_6"><sup>[6]</sup></a> by the hacking team "Utopia" in late 1999. It turned out that the scrambler was nothing more than "security through obscurity". The SDK contained a reverse-scrambler which transformed a valid executable into reverse-mashed-potatoes so it would be valid again when loaded and scrambled by the Dreamcast when booting from a CD-ROM.<br/>
+    <img loading="lazy" src="cd-rom_loading_reverse.svg" width="1384.2161" height="287.79181" style="width: 100%; height: auto; margin-top: 2ch; margin-bottom: 2ch;"/>   <br/>
+ </p>
+  <div style="clear:both;"></div>
+
+
+
+
+ <div class='heading'>Extracting a game from its GD-ROM</div><hr/><p>
+  The stolen SDK was all pirates needed. With the ability to run code on the machine, the Dreamcast was re-purposed to act not as a game console but as a GD-ROM drive. The SDK's "Coder's Cable"<a name="back_7" style="text-decoration: none;" href="#footnote_7"><sup>[7]</sup></a> allowed to connect the console to a PC and establish a physical connection. To trigger the console to dump the GD track content, a special executable was written, reverse-scrambled and burned onto a CD-ROM in order to output the whole 1 GiB via the console's serial port. It was an error prone process which took up to 18 hours<a name="back_8" style="text-decoration: none;" href="#footnote_8"><sup>[8]</sup></a> to complete<a name="back_9" style="text-decoration: none;" href="#footnote_9"><sup>[9]</sup></a>. The result was stored in a custom made format called ".gdi".<pre>ikaruga.gdi            153 bytes
+track01.bin     13,982,640 bytes
+track02.raw      2,088,576 bytes
+track03.bin  1,185,760,800 bytes</pre>
+<p>
+<b>Trivia</b>: You will notice that the total account for 1.2 GiB and not the 1.0 GiB mentioned earlier. This is because GD-ROM 2,352-byte sectors follow the "Red Book" format where 12 bytes are used for synchronization, 4 bytes for the header, 2048 bytes for the payload, and 288 bytes are for Error Detection Code/Error Correcting Code<a name="back_10" style="text-decoration: none;" href="#footnote_10"><sup>[10]</sup></a>.<br/>
+<pre>$ cat ikaruga.gdi
+3
+1     0 4 2352 track01.bin 0
+2  5945 0 2352 track02.raw 0
+3 45000 4 2352 track03.bin 0</pre>
+  </p>
+
+ <div class='heading'>Making a 1000 MiB GD-ROM fit inside a 700 MiB CD-ROM</div><hr/><p>
+  To make the game fit on a 700 MiB CD-ROM, game's assets were reworked. The ISO-9660 file-system used on GD-ROM made it easy to down-sample/remove video sequences and musics. For most games however there was no need for such a complicated process since they did not use the whole 1 GiB space. For example, Treasure's Ikaruga was only 150 MiB and padded most of its content with zeros. In these cases, only adjusting the padding was enough.<br/>
+  <br/>
+  In fact, ISO-9660 is such a well-known format that simple python scripts (such as <a href="https://sourceforge.net/projects/dcisotools/">gditools.py</a>) were written to <a href="gditools.txt">explore</a> the content of .gdi archives.<br/>
+  </p>
+
+
+
+
+<div class='heading'>Packing and Distribution</div><hr/><p>
+The last two steps of the process were to reverse-scramble 1ST_READ.BIN and pack everything into a .cdi archive so <a href="https://legacy.padus.com/">DiscJuggler</a> could burn the image on a CD-R. The result ran flawlessly on any vanilla Dreamcast without need for a modification chip.<br/>
+
+
+
+
+
+
+
+ <div class='heading'>Response from SEGA and after-match</div><hr/><p>
+    SEGA quickly released a DC v2 which disabled MIL-CD altogether but unfortunately damage had been done. With revenues plummeting and the PS2 ogre coming out, developers abandoned the Dreamcast and SEGA retired from the hardware manufacturing business in order to focus on software.<br/>
+  </p>
+
+ <div class='heading'>Corrections</div><hr/><p>
+  Long-time Dreamcast explorer, "newchiefgaming", provided corrections for this article. They can be found <a href="corrections/corrections.pdf">here</a>.
+ </p>
+<style type='text/css'>td.ref {  padding-bottom: 0ch; width:0;}</style><div class='heading'>References</div><hr/><p id='paperbox' style='text-align:left;'><table><tbody style='vertical-align: top;'><tr><td class='ref' style='width:1ch;'><a name="footnote_1"></a><a href="#back_1">^</a></td><td  class='ref' style='width:4ch;'> [ 1]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://www.consolecopyworld.com/dc/gd-ws/gdws_big/sld009.htm">SEGA GD Workshop</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_2"></a><a href="#back_2">^</a></td><td  class='ref' style='width:4ch;'> [ 2]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://segaretro.org/GD-ROM">segaretro.org: GD-ROM</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_3"></a><a href="#back_3">^</a></td><td  class='ref' style='width:4ch;'> [ 3]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://news.microsoft.com/1999/03/16/microsoft-announces-windows-ce-toolkit-for-dreamcast/">Microsoft Announces Windows CE Toolkit for Dreamcast</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_4"></a><a href="#back_4">^</a></td><td  class='ref' style='width:4ch;'> [ 4]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://segaretro.org/Windows_CE">Dreamcast games utilising Windows CE</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_5"></a><a href="#back_5">^</a></td><td  class='ref' style='width:4ch;'> [ 5]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://mc.pp.se/dc/ip.bin.html">IP.BIN and 1ST_READ.BIN</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_6"></a><a href="#back_6">^</a></td><td  class='ref' style='width:4ch;'> [ 6]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://www.neogaf.com/threads/lets-build-a-sega-dreamcast-game-from-scratch-breakout.916501/page-3#post-216433495">Let's build a Sega Dreamcast game from scratch</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_7"></a><a href="#back_7">^</a></td><td  class='ref' style='width:4ch;'> [ 7]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://mc.pp.se/dc/serifc.html">PC Serial Adaptor</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_8"></a><a href="#back_8">^</a></td><td  class='ref' style='width:4ch;'> [ 8]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://www.reddit.com/r/dreamcast/comments/15pww3/a_more_accurate_and_indepth_look_at_the/">A more accurate and in-depth look at the Dreamcast's security</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_9"></a><a href="#back_9">^</a></td><td  class='ref' style='width:4ch;'> [ 9]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://assemblergames.com/threads/dumping-dreamcast-gd-rom-gd-r-discs.16679/">Faster ways were designed latter, using the DC's broadband connector</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_10"></a><a href="#back_10">^</a></td><td  class='ref' style='width:4ch;'> [10]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://xiaopang333.wordpress.com/2008/08/06/dreamcast-myth-gd-rom-storage-capacity/">Dreamcast Myth: GD-ROM Storage Capacity</a></td></tr></tbody></table></p> <hr>
+ <center>*
