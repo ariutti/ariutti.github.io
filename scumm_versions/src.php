@@ -141,8 +141,8 @@ Here's a table where I listed all the informantion about my LucasArts games:<br/
 <?php h("References");?>
 
 <ul>
-  <li>Accordi Richards, M. (2014). <a href="http://www.carocci.it/index.php?option=com_carocci&task=schedalibro&Itemid=72&isbn=9788843074167">Storia del videogioco</a>. Carocci Editore. It's a book I bought in Italy but I think there's a lot of books about the history of videogams that can do the job!</li>
-  <li>from Wikipedia: <a href="https://en.wikipedia.org/wiki/Adventure">adventure game genre</a>, <a href="https://en.wikipedia.org/wiki/Interactive">interactive fiction</a>, <a href="https://en.wikipedia.org/wiki/Choose">Choose your own adventure</a>;</li>
-  <li><a href="https://en.wikipedia.org/wiki/Sierra">Sierra On-Line</a>Entertainment <a href="https://en.wikipedia.org/wiki/Adventure_Game_Interpreter">AGI</a> and <a href="http://sciwiki.sierrahelp.com/index.php?title=Sierra_Creative_Interpreter">SCI</a> Game interpreters;</li>
+  <li>Accordi Richards, M. (2014). <a href="http://old.carocci.it/index.php?option=com_carocci&task=schedalibro&Itemid=72&isbn=9788829003006">Storia del videogioco</a>. Carocci Editore. It's a book I bought in Italy but I think there's a lot of books about the history of videogams that can do the job!</li>
+  <li>from Wikipedia: <a href="https://en.wikipedia.org/wiki/Adventure_game">adventure game genre</a>, <a href="https://en.wikipedia.org/wiki/Interactive_fiction">interactive fiction</a>, <a href="https://en.wikipedia.org/wiki/Choose_Your_Own_Adventure">Choose your own adventure</a>;</li>
+  <li><a href="https://en.wikipedia.org/wiki/Sierra_Entertainment">Sierra On-Line</a> <a href="https://en.wikipedia.org/wiki/Adventure_Game_Interpreter">AGI</a> and <a href="http://sciwiki.sierrahelp.com/index.php?title=Sierra_Creative_Interpreter">SCI</a> Game interpreters;</li>
   <li><a href="http://wiki.scummvm.org/index.php/SCUMM/Versions">Here</a> the ScummVM <i>Technical Reference</i> Wiki page dedicated to SCUMM versions.</li>
 </ul>
