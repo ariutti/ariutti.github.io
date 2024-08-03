@@ -160,6 +160,7 @@ function generate($src_dir) {
 }
 
 generate(".");
+generate("about");
 generate("test_article");
 generate("first_article");
 // Add articles here as you write them...

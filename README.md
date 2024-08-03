@@ -28,16 +28,11 @@ TODO
 
 1. navigate inside the root of the code folder and run the command `php gen.php`;
 
-How does it work? Using Fabien words:
+How does it work? Using Fabien words: "The HTML pages are statically generated from php. There is a "master" script called gen.php which iterates over all sub-folders and searches for files named article.php. Upon hit, the master runs the article script, wrapping it into a header and a footer, and redirects the output to a file named index.html.
 
-```
-The HTML pages are statically generated from php. There is a "master" script called gen.php which iterates over all sub-folders and searches for files named article.php. Upon hit, the master runs the article script, wrapping it into a header and a footer, and redirects the output to a file named index.html.
-
-There is one helper function, footnote(), which stores references so they can be listed in the footer. It is something any programmer could write in an hour.
-```
+There is one helper function, footnote(), which stores references so they can be listed in the footer."
 
 We have indeed subfolders with article material inside. Single note is that the source code file for the article should be named `src.php` and not `article.php`.
-
 
 ## Content preparation
 
@@ -51,9 +46,10 @@ Every article shoud start with a header. In order to do This you should call the
 
 ### Images
 
+TODO
 
 
-### footnotes
+### Footnotes
 
 In order to make footnotes in your article you have to use thie php function in your article php src: `<?php footnote("segaretro.org: GD-ROM", "https://segaretro.org/GD-ROM");?>`
 
