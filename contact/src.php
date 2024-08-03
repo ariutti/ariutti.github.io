@@ -1,7 +1,8 @@
 <?php  genheader("Contact", ""); ?>
 
-<style type="text/css"> a { text-decoration:none; }</style>
+
 <p>
+  <style type="text/css"> a { text-decoration:none; }</style>
   twitter    : <a href="https://x.com/nicolaariutti">@nicolaariutti</a>
   <br/>
   github     : <a href="https://github.com/ariutti/">ariutti</a>

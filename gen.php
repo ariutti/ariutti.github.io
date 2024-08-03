@@ -166,5 +166,6 @@ generate("about");
 generate("contact");
 generate("test_article");
 generate("first_article");
+generate("scumm_walk_matrices");
 // Add articles here as you write them...
 ?>

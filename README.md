@@ -44,6 +44,10 @@ Every article shoud start with a header. In order to do This you should call the
 <?php genheader("How the Dreamcast copy protection was defeated", "December 11, 2018");?>
 ```
 
+### Headers like "h"
+
+Call the php specific function <?php h("my section title here");?>
+
 ### Images
 
 TODO
@@ -51,10 +55,18 @@ TODO
 
 ### Footnotes
 
-In order to make footnotes in your article you have to use thie php function in your article php src: `<?php footnote("segaretro.org: GD-ROM", "https://segaretro.org/GD-ROM");?>`
+In order to make footnotes in your article you have to use thie php function in your article php src: `<?php footnote("note title", "URL link");?>`
 
 
 ## TODO
 
 * Create a file `about/index.html`
 * Create a file `/contact/index.html`
+
+## from MD to HTML
+
+In using Pulsar text editor in order to edit old articles written in md format use the follogin regular expressions:
+
+* search for: '\*\*(.*?)\*\*' and replace with: '<b>$1</b>';
+* search for: '_(.*?)_' and replace with: '<i>$1</i>';
+* search for: '\$\$(.*?)\$\$' and replace with: '<code>$1</code>', same with `(.*?)`;

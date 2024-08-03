@@ -8,4 +8,5 @@
 <p style="text-align: left;margin-bottom: 1ch;">
 
 03/08/2024: <a href="first_article/index.html">My first article</a><br>
+19/07/2017: <a href="scumm_walk_matrices/index.html">SCUMM: walk matrices</a><br>
 <!--11/12/2018: <a href="test_article/index.html">Test article by Fabien Sanglard</a><br>-->
