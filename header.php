@@ -118,8 +118,7 @@
 <a href="/" class="title"><b>NICOLA ARIUTTI'S WEBSITE</b><br>
 </a><hr/><div style="text-align: justify;display: inline-block; width: 100%;">
 <!--<a class="title" href="/about">ABOUT</a> &nbsp;<a class="title" href="/contact/index.html">EMAIL</a> &nbsp;<a class="title" href="../rss.xml">RSS</a> &nbsp;<a class="title" href="put here your paypal link">DONATE</a></div></div>-->
-<!--<a class="title" href="/about">ABOUT</a> &nbsp;<a class="title" href="/contact/index.html">CONTACTS</a> &nbsp;</div></div>-->
-<a class="title" style="text-align: center;" href="/about/index.html">ABOUT</a> &nbsp;</div></div>
+<a class="title" href="/about">ABOUT</a> &nbsp;<a class="title" href="/contact/index.html">CONTACT</a> &nbsp;</div></div>
 
 </center><br><br>
 <div style="margin-bottom: 2ch;text-transform: none;">

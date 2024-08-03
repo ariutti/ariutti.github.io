@@ -129,6 +129,7 @@ function generate($src_dir) {
   $src = $src_dir . "/src.php";
   $footer_date = filemtime("footer.php");
   $header_date = filemtime("header.php");
+
   /*
   $generator_date = filemtime("g.php");
 
@@ -146,6 +147,7 @@ function generate($src_dir) {
   }
   */
 
+
   $cwd = getcwd();
   footnotes_reset();
   ob_start();
@@ -161,6 +163,7 @@ function generate($src_dir) {
 
 generate(".");
 generate("about");
+generate("contact");
 generate("test_article");
 generate("first_article");
 // Add articles here as you write them...
