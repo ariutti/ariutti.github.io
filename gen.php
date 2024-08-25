@@ -31,7 +31,7 @@ function footnote_gen_references() {
   echo "<style type='text/css'>td.ref {  padding-bottom: 0ch; width:0;}</style>";
   h("References");
   echo "<p id='paperbox' style='text-align:left;'>";
-  echo "<table><tbody style='vertical-align: top;'>";
+  echo "<table class='references'><tbody style='vertical-align: top;'>";
   for( $i = 1; $i <= $footnote_count; $i++ ) {
     echo "<tr>";
     $target = "<a href=\"" . $footnote_url[$i]  . "\">" . $footnote_text[$i] . "</a>";

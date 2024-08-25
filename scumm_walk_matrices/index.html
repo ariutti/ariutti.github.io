@@ -116,6 +116,26 @@
     padding-right: 0.3ch;
   }
 
+
+  /* GENERIC TABLE */
+  table {
+    border-collapse: collapse;
+  }
+
+  table td, th {
+    border:1px solid #ccc;
+  }
+
+  /* REFERENCES TABLE - which stands inside the footer*/
+  table.references td {
+    border:none;
+  }
+
+  table.references th {
+    border:none;
+  }
+
+
   /* TABELLA WALK MATRIX */
   table.walk-matrix {
       font-size: 0.8em;
@@ -148,13 +168,6 @@
       background-color: #eee;
   }
 
-  table {
-    border-collapse: collapse;
-  }
-
-  table td, th {
-    border:1px solid #ccc;
-  }
 
   </style>
   <title>SCUMM walk matrices</title>
@@ -244,14 +257,15 @@ Pay attention, this is a SCUMM version 5 game and these information may be diffe
 The <code>box</code> command shows a schematic report about the current room boxes, let's try to insert it at the debugger prompt and see what happens:
 
 <img loading="lazy" src="images/console-01.png" width="563" height="171" style="width: 100%; height: auto; margin-top: 2ch; margin-bottom: 2ch;"/>
-The 12 rows of text output, one for each of the boxes, show information about their geometry and more. Let's put aside for the moment the row/box number <code>0</code> (it is used as a sort of walk-matrix header and doesn't contain useful information really), and take a look at the other rows; here we see numerical values corresponding to
+The 12 rows of text output, one for each of the boxes, show information about their geometry and more. Let's put aside for the moment the row/box number <code>0</code> (it is used as a sort of walk-matrix header and doesn't contain useful information really), and take a look at the other rows; here we see numerical values corresponding to<br/><br/>
 
 <table>
-  <tr>
+<tr>
 <td>Upper Left Coords</td><td>Lower Left Coords</td><td>Upper Right Coords</td><td>Lower Right Coords</td><td>Mask</td><td>Flags</td><td>Scale</td>
 </tr>
 </table>
 
+<br/><br/>
 Let's omit the last three values for now, they represent <code>mask</code>, <code>flags</code> and <code>scale</code> values we will cover in details in future posts. Now let's concentrate to the first 4 pairs of coordinates.
 
 <img loading="lazy" src="images/box-new.png" width="512" height="301" style="width: 50%; height: auto; float:right; margin-top: 2ch; margin-bottom: 2ch;"/>
@@ -458,7 +472,7 @@ So Indy now is walking to box 2 and, once he arrives here, because box 2 is not 
 
 So one last stroll will suffice for Indy to reach his final destination on box 4!<br><br>
 
-So try youself, imagine the user is clicking near box 6, are you able to find the route using the walk matrix? Let's put your solution in the comment below!
+So try youself, imagine the user is clicking near box 6, are you able to find the route using the walk matrix?
 
 <div class='heading'>Other references</div><hr/>
 <ul>
@@ -467,5 +481,5 @@ So try youself, imagine the user is clicking near box 6, are you able to find th
   <li><a href="https://www.google.com/patents/US5425139?dq=sierra+on-line+path+finding&hl=en&sa=X&ved=0ahUKEwiqyuHVjZXVAhUF7xQKHfecCOYQ6AEIKzAB">Here</a>'s another way of looking at the pathfinding problem by <b>Sierra On-Line</b>;
   </li>
 </ul>
-<style type='text/css'>td.ref {  padding-bottom: 0ch; width:0;}</style><div class='heading'>References</div><hr/><p id='paperbox' style='text-align:left;'><table><tbody style='vertical-align: top;'><tr><td class='ref' style='width:1ch;'><a name="footnote_1"></a><a href="#back_1">^</a></td><td  class='ref' style='width:4ch;'> [1]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://www.sciencedirect.com/book/9780123747310/artificial-intelligence-for-games">Millington, I., & Funge J. (2009). 'Artificial Intelligence for Games' (2nd ed.). Morgan Kaufmann</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_2"></a><a href="#back_2">^</a></td><td  class='ref' style='width:4ch;'> [2]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://github.com/idmillington/aicore">'Artificial Intelligence for Games' book companion code reposiotry</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_3"></a><a href="#back_3">^</a></td><td  class='ref' style='width:4ch;'> [3]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://www.cs.utexas.edu/users/EWD/ewd02xx/EWD215.PDF">Go-to statement considered harmful</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_4"></a><a href="#back_4">^</a></td><td  class='ref' style='width:4ch;'> [4]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://forums.scummvm.org/viewtopic.php?t=4532">ScummVM Forum pathfinding topic</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_5"></a><a href="#back_5">^</a></td><td  class='ref' style='width:4ch;'> [5]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://wiki.scummvm.org/index.php/SCUMM/Technical_Reference/Box_resources">ScummVM, SCUMM technical reference for Box</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_6"></a><a href="#back_6">^</a></td><td  class='ref' style='width:4ch;'> [6]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://wiki.scummvm.org/index.php/SCUMM/Technical_Reference/Box_resources#BOXM">ScummVM, SCUMM technical reference for Matrix</a></td></tr></tbody></table></p> <hr>
+<style type='text/css'>td.ref {  padding-bottom: 0ch; width:0;}</style><div class='heading'>References</div><hr/><p id='paperbox' style='text-align:left;'><table class='references'><tbody style='vertical-align: top;'><tr><td class='ref' style='width:1ch;'><a name="footnote_1"></a><a href="#back_1">^</a></td><td  class='ref' style='width:4ch;'> [1]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://www.sciencedirect.com/book/9780123747310/artificial-intelligence-for-games">Millington, I., & Funge J. (2009). 'Artificial Intelligence for Games' (2nd ed.). Morgan Kaufmann</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_2"></a><a href="#back_2">^</a></td><td  class='ref' style='width:4ch;'> [2]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://github.com/idmillington/aicore">'Artificial Intelligence for Games' book companion code reposiotry</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_3"></a><a href="#back_3">^</a></td><td  class='ref' style='width:4ch;'> [3]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://www.cs.utexas.edu/users/EWD/ewd02xx/EWD215.PDF">Go-to statement considered harmful</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_4"></a><a href="#back_4">^</a></td><td  class='ref' style='width:4ch;'> [4]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://forums.scummvm.org/viewtopic.php?t=4532">ScummVM Forum pathfinding topic</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_5"></a><a href="#back_5">^</a></td><td  class='ref' style='width:4ch;'> [5]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://wiki.scummvm.org/index.php/SCUMM/Technical_Reference/Box_resources">ScummVM, SCUMM technical reference for Box</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_6"></a><a href="#back_6">^</a></td><td  class='ref' style='width:4ch;'> [6]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://wiki.scummvm.org/index.php/SCUMM/Technical_Reference/Box_resources#BOXM">ScummVM, SCUMM technical reference for Matrix</a></td></tr></tbody></table></p> <hr>
  <center>*

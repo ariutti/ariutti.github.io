@@ -79,14 +79,15 @@ The <code>box</code> command shows a schematic report about the current room box
 
 <?php img("images/console-01.png", 100, "margin-top: 2ch; margin-bottom: 2ch;");?>
 
-The 12 rows of text output, one for each of the boxes, show information about their geometry and more. Let's put aside for the moment the row/box number <code>0</code> (it is used as a sort of walk-matrix header and doesn't contain useful information really), and take a look at the other rows; here we see numerical values corresponding to
+The 12 rows of text output, one for each of the boxes, show information about their geometry and more. Let's put aside for the moment the row/box number <code>0</code> (it is used as a sort of walk-matrix header and doesn't contain useful information really), and take a look at the other rows; here we see numerical values corresponding to<br/><br/>
 
 <table>
-  <tr>
+<tr>
 <td>Upper Left Coords</td><td>Lower Left Coords</td><td>Upper Right Coords</td><td>Lower Right Coords</td><td>Mask</td><td>Flags</td><td>Scale</td>
 </tr>
 </table>
 
+<br/><br/>
 Let's omit the last three values for now, they represent <code>mask</code>, <code>flags</code> and <code>scale</code> values we will cover in details in future posts. Now let's concentrate to the first 4 pairs of coordinates.
 
 <?php img("images/box-new.png", 50, "float:right; margin-top: 2ch; margin-bottom: 2ch;");?>
@@ -299,7 +300,7 @@ So Indy now is walking to box 2 and, once he arrives here, because box 2 is not 
 
 So one last stroll will suffice for Indy to reach his final destination on box 4!<br><br>
 
-So try youself, imagine the user is clicking near box 6, are you able to find the route using the walk matrix? Let's put your solution in the comment below!
+So try youself, imagine the user is clicking near box 6, are you able to find the route using the walk matrix?
 
 <?php h("Other references");?>
 

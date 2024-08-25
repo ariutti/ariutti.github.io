@@ -116,6 +116,26 @@
     padding-right: 0.3ch;
   }
 
+
+  /* GENERIC TABLE */
+  table {
+    border-collapse: collapse;
+  }
+
+  table td, th {
+    border:1px solid #ccc;
+  }
+
+  /* REFERENCES TABLE - which stands inside the footer*/
+  table.references td {
+    border:none;
+  }
+
+  table.references th {
+    border:none;
+  }
+
+
   /* TABELLA WALK MATRIX */
   table.walk-matrix {
       font-size: 0.8em;
@@ -148,13 +168,6 @@
       background-color: #eee;
   }
 
-  table {
-    border-collapse: collapse;
-  }
-
-  table td, th {
-    border:1px solid #ccc;
-  }
 
   </style>
   <title>How the Dreamcast copy protection was defeated</title>
@@ -270,5 +283,5 @@ The last two steps of the process were to reverse-scramble 1ST_READ.BIN and pack
  <div class='heading'>Corrections</div><hr/><p>
   Long-time Dreamcast explorer, "newchiefgaming", provided corrections for this article. They can be found <a href="corrections/corrections.pdf">here</a>.
  </p>
-<style type='text/css'>td.ref {  padding-bottom: 0ch; width:0;}</style><div class='heading'>References</div><hr/><p id='paperbox' style='text-align:left;'><table><tbody style='vertical-align: top;'><tr><td class='ref' style='width:1ch;'><a name="footnote_1"></a><a href="#back_1">^</a></td><td  class='ref' style='width:4ch;'> [ 1]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://www.consolecopyworld.com/dc/gd-ws/gdws_big/sld009.htm">SEGA GD Workshop</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_2"></a><a href="#back_2">^</a></td><td  class='ref' style='width:4ch;'> [ 2]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://segaretro.org/GD-ROM">segaretro.org: GD-ROM</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_3"></a><a href="#back_3">^</a></td><td  class='ref' style='width:4ch;'> [ 3]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://news.microsoft.com/1999/03/16/microsoft-announces-windows-ce-toolkit-for-dreamcast/">Microsoft Announces Windows CE Toolkit for Dreamcast</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_4"></a><a href="#back_4">^</a></td><td  class='ref' style='width:4ch;'> [ 4]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://segaretro.org/Windows_CE">Dreamcast games utilising Windows CE</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_5"></a><a href="#back_5">^</a></td><td  class='ref' style='width:4ch;'> [ 5]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://mc.pp.se/dc/ip.bin.html">IP.BIN and 1ST_READ.BIN</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_6"></a><a href="#back_6">^</a></td><td  class='ref' style='width:4ch;'> [ 6]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://www.neogaf.com/threads/lets-build-a-sega-dreamcast-game-from-scratch-breakout.916501/page-3#post-216433495">Let's build a Sega Dreamcast game from scratch</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_7"></a><a href="#back_7">^</a></td><td  class='ref' style='width:4ch;'> [ 7]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://mc.pp.se/dc/serifc.html">PC Serial Adaptor</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_8"></a><a href="#back_8">^</a></td><td  class='ref' style='width:4ch;'> [ 8]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://www.reddit.com/r/dreamcast/comments/15pww3/a_more_accurate_and_indepth_look_at_the/">A more accurate and in-depth look at the Dreamcast's security</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_9"></a><a href="#back_9">^</a></td><td  class='ref' style='width:4ch;'> [ 9]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://assemblergames.com/threads/dumping-dreamcast-gd-rom-gd-r-discs.16679/">Faster ways were designed latter, using the DC's broadband connector</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_10"></a><a href="#back_10">^</a></td><td  class='ref' style='width:4ch;'> [10]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://xiaopang333.wordpress.com/2008/08/06/dreamcast-myth-gd-rom-storage-capacity/">Dreamcast Myth: GD-ROM Storage Capacity</a></td></tr></tbody></table></p> <hr>
+<style type='text/css'>td.ref {  padding-bottom: 0ch; width:0;}</style><div class='heading'>References</div><hr/><p id='paperbox' style='text-align:left;'><table class='references'><tbody style='vertical-align: top;'><tr><td class='ref' style='width:1ch;'><a name="footnote_1"></a><a href="#back_1">^</a></td><td  class='ref' style='width:4ch;'> [ 1]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://www.consolecopyworld.com/dc/gd-ws/gdws_big/sld009.htm">SEGA GD Workshop</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_2"></a><a href="#back_2">^</a></td><td  class='ref' style='width:4ch;'> [ 2]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://segaretro.org/GD-ROM">segaretro.org: GD-ROM</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_3"></a><a href="#back_3">^</a></td><td  class='ref' style='width:4ch;'> [ 3]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://news.microsoft.com/1999/03/16/microsoft-announces-windows-ce-toolkit-for-dreamcast/">Microsoft Announces Windows CE Toolkit for Dreamcast</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_4"></a><a href="#back_4">^</a></td><td  class='ref' style='width:4ch;'> [ 4]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://segaretro.org/Windows_CE">Dreamcast games utilising Windows CE</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_5"></a><a href="#back_5">^</a></td><td  class='ref' style='width:4ch;'> [ 5]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://mc.pp.se/dc/ip.bin.html">IP.BIN and 1ST_READ.BIN</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_6"></a><a href="#back_6">^</a></td><td  class='ref' style='width:4ch;'> [ 6]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://www.neogaf.com/threads/lets-build-a-sega-dreamcast-game-from-scratch-breakout.916501/page-3#post-216433495">Let's build a Sega Dreamcast game from scratch</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_7"></a><a href="#back_7">^</a></td><td  class='ref' style='width:4ch;'> [ 7]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://mc.pp.se/dc/serifc.html">PC Serial Adaptor</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_8"></a><a href="#back_8">^</a></td><td  class='ref' style='width:4ch;'> [ 8]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://www.reddit.com/r/dreamcast/comments/15pww3/a_more_accurate_and_indepth_look_at_the/">A more accurate and in-depth look at the Dreamcast's security</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_9"></a><a href="#back_9">^</a></td><td  class='ref' style='width:4ch;'> [ 9]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://assemblergames.com/threads/dumping-dreamcast-gd-rom-gd-r-discs.16679/">Faster ways were designed latter, using the DC's broadband connector</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_10"></a><a href="#back_10">^</a></td><td  class='ref' style='width:4ch;'> [10]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://xiaopang333.wordpress.com/2008/08/06/dreamcast-myth-gd-rom-storage-capacity/">Dreamcast Myth: GD-ROM Storage Capacity</a></td></tr></tbody></table></p> <hr>
  <center>*

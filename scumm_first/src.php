@@ -22,18 +22,18 @@ Back to the early LucasArts years (still <i>LucasFilm games</i> at that time), t
 
 They needed some kind of tool to make this process quicker and easier for developers and content creators to use and, eventually, this tool was soon created from scratch.<br></br>
 
-Since <b>Maniac Mansion</b>, their first adventure game, LucasArts progemmers started to use <b>SCUMM</b><?php footnote("SCUMM Wikipedia page", "https://en.wikipedia.org/wiki/SCUMM");?> (<b>S</b>cript <b>C</b>reation <b>U</b>tility for <b>M</b>aniac <b>M</b>ansion) a special programming language and toolbox particularly designed for this kind of videogames.
+Since <b>Maniac Mansion</b>, their first adventure game, LucasArts developers started to use <b>SCUMM</b><?php footnote("SCUMM Wikipedia page", "https://en.wikipedia.org/wiki/SCUMM");?> (<b>S</b>cript <b>C</b>reation <b>U</b>tility for <b>M</b>aniac <b>M</b>ansion) a special programming language and toolbox particularly designed for this kind of videogames.
 
 <?php img("images/scumm-bar.png", 100, "margin-bottom: 2ch; margin-top:2ch;");?>
 
-Thanks to SCUMM, programmers would have been able to manipulate the huge amount of game assets in a relatively easy way, taking benefint from a series of ad-hoc pre-packaged functions, writing more compact and human-readible scripts, without troubling themself with countless lines af low level code.<br></br>
+Thanks to SCUMM, programmers would have been able to manipulate the huge amount of game assets in a relatively easy way, taking benefit from a series of ad-hoc pre-packaged functions, writing more compact and human-readible scripts, without troubling themself with countless lines af low level code.<br></br>
 
 The term SCUMM can also be extended to the way assets were encoded and packed together on large "<i>container files</i>", inside of which the game scripts were also stored (game scripts can be considered as assets too!)<br></br>
 
 Then, those "<i>container files</i>" were read and decoded by a special computer program in order to eventually run the actual game! This program was the SCUMM <b>interpreter</b> (later it was given the name <b>SPUTM</b> which stands for <b>S</b>CUMM <b>P</b>resetation <b>U</b>tility (<b>tm</b>) <?php footnote("'The SCUMM Diary: Stories behind one of the greatest game engines ever made' article by Mike Bevan", "https://www.gamedeveloper.com/design/the-scumm-diary-stories-behind-one-of-the-greatest-game-engines-ever-made");?>).<br></br>
 
 <div style="text-align: center;">
-<?php img("images/scumm-interpreter-2.png", 50, "align:center; margin-bottom: 2ch; margin-top:2ch;");?>
+<?php img("images/scumm-system.png", 50, "margin-bottom: 2ch; margin-top:2ch;");?><br></br>
 </div>
 
 Indeed it was a veritable virtual machine (<i>process virtual machines</i>) designed to run a single computer program - the game itself - giving it an abstract execution enviroment, indipendent from the underlying platform.<br></br>
@@ -41,7 +41,7 @@ Indeed it was a veritable virtual machine (<i>process virtual machines</i>) desi
 With game interpreters it was eventually possible to keep assets separated from the game implementation details whose were strictly dependent on the hardware and different from platform to platform (<i>Commodore</i>, <i>Pc</i> o <i>Apple</i> for example). <br></br>
 
 <div style="text-align: center;">
-<?php img("images/scumm-system.png", 50, "margin-bottom: 2ch; margin-top:2ch;");?><br></br>
+<?php img("images/scumm-interpreter-2.png", 50, "align:center; margin-bottom: 2ch; margin-top:2ch;");?>
 </div>
 
 With the passing of time and the emergence of new systems and devices, these games could no longer be played because their interpreters were no longer up to date to adapt to the hardware features of modern machines.<br></br>
@@ -91,7 +91,7 @@ The DOSBox project is a little younger than ScummVM (the first release for DOSBo
 <?php h("Other References");?>
 
 <ul>
-<li>An interesting <a href="https://www.youtube.com/watch?v=wNpjGvJwyL8">talk</a>by <i>Ron Gilbert</i> at <i>Game Forum Germany 2011</i>. Here Gilbert talks about <i>Maniac Mansion</i> and about <i>SCUMM</i> engine origin, with some curiosity;</li>
+<li>An interesting <a href="https://www.youtube.com/watch?v=wNpjGvJwyL8">talk</a> by <i>Ron Gilbert</i> at <i>Game Forum Germany 2011</i>. Here Gilbert talks about <i>Maniac Mansion</i> and about <i>SCUMM</i> engine origin, with some curiosity;</li>
 <li><a href="http://wiki.scummvm.org/index.php/SCUMM">SCUMM engine</a> page taken directly from the ScummVM Wiki;</li>
 <li>Othere interesting link from Wikipedia: <a href="https://en.wikipedia.org/wiki/Virtual_machine">Virtual Machine</a>;</li>
 </ul>

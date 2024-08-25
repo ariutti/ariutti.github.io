@@ -116,6 +116,26 @@
     padding-right: 0.3ch;
   }
 
+
+  /* GENERIC TABLE */
+  table {
+    border-collapse: collapse;
+  }
+
+  table td, th {
+    border:1px solid #ccc;
+  }
+
+  /* REFERENCES TABLE - which stands inside the footer*/
+  table.references td {
+    border:none;
+  }
+
+  table.references th {
+    border:none;
+  }
+
+
   /* TABELLA WALK MATRIX */
   table.walk-matrix {
       font-size: 0.8em;
@@ -148,13 +168,6 @@
       background-color: #eee;
   }
 
-  table {
-    border-collapse: collapse;
-  }
-
-  table td, th {
-    border:1px solid #ccc;
-  }
 
   </style>
   <title>Scumm: if you know it, you love it!</title>
@@ -192,25 +205,25 @@ Back to the early LucasArts years (still <i>LucasFilm games</i> at that time), t
 
 They needed some kind of tool to make this process quicker and easier for developers and content creators to use and, eventually, this tool was soon created from scratch.<br></br>
 
-Since <b>Maniac Mansion</b>, their first adventure game, LucasArts progemmers started to use <b>SCUMM</b><a name="back_1" style="text-decoration: none;" href="#footnote_1"><sup>[1]</sup></a> (<b>S</b>cript <b>C</b>reation <b>U</b>tility for <b>M</b>aniac <b>M</b>ansion) a special programming language and toolbox particularly designed for this kind of videogames.
+Since <b>Maniac Mansion</b>, their first adventure game, LucasArts developers started to use <b>SCUMM</b><a name="back_1" style="text-decoration: none;" href="#footnote_1"><sup>[1]</sup></a> (<b>S</b>cript <b>C</b>reation <b>U</b>tility for <b>M</b>aniac <b>M</b>ansion) a special programming language and toolbox particularly designed for this kind of videogames.
 
 <img loading="lazy" src="images/scumm-bar.png" width="640" height="288" style="width: 100%; height: auto; margin-bottom: 2ch; margin-top:2ch;"/>
-Thanks to SCUMM, programmers would have been able to manipulate the huge amount of game assets in a relatively easy way, taking benefint from a series of ad-hoc pre-packaged functions, writing more compact and human-readible scripts, without troubling themself with countless lines af low level code.<br></br>
+Thanks to SCUMM, programmers would have been able to manipulate the huge amount of game assets in a relatively easy way, taking benefit from a series of ad-hoc pre-packaged functions, writing more compact and human-readible scripts, without troubling themself with countless lines af low level code.<br></br>
 
 The term SCUMM can also be extended to the way assets were encoded and packed together on large "<i>container files</i>", inside of which the game scripts were also stored (game scripts can be considered as assets too!)<br></br>
 
 Then, those "<i>container files</i>" were read and decoded by a special computer program in order to eventually run the actual game! This program was the SCUMM <b>interpreter</b> (later it was given the name <b>SPUTM</b> which stands for <b>S</b>CUMM <b>P</b>resetation <b>U</b>tility (<b>tm</b>) <a name="back_2" style="text-decoration: none;" href="#footnote_2"><sup>[2]</sup></a>).<br></br>
 
 <div style="text-align: center;">
-<img loading="lazy" src="images/scumm-interpreter-2.png" width="1024" height="579" style="width: 50%; height: auto; align:center; margin-bottom: 2ch; margin-top:2ch;"/></div>
+<img loading="lazy" src="images/scumm-system.png" width="1024" height="486" style="width: 50%; height: auto; margin-bottom: 2ch; margin-top:2ch;"/><br></br>
+</div>
 
 Indeed it was a veritable virtual machine (<i>process virtual machines</i>) designed to run a single computer program - the game itself - giving it an abstract execution enviroment, indipendent from the underlying platform.<br></br>
 
 With game interpreters it was eventually possible to keep assets separated from the game implementation details whose were strictly dependent on the hardware and different from platform to platform (<i>Commodore</i>, <i>Pc</i> o <i>Apple</i> for example). <br></br>
 
 <div style="text-align: center;">
-<img loading="lazy" src="images/scumm-system.png" width="1024" height="486" style="width: 50%; height: auto; margin-bottom: 2ch; margin-top:2ch;"/><br></br>
-</div>
+<img loading="lazy" src="images/scumm-interpreter-2.png" width="1024" height="579" style="width: 50%; height: auto; align:center; margin-bottom: 2ch; margin-top:2ch;"/></div>
 
 With the passing of time and the emergence of new systems and devices, these games could no longer be played because their interpreters were no longer up to date to adapt to the hardware features of modern machines.<br></br>
 
@@ -254,9 +267,9 @@ The DOSBox project is a little younger than ScummVM (the first release for DOSBo
 
 <div class='heading'>Other References</div><hr/>
 <ul>
-<li>An interesting <a href="https://www.youtube.com/watch?v=wNpjGvJwyL8">talk</a>by <i>Ron Gilbert</i> at <i>Game Forum Germany 2011</i>. Here Gilbert talks about <i>Maniac Mansion</i> and about <i>SCUMM</i> engine origin, with some curiosity;</li>
+<li>An interesting <a href="https://www.youtube.com/watch?v=wNpjGvJwyL8">talk</a> by <i>Ron Gilbert</i> at <i>Game Forum Germany 2011</i>. Here Gilbert talks about <i>Maniac Mansion</i> and about <i>SCUMM</i> engine origin, with some curiosity;</li>
 <li><a href="http://wiki.scummvm.org/index.php/SCUMM">SCUMM engine</a> page taken directly from the ScummVM Wiki;</li>
 <li>Othere interesting link from Wikipedia: <a href="https://en.wikipedia.org/wiki/Virtual_machine">Virtual Machine</a>;</li>
 </ul>
-<style type='text/css'>td.ref {  padding-bottom: 0ch; width:0;}</style><div class='heading'>References</div><hr/><p id='paperbox' style='text-align:left;'><table><tbody style='vertical-align: top;'><tr><td class='ref' style='width:1ch;'><a name="footnote_1"></a><a href="#back_1">^</a></td><td  class='ref' style='width:4ch;'> [ 1]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://en.wikipedia.org/wiki/SCUMM">SCUMM Wikipedia page</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_2"></a><a href="#back_2">^</a></td><td  class='ref' style='width:4ch;'> [ 2]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://www.gamedeveloper.com/design/the-scumm-diary-stories-behind-one-of-the-greatest-game-engines-ever-made">'The SCUMM Diary: Stories behind one of the greatest game engines ever made' article by Mike Bevan</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_3"></a><a href="#back_3">^</a></td><td  class='ref' style='width:4ch;'> [ 3]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://www.scummvm.org/">ScummVM Project</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_4"></a><a href="#back_4">^</a></td><td  class='ref' style='width:4ch;'> [ 4]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://en.wikipedia.org/wiki/ScummVM">ScummVM Project Wikipedia page</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_5"></a><a href="#back_5">^</a></td><td  class='ref' style='width:4ch;'> [ 5]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://arstechnica.com/gaming/2012/01/16/maniac-tentacle-mindbenders-of-atlantis-how-scummvm-kept-adventure-gaming-alive/">'Maniac Tentacle Mindbenders: How ScummVM’s unpaid coders kept adventure gaming alive' article by Richard Moss. An interesting article on ScummVM history, have a good read</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_6"></a><a href="#back_6">^</a></td><td  class='ref' style='width:4ch;'> [ 6]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://github.com/munt/munt">The Munt project (a Roland MT-32 software emulation)</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_7"></a><a href="#back_7">^</a></td><td  class='ref' style='width:4ch;'> [ 7]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://www.scummvm.org/games/">ScummVM Project freeware games page</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_8"></a><a href="#back_8">^</a></td><td  class='ref' style='width:4ch;'> [ 8]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://wiki.scummvm.org/index.php/SCUMM/Bugs">LucasArts SCUMM games contained bugs too, and ScummVM (partially) solved them! A the page which shows them</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_9"></a><a href="#back_9">^</a></td><td  class='ref' style='width:4ch;'> [ 9]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://www.DOSBox.com/">DOSBox Project home page</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_10"></a><a href="#back_10">^</a></td><td  class='ref' style='width:4ch;'> [10]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://en.wikipedia.org/wiki/DOSBox">DOSBox Project Wikipedia page</a></td></tr></tbody></table></p> <hr>
+<style type='text/css'>td.ref {  padding-bottom: 0ch; width:0;}</style><div class='heading'>References</div><hr/><p id='paperbox' style='text-align:left;'><table class='references'><tbody style='vertical-align: top;'><tr><td class='ref' style='width:1ch;'><a name="footnote_1"></a><a href="#back_1">^</a></td><td  class='ref' style='width:4ch;'> [ 1]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://en.wikipedia.org/wiki/SCUMM">SCUMM Wikipedia page</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_2"></a><a href="#back_2">^</a></td><td  class='ref' style='width:4ch;'> [ 2]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://www.gamedeveloper.com/design/the-scumm-diary-stories-behind-one-of-the-greatest-game-engines-ever-made">'The SCUMM Diary: Stories behind one of the greatest game engines ever made' article by Mike Bevan</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_3"></a><a href="#back_3">^</a></td><td  class='ref' style='width:4ch;'> [ 3]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://www.scummvm.org/">ScummVM Project</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_4"></a><a href="#back_4">^</a></td><td  class='ref' style='width:4ch;'> [ 4]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://en.wikipedia.org/wiki/ScummVM">ScummVM Project Wikipedia page</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_5"></a><a href="#back_5">^</a></td><td  class='ref' style='width:4ch;'> [ 5]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://arstechnica.com/gaming/2012/01/16/maniac-tentacle-mindbenders-of-atlantis-how-scummvm-kept-adventure-gaming-alive/">'Maniac Tentacle Mindbenders: How ScummVM’s unpaid coders kept adventure gaming alive' article by Richard Moss. An interesting article on ScummVM history, have a good read</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_6"></a><a href="#back_6">^</a></td><td  class='ref' style='width:4ch;'> [ 6]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://github.com/munt/munt">The Munt project (a Roland MT-32 software emulation)</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_7"></a><a href="#back_7">^</a></td><td  class='ref' style='width:4ch;'> [ 7]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://www.scummvm.org/games/">ScummVM Project freeware games page</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_8"></a><a href="#back_8">^</a></td><td  class='ref' style='width:4ch;'> [ 8]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://wiki.scummvm.org/index.php/SCUMM/Bugs">LucasArts SCUMM games contained bugs too, and ScummVM (partially) solved them! A the page which shows them</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_9"></a><a href="#back_9">^</a></td><td  class='ref' style='width:4ch;'> [ 9]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://www.DOSBox.com/">DOSBox Project home page</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_10"></a><a href="#back_10">^</a></td><td  class='ref' style='width:4ch;'> [10]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://en.wikipedia.org/wiki/DOSBox">DOSBox Project Wikipedia page</a></td></tr></tbody></table></p> <hr>
  <center>*
