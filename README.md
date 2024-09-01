@@ -27,8 +27,14 @@ TODO
 ### generate website
 
 1. navigate inside the root of the code folder and run the command `php gen.php`;
+2. now, in order to see the just-compiled-website working run the command `python3 -m http.server 8000` and go to a browser reaching the url `localhost:8000`.
 
-How does it work? Using Fabien words: "The HTML pages are statically generated from php. There is a "master" script called gen.php which iterates over all sub-folders and searches for files named article.php. Upon hit, the master runs the article script, wrapping it into a header and a footer, and redirects the output to a file named index.html.
+The usage of a local webserver is important in order to prevent CORS issues and also to have fonts rendered correctly and also have the _wavesurfer.js_ module working as expected.
+
+
+## How does it work?
+
+Using Fabien words: "The HTML pages are statically generated from php. There is a "master" script called gen.php which iterates over all sub-folders and searches for files named article.php. Upon hit, the master runs the article script, wrapping it into a header and a footer, and redirects the output to a file named index.html.
 
 There is one helper function, footnote(), which stores references so they can be listed in the footer."
 

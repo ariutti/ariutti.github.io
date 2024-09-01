@@ -124,6 +124,7 @@ function picture($path, $width, $style, $class = "") {
 }
 
 include("header.php");
+
 function generate($src_dir) {
   $dst = $src_dir . "/index.html";
   $src = $src_dir . "/src.php";
@@ -164,11 +165,16 @@ function generate($src_dir) {
 generate(".");
 generate("about");
 generate("contact");
-generate("test_article");
-generate("first_article");
 
-generate("scumm_walk_matrices");
-generate("scumm_versions");
-generate("scumm_first");
+
+/*
+I want all my articles to be collected inside a folder which is named '_posts'
+*/
+//generate("articles/test_article");
+generate("articles/first_article");
+generate("articles/wavesurfer_test");
+generate("articles/scumm_walk_matrices");
+generate("articles/scumm_versions");
+generate("articles/scumm_first");
 // Add articles here as you write them...
 ?>
