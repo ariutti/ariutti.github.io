@@ -145,8 +145,6 @@
 
 <p>Here is a diagram of the connections:</p>
 
-<div style="text-align: center;">
 <?php img("images/connection_diagram_v1.svg", 100, "margin-top: 2ch; margin-bottom: 2ch;");?>
-</div>
 
 <p>I will keep an eye on it in the future and hope not to run into any more strange malfunctions.</p>
