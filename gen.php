@@ -171,10 +171,11 @@ generate("contact");
 I want all my articles to be collected inside a folder which is named '_posts'
 */
 //generate("articles/test_article");
-generate("articles/first_article");
+generate("articles/feurich_piano");
 generate("articles/wavesurfer_test");
 generate("articles/scumm_walk_matrices");
 generate("articles/scumm_versions");
 generate("articles/scumm_first");
+generate("articles/first_article");
 // Add articles here as you write them...
 ?>

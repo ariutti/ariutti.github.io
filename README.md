@@ -59,15 +59,20 @@ Call the php specific function <?php h("my section title here");?>
 TODO
 
 
+### Image creation
+
+When working with SVG for image creation keep in mind these :
+
+* la larghezza del cavas deve essere:
+
 ### Footnotes
 
 In order to make footnotes in your article you have to use thie php function in your article php src: `<?php footnote("note title", "URL link");?>`
 
+## Favicon
 
-## TODO
+I'm using the same favicon as the one from [Melissa Pons](https://www.melissapons.com/) website. I like it!
 
-* Create a file `about/index.html`
-* Create a file `/contact/index.html`
 
 ## from MD to HTML
 

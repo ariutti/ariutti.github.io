@@ -7,6 +7,7 @@
 
 <p style="text-align: left;margin-bottom: 1ch;">
 
+08/09/2024: <a href="articles/feurich_piano/index.html">GENIO system connections</a><br>
 01/09/2024: <a href="articles/wavesurfer_test/index.html">Wavesurfer test</a><br>
 03/08/2024: <a href="articles/first_article/index.html">My first article</a><br>
 19/07/2017: <a href="articles/scumm_walk_matrices/index.html">SCUMM: walk matrices</a><br>

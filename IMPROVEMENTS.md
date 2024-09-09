@@ -1,7 +1,11 @@
 # README
 
-## HOW to implement synthax highligth in <pre> tags
+## Matematical formulas
 
+vedi articolo di fabien qui: https://fabiensanglard.net/floating_point_visually_explained/index.html
+
+
+## HOW to implement synthax highligth in <pre> tags
 TODO
 
 ## how to show HTML code inside the <pre> tags
