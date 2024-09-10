@@ -30,7 +30,7 @@
 <li>use it as a sound source, recording it perhaps with some microphone;</li>
 </ul>
 
-<p>After various searches, we fell in love with a <b>Feurich 125</b> piano that we found by chance at a tuner/repair shop out of town. It is a beautiful piano built in 1983 in West Germany and has, among other special features, a <i>Renner</i><?php footnote("Renner piano mechanics", "https://rennerusa.com/");?> mechanism and a soundboard made of spruce made by the Ciresa<?php footnote("Ciresa soundboards", "https://www.ciresafiemme.it/en/about-us/");?> company.</p>
+<p>After various searches, we fell in love with a <b>Feurich 125</b> piano that we found by chance at a tuner/repair shop out of town. It is a beautiful piano built in 1983 in West Germany and has, among other special features, a <i>Renner</i><?php footnote("Renner piano mechanics", "https://rennerusa.com/");?> mechanism and a soundboard made of spruce by the Ciresa company.<?php footnote("Ciresa soundboards", "https://www.ciresafiemme.it/en/about-us/");?> company.</p>
 
 <?php img("images/photo_2024-09-09_19-07-34.jpg", 100, "margin-top: 1ch; margin-bottom: 2ch;");?>
 
@@ -38,17 +38,17 @@
 
 <p>In addition to these two pedals, the piano has a lateral lever which acts as a <i>sordina</i> pedal which, when activated, causes a felt cloth to descend, placing itself between the hammers and the strings: an exquisitely muffled and evocative sound is thus obtained.</p>
 
-<p>On closer inspection, both the left pedal and the <i>sordina</i> lever can be considered sound silencing systems, invented for both expressive and practical purposes.</p>
+<p>On closer inspection, both the left pedal and the <i>sordina</i> lever can be considered sound silencing systems, them are mechanical silencing systems, invented for both expressive and practical purposes.</p>
 
-<p>At the time of purchase, we asked for an additional silencing system to be installed, in other words, a system that, through sensors and various electronics, would allow us to play the piano with headphones, without the instrument producing any audible sound in the environment.</p>
+<p>I mention this because, when we made the purchase, we requested the installation of an additional, more modern silencing system—an electromechanical one. This system, through the use of sensors and electronic components, would allow us to play the piano with headphones, without the instrument producing any audible sound in the surrounding environment.</p>
 
 <!--<p>at, by means of various sensors and electronics, would allow us to play the piano with headphones, without the instrument producing any audible sound in the environment.</p>-->
 
-<p>Silencing systems are primarily designed to allow studying and practising the piano without disturbing tenants or neighbours. The presence of sensors in tandem with the activation of a mechanical system that interrupts the stroke of the hammers just before they hit the strings, makes the piano totally silent and at the same time usable through a pair of headphones.</p>
+<p>These moderns type of silencing systems are primarily designed to allow studying and practising the piano without disturbing tenants or neighbours. The presence of sensors in tandem with the activation of a mechanical system that interrupts the stroke of the hammers just before they hit the strings, makes the piano totally silent and at the same time usable through a pair of headphones.</p>
 
-<p>Our request wasn't primarily to prevent any potential disturbance the instrument's sound might cause our neighbors, but rather to implement a system that could convert the pressure applied to the keys and pedals into digital signals. This would have opened up opportunities for various forms of experimentation and, most importantly, allowed us to record our performances in MIDI format.</p>
+<p>Our request wasn't primarily to prevent any potential disturbance the instrument's sound might cause our neighbors, but rather to implement a system that could convert the pressure applied to the keys and pedals into digital signals. This would have opened up opportunities for various forms of experimentation and, most importantly, allowed us to record our performances in MIDI format, to be later processed in a DAW maybe.</p>
 
-<p>From my experience, <i>Yamaha</i> or <i>Kaway</i> pianos, for example, can be purchased with a ‘factory’ silencing system, but it is also possible to install a silencing system from scratch even on pianos that did not originally have one (the installation work is not particularly invasive).</p>
+<p>From my experience, <i>Yamaha</i> or <i>Kaway</i> pianos, for example, can be purchased with a ‘factory’ silencing system, but it is also possible to install a silencing system from scratch even on pianos that did not originally have one - like in our case (the installation work is not particularly invasive).</p>
 
 <p>There are at least two silencing kits of this kind: one is <i><a href="https://www.adsilent.eu/en/">adsilent</a></i>, made in Germany, and the other is Genio, from the Korean company <a href="https://usrlab.kr/">URSlab</a>. The system installed on our Feurich is a <b>Genio Premium alpha</b>, and it works quite well!</p>
 
@@ -60,13 +60,13 @@
 <?php img("images/room_v2.svg", 80, "margin-top: 2ch; margin-bottom: 2ch;");?>
 </div>
 
-<p>An initial problem is immediately apparent; my usual workstation is located some distance from the instrument. One solution could have been to refactor the positions of all the furniture in the room to allow the desk to be close to the piano. Although we contemplated this possibility, the truth is that we discarded it: we like the room as it is currently configured very much and have no intention of moving anything at the moment!</p>
+<p>The first issue that arises is that my usual workstation is situated quite far from the instrument. One possible solution would have been to rearrange the furniture in the room to position the desk closer to the piano. While we considered this option, we ultimately dismissed it, as we are very fond of the current setup and have no desire to change it at this time!</p>
 
 <p>The problem of the connection between the piano and the laptop has not yet been resolved and we must therefore consider other options such as:</p>
 <ol>
   <li>Using a long USB cable;</li>
   <li>Making deferred MIDI recordings;</li>
-  <li>Using a MIDI cable;</li>
+  <li>Using a long MIDI cable;</li>
 </ol>
 
 <?php h("Using a long USB cable");?>
@@ -75,7 +75,7 @@
 
 <?php img("images/GENIO-front.png", 100, "margin-bottom: 2ch; margin-top:2ch;");?>
 
-<p>Using a USB cable would have been the best solution, and although this connection works well when the USB cable has relatively short lengths, it would not have worked so well in our use case: the USB cable would have had to extend more than 5 metres and this would have resulted in a degradation of the digital signal.</p>
+<p>A USB cable would have been the ideal solution, and while this connection functions well with shorter cable lengths, it wouldn't have been as effective for our situation. The cable would need to stretch over 5 meters, which would lead to a degradation of the digital signal.</p>
 
 <?php h("Making deferred MIDI recordings");?>
 
@@ -133,7 +133,7 @@
 
 <?php img("images/GENIO-rear.png", 100, "margin-top: 2ch; margin-bottom: 2ch;");?>
 
-<p>So, as a test, I immediately try to connect the <i>Midisport</i> to the <code>MIDI ex</code> port of the <i>Genio</i> (in the picture numbered as 6) but I realise that, from the activity of the the Midisport's LEDs, no MIDI signal is sent from the <i>Genio</i> to the MIDI out port of the Midisport.</p>
+<p>So, as a test, I immediately try to connect the <i>Midisport</i> to the <code>MIDI ex</code> port of the <i>Genio</i> also because on closer inspection, it appears that the connection interface is in the form of a USB-A connector (in the picture numbered as 6) but I realise that, from the activity of the the Midisport's LEDs, no MIDI signal is sent from the <i>Genio</i> to the MIDI out port of the <i>Midisport</i>.</p>
 
 <p>I wrote a second e-mail to <i>USRlab</i>'s official support querying them about the matter and the support explains to me that the <code>MIDI ex</code> port of the <i>Genio</i> is designed to interface exclusively with a <u>proprietary I/O MIDI device</u> and, therefore, is not compatible with other types of interfaces.</p>
 
@@ -141,10 +141,8 @@
 
 <?php img("images/MIDI_external_io.png", 100, "margin-top: 2ch; margin-bottom: 2ch;");?>
 
-<p>The purchase of a sufficiently long MIDI cable (10 metres in my case) finally allowed me to close the circle and successfully connect the piano to the PC. After initial tests, it seems that this last route is proving successful.</p>
-
-<p>Here is a diagram of the connections:</p>
+<p>The purchase of a sufficiently long MIDI cable (10 metres in my case) finally allowed me to close the circle and successfully connect the piano to the PC.</p>
 
 <?php img("images/connection_diagram_v1.svg", 100, "margin-top: 2ch; margin-bottom: 2ch;");?>
 
-<p>I will keep an eye on it in the future and hope not to run into any more strange malfunctions.</p>
+<p>After initial tests, it seems that this last route is proving successful. I will keep an eye on it in the future and hope not to run into any more strange malfunctions.</p>
