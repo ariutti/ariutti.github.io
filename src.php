@@ -7,7 +7,7 @@
 
 <p style="text-align: left;margin-bottom: 1ch;">
 
-17/10/2024: <a href="articles/probabilistic_automaton_for_melodies_first_tests/index.html">Probabilistic_automaton_for_melodies_first_tests</a><br>
+17/10/2024: <a href="articles/probabilistic_automaton_for_melodies_first_tests/index.html">Probabilistic automaton for creating melodies (first tests)</a><br>
 08/09/2024: <a href="articles/feurich_piano/index.html">GENIO system connections</a><br>
 01/09/2024: <a href="articles/wavesurfer_test/index.html">Wavesurfer test</a><br>
 03/08/2024: <a href="articles/first_article/index.html">My first article</a><br>

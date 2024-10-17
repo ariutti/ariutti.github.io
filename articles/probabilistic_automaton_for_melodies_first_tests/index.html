@@ -188,7 +188,7 @@ October 17, 2024</div>
 <p>On the early experiments in building a probabilistic machine for the automatic generation of melodies.</p>
 
 <div class='heading'>Hollos brothers</div><hr/>
-<p>Some time ago, by chance, I came across the small publishing house Abrazol Publishing<a name="back_1" style="text-decoration: none;" href="#footnote_1"><sup>[1]</sup></a>, which seems to exclusively publish books written by the brothers <a href="https://www.exstrom.com/stefan/stefan.html">Stefan</a> and <a href="https://www.exstrom.com/richard/richard.html">J. Richard</a> Hollos (maybe because they own it?).</p>
+<p>Some time ago, by chance, I came across the small publishing house <a href="https://abrazol.com/">Abrazol Publishing</a>, which seems to exclusively publish books written by the brothers <a href="https://www.exstrom.com/stefan/stefan.html">Stefan</a> and <a href="https://www.exstrom.com/richard/richard.html">J. Richard</a> Hollos (maybe because they own it?).</p>
 
 <img loading="lazy" src="images/cover_creating_rhythms.png" width="300" height="480" style="width: 20%; height: auto; float:left; margin-bottom: 2ch; margin-right: 2ch; margin-left:1ch;"/><img loading="lazy" src="images/cover_creating_melodies.png" width="300" height="480" style="width: 20%; height: auto; float:left; margin-bottom: 2ch; margin-right: 2ch; margin-left:1ch;"/>
 <p>The two brothers, both graduates in Electrical Engineering and Physics, are passionate about mathematics, statistics, probability, electronics, and art, and together they write about these subjects in their books.</p>
@@ -212,7 +212,7 @@ October 17, 2024</div>
 
 
 <div class='heading'>What a melody is</div><hr/>
-<p>First of all, what is a melody<a name="back_2" style="text-decoration: none;" href="#footnote_2"><sup>[2]</sup></a>?</p>
+<p>First of all, what is a melody<a name="back_1" style="text-decoration: none;" href="#footnote_1"><sup>[1]</sup></a>?</p>
 
 <p>It is a musical phrase, a "<i>gesture</i>" composed of a finite sequence of sounds at different pitches (<i>notes</i>) and silences (<i>rests</i>). Each note follows and precedes other notes, thus forming a distinctive and recognizable "<i>contour</i>" from a horizontal perspective.</p>
 
@@ -302,7 +302,7 @@ October 17, 2024</div>
 
 <div class='heading'>First considerations</div><hr/>
 <p>These initial results are interesting in my opinion because they show how, based on statistics and probability, machines can autonomously generate new melodies that still resemble the material provided as the initial dataset.</p>
-<p>I can imagine using them in a multimedia installation context where it’s necessary to produce new, always different, but consistent music within a given style. Music that can be continuously and automatically generated (making music by means of designing systems that make music stands at the base of the generative music<a name="back_3" style="text-decoration: none;" href="#footnote_3"><sup>[3]</sup></a> concept).</p>
+<p>I can imagine using them in a multimedia installation context where it’s necessary to produce new, always different, but consistent music within a given style. Music that can be continuously and automatically generated (making music by means of designing systems that make music stands at the base of the generative music<a name="back_2" style="text-decoration: none;" href="#footnote_2"><sup>[2]</sup></a> concept).</p>
 
 <p>From these early experiments, I’ve noticed that dataset preparation is a crucial phase. For the machine to be reliable and produce results that are both consistent and varied, the dataset must be large and comprehensive. It should contain as many possible note combinations as well as rhythmic and melodic patterns that repeat themselves, allowing the automaton to choose among different possible paths.</p>
 
@@ -311,8 +311,7 @@ October 17, 2024</div>
 <p>As we mentioned before, we have not yet considered other fundamental aspects of melody generation, such as rhythm or dynamics. What results could we obtain if we did?</p>
 <p>What would happen if, for example, our automaton also considered the duration of each note in its statistical analysis of the input score?</p>
 
-
-<div class='heading'>Adding time | rhythm</div><hr/><div class='heading'>Higher order automatons</div><hr/>
+<div class='heading'>Adding time | rhythm</div><hr/>
 <p>If we change the code of our algorithm and add a feature to analyze the duration of each note in addition to its pitch, the first-order heatmap becomes more detailed than the one we encountered earlier. In the melody, notes that share the same pitch now become distinct entities because they have different durations.</p>
 
 <div style="text-align: center;">
@@ -371,5 +370,5 @@ October 17, 2024</div>
 <img loading="lazy" src="images/algorhythm_diagram.svg" width="1379.6713" height="942.80743" style="width: 80%; height: auto; margin-top: 2ch; margin-bottom: 2ch;"/></div>
 
 <p>That’s all for now. See you in the next experiment!</p>
-<style type='text/css'>td.ref {  padding-bottom: 0ch; width:0;}</style><div class='heading'>References</div><hr/><p id='paperbox' style='text-align:left;'><table class='references'><tbody style='vertical-align: top;'><tr><td class='ref' style='width:1ch;'><a name="footnote_1"></a><a href="#back_1">^</a></td><td  class='ref' style='width:4ch;'> [1]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://abrazol.com/">Abrazol Publishing</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_2"></a><a href="#back_2">^</a></td><td  class='ref' style='width:4ch;'> [2]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://en.wikipedia.org/wiki/Melody">Melody definition by WikiPedia</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_3"></a><a href="#back_3">^</a></td><td  class='ref' style='width:4ch;'> [3]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://teropa.info/loop/#/title">wonderful introduction on generative music by Tero Parviainen</a></td></tr></tbody></table></p> <hr>
+<style type='text/css'>td.ref {  padding-bottom: 0ch; width:0;}</style><div class='heading'>References</div><hr/><p id='paperbox' style='text-align:left;'><table class='references'><tbody style='vertical-align: top;'><tr><td class='ref' style='width:1ch;'><a name="footnote_1"></a><a href="#back_1">^</a></td><td  class='ref' style='width:4ch;'> [1]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://en.wikipedia.org/wiki/Melody">Melody definition by WikiPedia</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_2"></a><a href="#back_2">^</a></td><td  class='ref' style='width:4ch;'> [2]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://teropa.info/loop/#/title">wonderful introduction on generative music by Tero Parviainen</a></td></tr></tbody></table></p> <hr>
  <center>*

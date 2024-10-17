@@ -4,7 +4,7 @@
 
 <?php h("Hollos brothers");?>
 
-<p>Some time ago, by chance, I came across the small publishing house <a ref="https://abrazol.com/">Abrazol Publishing</a>, which seems to exclusively publish books written by the brothers <a href="https://www.exstrom.com/stefan/stefan.html">Stefan</a> and <a href="https://www.exstrom.com/richard/richard.html">J. Richard</a> Hollos (maybe because they own it?).</p>
+<p>Some time ago, by chance, I came across the small publishing house <a href="https://abrazol.com/">Abrazol Publishing</a>, which seems to exclusively publish books written by the brothers <a href="https://www.exstrom.com/stefan/stefan.html">Stefan</a> and <a href="https://www.exstrom.com/richard/richard.html">J. Richard</a> Hollos (maybe because they own it?).</p>
 
 <?php img("images/cover_creating_rhythms.png", 20, "float:left; margin-bottom: 2ch; margin-right: 2ch; margin-left:1ch;");?>
 <?php img("images/cover_creating_melodies.png", 20, "float:left; margin-bottom: 2ch; margin-right: 2ch; margin-left:1ch;");?>
