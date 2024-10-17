@@ -58,6 +58,10 @@ Call the php specific function <?php h("my section title here");?>
 
 TODO
 
+### orizonatal line to make a separation
+
+<div style="clear:both;"></div>
+
 
 ### Image creation
 

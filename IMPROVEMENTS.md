@@ -18,6 +18,11 @@ Se desideri mostrare del codice HTML all'interno dei tag <pre> senza che il brow
     " (virgolette doppie) → &quot;
     ' (virgolette singole) → &apos; (non sempre necessario, dipende dal contesto)
 
+## SCORE player
+
+Un modo per embeddare uno score player dentro alla pagina web, con tanto di visualizzazione della playhead che si muove sulla partitura. E' possibile farlo con XML?
+
+
 
 ## [DONE]waveform visualizer
 
