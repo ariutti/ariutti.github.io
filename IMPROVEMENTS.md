@@ -1,5 +1,14 @@
 # README
 
+## GIT LFS storage for large files (video files)
+
+Install and use Git LFS for video files and large files in general for the website
+
+```
+git lfs install
+git lfs track "*.psd"
+```
+
 ## Matematical formulas
 
 vedi articolo di fabien qui: https://fabiensanglard.net/floating_point_visually_explained/index.html
