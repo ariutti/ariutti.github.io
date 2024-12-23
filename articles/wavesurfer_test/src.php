@@ -18,7 +18,7 @@ So now I would like to try myself in using this very same library here on this t
 
  <?php h("How to make it work? Nicola, this is a reminder for you!");?><p>
 
-<p>In order to have the <b>wavesurfer.js</b> work on my website (which I think is something similare Fabien is using) you have to take care of properly prepare the article folder like it's shown below:</p>
+<p>In order to have the <b>wavesurfer.js</b> work on my website (which I think is something similar Fabien is using) you have to take care of properly prepare the article folder like it's shown below:</p>
 
 <pre>
   /article_subfolder/

@@ -24,12 +24,26 @@ I then noticed that by changing them like this `<?php h ` or `<?php echo `, the 
 
 TODO
 
+
+### convert md article in src.php
+
+A frist step is to create the article `src.php`. Often you will find yourself in writing in markdown. Converting in src.php format is a matter of inserting all of these html tags which can be a bit boring.
+
+Better to use pandoc to do this, at least as a first step to be later refined by hand.
+
+use the following command (use the template `pandoc_temaplate.html` inside the `templates` folder):
+
+```
+pandoc --standalone --template template.html my_article.md -o src.html
+```
+
+
 ### generate website
 
 1. navigate inside the root of the code folder and run the command `php gen.php`;
 2. now, in order to see the just-compiled-website working run the command `python3 -m http.server 8000` and go to a browser reaching the url `localhost:8000`.
 
-The usage of a local webserver is important in order to prevent CORS issues and also to have fonts rendered correctly and also have the _wavesurfer.js_ module working as expected.
+Note: The usage of a local webserver is important in order to prevent CORS issues and also to have fonts rendered correctly and also have the _wavesurfer.js_ module working as expected.
 
 
 ## How does it work?

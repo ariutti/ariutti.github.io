@@ -79,26 +79,26 @@
     }
 
     blockquote {
-    background-color: #f3f3f3;
-    border: dashed 1px grey;
-    width: 97.5%;
-    font-style: italic;
-    text-align: justify;
+      background-color: #f3f3f3;
+      border: dashed 1px grey;
+      width: 97.5%;
+      font-style: italic;
+      text-align: justify;
 
-    padding: 1ch;
-    padding-top: 2ch;
-    padding-bottom: 2ch;
+      padding: 1ch;
+      padding-top: 2ch;
+      padding-bottom: 2ch;
 
-    margin : 0ch;
-    margin-bottom: 2ch;
-    margin-top: 0ch;
-  }
+      margin : 0ch;
+      margin-bottom: 2ch;
+      margin-top: 0ch;
+    }
 
-  blockquote div {
-    text-transform: none;
-    text-align: right;
-    width: 100%;
-  }
+    blockquote div {
+      text-transform: none;
+      text-align: right;
+      width: 100%;
+    }
 
   .note {
     position: relative;
@@ -185,7 +185,8 @@
 <div style="margin-bottom: 2ch;text-transform: none;">
 October 17, 2024</div>
 <div class='heading'>Probabilistic automaton for creating melodies (first tests)</div><hr/>
-<p>On the early experiments in building a probabilistic machine for the automatic generation of melodies.</p>
+<p>Making music by means of designing systems that make music stands at the base of the <i>generative music</i><a name="back_1" style="text-decoration: none;" href="#footnote_1"><sup>[1]</sup></a> concept.</p>
+<p>This article covers my early experiments in building a probabilistic machine for the automatic generation of melodies.</p>
 
 <div class='heading'>Hollos brothers</div><hr/>
 <p>Some time ago, by chance, I came across the small publishing house <a href="https://abrazol.com/">Abrazol Publishing</a>, which seems to exclusively publish books written by the brothers <a href="https://www.exstrom.com/stefan/stefan.html">Stefan</a> and <a href="https://www.exstrom.com/richard/richard.html">J. Richard</a> Hollos (maybe because they own it?).</p>
@@ -212,7 +213,7 @@ October 17, 2024</div>
 
 
 <div class='heading'>What a melody is</div><hr/>
-<p>First of all, what is a melody<a name="back_1" style="text-decoration: none;" href="#footnote_1"><sup>[1]</sup></a>?</p>
+<p>First of all, what is a melody<a name="back_2" style="text-decoration: none;" href="#footnote_2"><sup>[2]</sup></a>?</p>
 
 <p>It is a musical phrase, a "<i>gesture</i>" composed of a finite sequence of sounds at different pitches (<i>notes</i>) and silences (<i>rests</i>). Each note follows and precedes other notes, thus forming a distinctive and recognizable "<i>contour</i>" from a horizontal perspective.</p>
 
@@ -302,7 +303,7 @@ October 17, 2024</div>
 
 <div class='heading'>First considerations</div><hr/>
 <p>These initial results are interesting in my opinion because they show how, based on statistics and probability, machines can autonomously generate new melodies that still resemble the material provided as the initial dataset.</p>
-<p>I can imagine using them in a multimedia installation context where it’s necessary to produce new, always different, but consistent music within a given style. Music that can be continuously and automatically generated (making music by means of designing systems that make music stands at the base of the generative music<a name="back_2" style="text-decoration: none;" href="#footnote_2"><sup>[2]</sup></a> concept).</p>
+<p>I can imagine using them in a multimedia installation context where it’s necessary to produce new, always different, but consistent music within a given style. Music that can be continuously and automatically generated.</p>
 
 <p>From these early experiments, I’ve noticed that dataset preparation is a crucial phase. For the machine to be reliable and produce results that are both consistent and varied, the dataset must be large and comprehensive. It should contain as many possible note combinations as well as rhythmic and melodic patterns that repeat themselves, allowing the automaton to choose among different possible paths.</p>
 
@@ -370,5 +371,5 @@ October 17, 2024</div>
 <img loading="lazy" src="images/algorhythm_diagram.svg" width="1379.6713" height="942.80743" style="width: 80%; height: auto; margin-top: 2ch; margin-bottom: 2ch;"/></div>
 
 <p>That’s all for now. See you in the next experiment!</p>
-<style type='text/css'>td.ref {  padding-bottom: 0ch; width:0;}</style><div class='heading'>References</div><hr/><p id='paperbox' style='text-align:left;'><table class='references'><tbody style='vertical-align: top;'><tr><td class='ref' style='width:1ch;'><a name="footnote_1"></a><a href="#back_1">^</a></td><td  class='ref' style='width:4ch;'> [1]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://en.wikipedia.org/wiki/Melody">Melody definition by WikiPedia</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_2"></a><a href="#back_2">^</a></td><td  class='ref' style='width:4ch;'> [2]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://teropa.info/loop/#/title">wonderful introduction on generative music by Tero Parviainen</a></td></tr></tbody></table></p> <hr>
+<style type='text/css'>td.ref {  padding-bottom: 0ch; width:0;}</style><div class='heading'>References</div><hr/><p id='paperbox' style='text-align:left;'><table class='references'><tbody style='vertical-align: top;'><tr><td class='ref' style='width:1ch;'><a name="footnote_1"></a><a href="#back_1">^</a></td><td  class='ref' style='width:4ch;'> [1]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://teropa.info/loop/#/title">wonderful introduction on generative music by Tero Parviainen</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_2"></a><a href="#back_2">^</a></td><td  class='ref' style='width:4ch;'> [2]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://en.wikipedia.org/wiki/Melody">Melody definition by WikiPedia</a></td></tr></tbody></table></p> <hr>
  <center>*

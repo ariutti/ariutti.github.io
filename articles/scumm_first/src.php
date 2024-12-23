@@ -58,7 +58,7 @@ As today (July 2017), after 15 years of development<?php footnote("'Maniac Tenta
 
 Futhermore, even if the core of the project were initially focoused on LucasArts SCUMM games solely, as ScummVM name suggests, now ScummVM is huge and integrates a lot of game interpreters from other good-old-days software houses like <i>Sierra</i>, <i>Revolution Software</i>, <i>Activision</i>, <i>Coktel Vision</i> and more, and it is growing every day.<br></br>
 
-ScummVM exists thanks to the collaboration of hundreds of developers and adventure games enthusiasts. As said before and shown on the following video, the project contains the code of a huge amount of different game interpreters of the "<i>graphical adventure</i>" game genre. ScummVM also contains code from other software projects which were born indipendently like the <b>Munt</b> project<?php footnote("The Munt project (a Roland MT-32 software emulation)", "https://github.com/munt/munt");?>, used to emulate the Rolant MT-32 sound card and its typical sounds.<br></br>
+ScummVM exists thanks to the collaboration of hundreds of developers and adventure games enthusiasts. As said before and shown on the following video, the project contains the code of a huge amount of different game interpreters of the "<i>graphical adventure</i>" game genre. ScummVM also contains code from other software projects which were born indipendently like the <b>Munt</b> project<?php footnote("The Munt project (a Roland MT-32 software emulation)", "https://github.com/munt/munt");?>, used to emulate the Roland MT-32 sound card and its typical sounds.<br></br>
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/iZpf15F3ink" allowfullscreen></iframe><br></br>
 
@@ -68,7 +68,7 @@ Fortunately there are some exceptions, as the case of <i>Revolution Software</i>
 
 The same was for <i>Adventure Soft</i> and other software houses which, in this sharing spirit, released freeware versions of their games that are now downloadable from the ScummVM project website directly<?php footnote("ScummVM Project freeware games page", "http://www.scummvm.org/games/");?>.<br></br>
 
-As an example of the great quality of the project and of the ScummVM developers cautious care for details, lies in the fact they have included codes to even solve <i>bugs</i> from games in their original version<?php footnote("LucasArts SCUMM games contained bugs too, and ScummVM (partially) solved them! A the page which shows them", "http://wiki.scummvm.org/index.php/SCUMM/Bugs");?>!<br></br>
+As an example of the great quality of the project and of the ScummVM developers cautious care for details, lies in the fact they have included codes to even solve <i>bugs</i> from games in their original version<?php footnote("LucasArts SCUMM games contained bugs too, and ScummVM (partially) solved them! The page which shows them", "http://wiki.scummvm.org/index.php/SCUMM/Bugs");?>!<br></br>
 
 <hr>
 

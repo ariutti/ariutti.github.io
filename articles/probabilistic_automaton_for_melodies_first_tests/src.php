@@ -1,6 +1,7 @@
 <?php genheader("Probabilistic automaton for creating melodies (first tests)", "October 17, 2024");?>
 
-<p>On the early experiments in building a probabilistic machine for the automatic generation of melodies.</p>
+<p>Making music by means of designing systems that make music stands at the base of the <i>generative music</i><?php footnote("wonderful introduction on generative music by Tero Parviainen", "https://teropa.info/loop/#/title");?> concept.</p>
+<p>This article covers my early experiments in building a probabilistic machine for the automatic generation of melodies.</p>
 
 <?php h("Hollos brothers");?>
 
@@ -134,7 +135,7 @@
 <?php h("First considerations");?>
 
 <p>These initial results are interesting in my opinion because they show how, based on statistics and probability, machines can autonomously generate new melodies that still resemble the material provided as the initial dataset.</p>
-<p>I can imagine using them in a multimedia installation context where it’s necessary to produce new, always different, but consistent music within a given style. Music that can be continuously and automatically generated (making music by means of designing systems that make music stands at the base of the generative music<?php footnote("wonderful introduction on generative music by Tero Parviainen", "https://teropa.info/loop/#/title");?> concept).</p>
+<p>I can imagine using them in a multimedia installation context where it’s necessary to produce new, always different, but consistent music within a given style. Music that can be continuously and automatically generated.</p>
 
 <p>From these early experiments, I’ve noticed that dataset preparation is a crucial phase. For the machine to be reliable and produce results that are both consistent and varied, the dataset must be large and comprehensive. It should contain as many possible note combinations as well as rhythmic and melodic patterns that repeat themselves, allowing the automaton to choose among different possible paths.</p>
 

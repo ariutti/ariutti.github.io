@@ -62,7 +62,7 @@ As today (July 2017), after 15 years of development **[d]**, the ScummVM project
 
 Futhermore, even if the core of the project were initially focoused on LucasArts SCUMM games solely, as ScummVM name suggests, now ScummVM is huge and integrates a lot of game interpreters from other good-old-days software houses like _Sierra_, _Revolution Software_, _Activision_, _Coktel Vision_ and more, and it is growing every day.
 
-ScummVM exists thanks to the collaboration of hundreds of developers and adventure games enthusiasts. As said before and shown on the following video, the project contains the code of a huge amount of different game interpreters of the "_graphical adventure_" game genre. ScummVM also contains code from other software projects which were born indipendently like the **Munt** project **[e]**, used to emulate the Rolant MT-32 sound card and its typical sounds.
+ScummVM exists thanks to the collaboration of hundreds of developers and adventure games enthusiasts. As said before and shown on the following video, the project contains the code of a huge amount of different game interpreters of the "_graphical adventure_" game genre. ScummVM also contains code from other software projects which were born indipendently like the **Munt** project **[e]**, used to emulate the Roland MT-32 sound card and its typical sounds.
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/iZpf15F3ink" allowfullscreen></iframe>
 

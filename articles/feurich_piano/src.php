@@ -30,7 +30,7 @@
 <li>use it as a sound source, recording it perhaps with some microphone;</li>
 </ul>
 
-<p>After various searches, we fell in love with a <b>Feurich 125</b> piano that we found by chance at a tuner/repair shop out of town. It is a beautiful piano built in 1983 in West Germany and has, among other special features, a <i>Renner</i><?php footnote("Renner piano mechanics", "https://rennerusa.com/");?> mechanism and a soundboard made of spruce by the Ciresa company.<?php footnote("Ciresa soundboards", "https://www.ciresafiemme.it/en/about-us/");?> company.</p>
+<p>After various searches, we fell in love with a <b>Feurich 125</b> piano that we found by chance at a tuner/repair shop out of town. It is a beautiful piano built in 1983 in West Germany and has, among other special features, a <i>Renner</i><?php footnote("Renner piano mechanics", "https://rennerusa.com/");?> mechanism and a soundboard made of spruce by the Ciresa company<?php footnote("Ciresa soundboards", "https://www.ciresafiemme.it/en/about-us/");?>.</p>
 
 <?php img("images/photo_2024-09-09_19-07-34.jpg", 100, "margin-top: 1ch; margin-bottom: 2ch;");?>
 
@@ -40,7 +40,7 @@
 
 <p>On closer inspection, both the left pedal and the <i>sordina</i> lever can be considered sound silencing systems, them are mechanical silencing systems, invented for both expressive and practical purposes.</p>
 
-<p>I mention this because, when we made the purchase, we requested the installation of an additional, more modern silencing system—an electromechanical one. This system, through the use of sensors and electronic components, would allow us to play the piano with headphones, without the instrument producing any audible sound in the surrounding environment.</p>
+<p>I mention this because, when we made the purchase, we requested the installation of an additional, more modern silencing system — an electromechanical one. This system, through the use of sensors and electronic components, would allow us to play the piano with headphones, without the instrument producing any audible sound in the surrounding environment.</p>
 
 <!--<p>at, by means of various sensors and electronics, would allow us to play the piano with headphones, without the instrument producing any audible sound in the environment.</p>-->
 
