@@ -38,7 +38,8 @@
 
 <div style="text-align: center; margin-top:2ch; margin-bottom:2ch;">
 <video width="100%" controls>
- <source src="videos/mi2_example_1.mp4" type="video/mp4">
+<!-- <source src="videos/mi2_example_1.mp4" type="video/mp4"> -->
+ <source src="videos/mi2_example_1.webm" type="video/webm">
 Your browser does not support the video tag.
 </video>
 <p style="font-size: 0.75em; vertical-align:top; text-align:center;">Me playing the woodtick sequence of my copy of Monkey Island 2 (italian version) through ScummVM and OBS<br/>. The sounds you hear are rendered by a (virtualized) Roland MT-32.</p>
@@ -64,17 +65,16 @@ Your browser does not support the video tag.
 
 <div style="text-align: center; margin-top:2ch; margin-bottom:2ch;">
 <video width="100%" controls>
- <source src="videos/mi2_example_2.mp4" type="video/mp4">
+<source src="videos/mi2_example_2.webm" type="video/webm">
 Your browser does not support the video tag.
 </video>
 
 <p style="font-size: 0.75em; vertical-align:top; text-align:center;">An in-game footage I recorder with ScummVM and OBS<br/>playing in the Voodoo lady swamp room (sound is rendered via a virtual Roland MT-32)</p>
 </div>
 
-
 <?php h("");?>
 
-<p>A few years later, in 1994, Land and McConnel, driven by internal company requirements, filed a patent<?php footnote("iMuse Patent number US_5315057", "local_res/US_5315057_A.pdf");?> to intellectually protect the newly invented technology (we will frequently refer to this patent later).</p>
+<p>A few years later, in 1994, Land and McConnel, driven by internal company requirements, filed a patent<?php footnote("iMuse Patent number US_5315057", "resources/US_5315057_A.pdf");?> to intellectually protect the newly invented technology (we will frequently refer to this patent later).</p>
 
 <p>From that point on, the iMuse system was expanded, improved, and used in subsequent LucasArts video games.</p>
 

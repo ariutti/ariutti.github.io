@@ -6,7 +6,13 @@ Install and use Git LFS for video files and large files in general for the websi
 
 ```
 git lfs install
-git lfs track "*.psd"
+git lfs track "*.mp4"
+```
+
+Do this in order to untrack files
+
+```
+git lfs untrack '*.mp4'
 ```
 
 ## Matematical formulas
@@ -132,7 +138,7 @@ Alcune dritte che derivano da uno scambio d ivedute con ChatGPT:
 
 
 
-## [DONE]waveform visualizer
+## [DONE] waveform visualizer
 
 Take a look at this article by fabien sargland
 * https://fabiensanglard.net/sf2_sound_system/index.html
@@ -198,8 +204,6 @@ e anche
         <canvas style="position: absolute; z-index: 2; left: 0px; top: 0px; bottom: 0px; height: 100%; pointer-events: none; width: 882px;" width="882" height="128"></canvas>
     </wave>
 </div>
-
-
 
 
 Take inspiration from these links:
