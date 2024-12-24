@@ -18,7 +18,7 @@
 
 <p>An audio engine capable of delivering a dynamic, real-time soundtrack to the player, responsive to in-game events without interruptions. iMuse was an innovative and unique project for its time. It is cited in virtually every book discussing the topic of audio in video games (“Game Sound”<?php footnote("'Game Sound', Karen Collins, MIT press", "https://mitpress.mit.edu/9780262537773/game-sound/");?> by Karen Collins, to name one of the most notable).</p>
 
-<p>The credit for this invention goes to the composer and developer <b>Micheal Land</b>. At the time, Land had recently joined the LucasArts team and had contributed to composing the soundtrack for “<i>The Secret of Monkey Island</i>”<?php footnote("'The Secret of Monkey Island' wiki page", "https://en.wikipedia.org/wiki/The_Secret_of_Monkey_Island");?>.</p>
+<p>The credit for this invention goes to the composer and developer <b>Michael Land</b>. At the time, Land had recently joined the LucasArts team and had contributed to composing the soundtrack for “<i>The Secret of Monkey Island</i>”<?php footnote("'The Secret of Monkey Island' wiki page", "https://en.wikipedia.org/wiki/The_Secret_of_Monkey_Island");?>.</p>
 
 <?php img("images/MI2.jpg", 25, "float:right; margin-bottom: 2ch; margin-right: 1ch; margin-left:2ch;");?>
 
@@ -48,8 +48,9 @@ Your browser does not support the video tag.
 
 <!-- <?php img("images/monkey2-scabb.gif", 80, "margin-bottom: 2ch; margin-top: 0ch");?> -->
 
+There is an initial musical accompainement che si arricchisce di volta in volta di nuovi arrangiamenti per il tema musicale principale,
 
-<p>There is a main musical theme whose arrangement constantly changes each time Guybrush enters a new location (<i>room</i>).</p>
+<p>There is an initial musical accompaniment that is progressively enriched with new arrangements for the main musical theme each time Guybrush enters a new location (<i>room</i>).</p>
 
 <p>Since video games are not traditional linear media like movies, it is impossible to predict the player’s choices or when they will occur. The composer cannot anticipate these events but must instead prepare all the necessary music material to account for the various possibilities.</p>
 
@@ -65,7 +66,7 @@ Your browser does not support the video tag.
 
 <div style="text-align: center; margin-top:2ch; margin-bottom:2ch;">
 <video width="100%" controls>
-<source src="videos/mi2_example_2.webm" type="video/webm">
+<source src="videos/mi2_example_3.webm" type="video/webm">
 Your browser does not support the video tag.
 </video>
 
@@ -114,6 +115,42 @@ Your browser does not support the video tag.
 
 <p>This work of composition and subsequent reductions could fall to a single composer. Alternatively, for instance, it could happen that the composer focused exclusively on creating good “transcriptions” for the OPL2 from compositions previously written by other colleagues for the Roland system.</p>
 
+
+<div id="multi-listen">
+  <div>
+    <p>Below is a comparison between the three versions of the same track, taken from the soundtrack of 'Indiana Jones and the Fate of Atlantis'</p>
+    <p>Click play to listen to the music and use the <i>radio button</i> to switch between the three versions.</p>
+    <p>You can also move the playhead if you want to concentrate on a specific music movement.</p>
+  </div>
+    <div>
+      <button id="playButton" onclick="playAudio()">Play</button>
+      <button id="stopButton" onclick="stopAudio()" disabled>Stop</button>
+    </div>
+
+    <div class="track-container">
+      <div class="radio-container">
+        <input type="radio" name="track" value="0" onchange="setSolo(0)" checked>Roland MT-32</input>
+      </div>
+        <div id="waveform0" class="waveform"></div>
+
+    </div>
+    <div class="track-container">
+      <div class="radio-container">
+        <input type="radio" name="track" value="1" onchange="setSolo(1)">AdLib/SoundBlaster (Yamaha YM3812, OPL2)</input>
+      </div>
+        <div id="waveform1" class="waveform"></div>
+
+    </div>
+    <div class="track-container">
+      <div class="radio-container">
+        <input type="radio" name="track" value="2" onchange="setSolo(2)">PC internal speaker</input>
+      </div>
+        <div id="waveform2" class="waveform"></div>
+    </div>
+</div>
+
+
+
 <p>When I learned about this kind of workflow, I was deeply impressed: producing a soundtrack for a video game at that time was essentially triple the work.</p>
 
 <p>I am perhaps even more struck by the fact that much of this work was barely perceived by the gamer. In my experience, for example, belonging to the second category of gamers so to speak, I never had the opportunity to enjoy the compositions in their “original” version for the MT-32, nor was I even aware of their existence.</p>
@@ -132,12 +169,103 @@ Your browser does not support the video tag.
 
 
 
+<!-- LOAD a local CSS inside the head ----------------------------------------->
+<script>
+    // Create a new link element
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'styles/additional.css'; // Replace with your actual CSS file path
+
+    // Append the link element to the body (although it's typically added in the <head>)
+    document.body.appendChild(link);
+</script>
+
+
+
+
+<!-- wavesurfer stuff --------------------------------------------------------->
+<script src="../../js/wavesurfer.min.js"></script>
+<!-- <script src="https://unpkg.com/wavesurfer.js@7"></script> -->
+<script>
+    const tracks = [
+        "sounds/MT32_FOA_sophia_NY_theater.ogg",
+        "sounds/OPL2_FOA_sophia_NY_theater.ogg",
+        "sounds/SPK_FOA_sophia_NY_theater.ogg"
+    ];
+
+    let waveSurfers = [];
+    let soloIndex = 0;
+
+    // Initialize WaveSurfer for each track
+    tracks.forEach((track, index) => {
+        const waveSurfer = WaveSurfer.create({
+            container: `#waveform${index}`,
+            waveColor: '#8c3ca4',
+            progressColor: '#572566',
+            cursorColor: 'red',
+            responsive: true,
+            height: 90,
+            normalize: true // Normalize the waveform
+        });
+        waveSurfer.load(track);
+
+        // Add synchronization event to the waveform
+        waveSurfer.on('click', (progress) => syncPlayhead(progress));
+
+        waveSurfers.push(waveSurfer);
+    });
+
+    // Function to synchronize the playhead of all tracks
+    function syncPlayhead(progress) {
+        waveSurfers.forEach((waveSurfer) => {
+            waveSurfer.seekTo(progress); // Move the playhead of all tracks
+        });
+    }
+
+    // Play all tracks, but only listen to the selected track
+    function playAudio() {
+        waveSurfers.forEach((waveSurfer, index) => {
+            if (index === soloIndex) {
+                waveSurfer.setVolume(1);
+            } else {
+                waveSurfer.setVolume(0);
+            }
+            waveSurfer.play();
+        });
+        toggleButtons(true);
+    }
+
+    // Stop all tracks
+    function stopAudio() {
+        waveSurfers.forEach(waveSurfer => waveSurfer.stop());
+        toggleButtons(false);
+    }
+
+    // Update the "exclusive solo" (only one track is audible)
+    function setSolo(index) {
+        soloIndex = index;
+        waveSurfers.forEach((waveSurfer, i) => {
+            waveSurfer.setVolume(i === soloIndex ? 1 : 0);
+        });
+    }
+
+    // Function to handle button states
+    function toggleButtons(isPlaying) {
+        const playButton = document.getElementById('playButton');
+        const stopButton = document.getElementById('stopButton');
+        playButton.disabled = isPlaying;
+        stopButton.disabled = !isPlaying;
+    }
+</script>
+
+
+
 <!--
 <hr />
 <h2 id="perchè-credo-sia-importante-conoscere-imuse">Perchè credo sia importante conoscere iMUSE</h2>
 <p>Ritengo che, per chi come me, appassionato di musica per contesti interattivi, studiare il funzionamento di iMuse possa aggiungere al proprio bagaglio di conoscenze una serie di preziosi insegnamenti, da applicare magari anche in altri contesti.</p>
 <p>iMuse è un sistema che vive al margine di diverse discipline, tutte in dialogo tra loro, dalla composizione alla cumputer science al dal sound engineering al sound design.</p>
 <p>Ritengo che iMuse sia un magnifico esempio di un approccio orizzontale, olistico, alle cose, quello di Land nello specifico ma di tutti i compositori e sound designer di quel periodo storico e precedenti. All’epoca chi scriveva musica per videogiochi non era soltanto un musicista ma anche un tecnico e sviluppatore software - tra il resto - con una profonda conoscenza dei sistemi tecnolgici al contorno della loro principale mansione.</p>
-<p>Micheal Land non è soltanto un compositore di grande sensibilità e bravura (basti avere giocato “the Dig” solo per citare un gioco fra tutti per accorgersene) ma allo stesso tempo è un tecnico preparato e consapevole.</p>
+<p>Michael Land non è soltanto un compositore di grande sensibilità e bravura (basti avere giocato “the Dig” solo per citare un gioco fra tutti per accorgersene) ma allo stesso tempo è un tecnico preparato e consapevole.</p>
 <p>In epoche più recenti, sistemi middleware hanno reso i compositori via via sempre più indipendenti dai dettagli implementativi, ma Land faceva ancora parte delle “vecchia scuola” ed è forse per questo che iMuse è stata - ed è tutt’ora ritengo - così efficacie perchè è stato scritto di primo pugno da un “vero addetto ai lavori”.</p>
 -->

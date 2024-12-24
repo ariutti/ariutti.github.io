@@ -206,15 +206,14 @@ So now I would like to try myself in using this very same library here on this t
 <p>In order to have the <b>wavesurfer.js</b> work on my website (which I think is something similar Fabien is using) you have to take care of properly prepare the article folder like it's shown below:</p>
 
 <pre>
-  /article_subfolder/
-  │
-  ├── index.html
-  ├── js/
-  │   └── wavesurfer.min.js
-  └── sounds/
-      └── file-audio.mp3
+├── /js/
+│   └── wavesurfer.min.js
+└── /articles_folder/
+    └── /article_subfolder/
+        ├── index.html
+        └── sounds/
+            └── file-audio.mp3
 </pre>
-
 
 <p>The article subfolder should contain at least two subfolders:</p>
 <ul>
@@ -222,7 +221,14 @@ So now I would like to try myself in using this very same library here on this t
   <li>the second one is the <code>sounds</code> folder and, as the name suggests, will be used to store all the soundfiles used by the article.</li>
 </ul>
 
-<p>Inside the <b>js</b> folder put the <code>wavesurfer.min.js</code> file. You can do that simply by running the commnad <code>npm install --save wavesurfer.js</code> inside this folder, navigate into the <b>dist</b> subfolder to locate the file, moving it outside and removing everything else.</p>
+
+<p>Inside the <b>js</b> folder put the <code>wavesurfer.min.js</code> file. You can do that simply by running the command <code>npm install --save wavesurfer.js</code> inside this folder, navigate into the <b>dist</b> subfolder to locate the file, moving it outside and removing everything else.</p>
+
+<br/>
+
+<p><b>Edit 2024/12/24</b>: better to have the <code>js</code> (with the <i>wavesurfer.min.js</i> inside) outside the articles parent folder. This way, if more than one article will need the library, we are not going to have duplicate files inside the website repository.</p>
+
+<br/>
 
 <p>Place the desired audio files inside the <b>sounds</b> folder</p>
 
@@ -247,7 +253,7 @@ So now I would like to try myself in using this very same library here on this t
 
 <p>Than we should include the javascript library with the line:</p>
 <pre>
-  &lt;script src="js/wavesurfer.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../../js/wavesurfer.min.js"&gt;&lt;/script&gt;
 </pre>
 
 <p>And eventually a last bit of custom javascript code to:</p>
@@ -284,7 +290,7 @@ So now I would like to try myself in using this very same library here on this t
 
 
 <!-- wavesurfer stuff -->
-<script src="js/wavesurfer.min.js"></script>
+<script src="../../js/wavesurfer.min.js"></script>
 <!-- <script src="https://unpkg.com/wavesurfer.js@7"></script> -->
 <script type="text/javascript">
   var test_sound = WaveSurfer.create({
