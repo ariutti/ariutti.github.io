@@ -42,13 +42,11 @@
  <source src="videos/mi2_example_1.webm" type="video/webm">
 Your browser does not support the video tag.
 </video>
-<p style="font-size: 0.75em; vertical-align:top; text-align:center;">Me playing the woodtick sequence of my copy of Monkey Island 2 (italian version) through ScummVM and OBS<br/>. The sounds you hear are rendered by a (virtualized) Roland MT-32.</p>
+<p style="font-size: 0.75em; vertical-align:top; text-align:center;">Me stressing the system in the woodtick sequence<br/>. The sounds you hear are rendered by a (virtualized) Roland MT-32.</p>
 </div>
 
 
 <!-- <?php img("images/monkey2-scabb.gif", 80, "margin-bottom: 2ch; margin-top: 0ch");?> -->
-
-There is an initial musical accompainement che si arricchisce di volta in volta di nuovi arrangiamenti per il tema musicale principale,
 
 <p>There is an initial musical accompaniment that is progressively enriched with new arrangements for the main musical theme each time Guybrush enters a new location (<i>room</i>).</p>
 
@@ -62,7 +60,11 @@ There is an initial musical accompainement che si arricchisce di volta in volta 
 
 <p>Another example that is particularly dear to me is also found in Monkey Island 2, when Guybrush is in the swamp to visit the Voodoo Lady.</p>
 
-<p>At the edge of the swamp, the accompanying music consists of a simple melodic line outlining the main theme of this room. As soon as Guybrush boards the coffin-boat, the theme is enriched with a new part. While Guybrush navigates to the right, this vertical layering of the accompaniment continues, with new parts being added progressively. At the point just before Guybrush reaches the Voodoo Lady's hut, it is the music that dictates the game: the platform can only rise in correspondence with a specific musical accent, carefully placed at a well-considered point in the musical bar.</p>
+<p>At the edge of the swamp, the accompanying music consists of a simple melodic line outlining the main theme of this room.</p>
+
+<p>As soon as Guybrush boards the coffin-boat, the theme is enriched with a <i>shaker</i> part. While Guybrush navigates to the right, this vertical layering of the accompaniment continues, with new parts being added progressively (<i>woodbloks</i>, <i>electric bass</i>).</p>
+
+<p>At the point just before Guybrush reaches the Voodoo Lady's hut, it is the music that dictates the game: the platform can only rise in correspondence with a specific musical accent, carefully placed at a well-considered point in the musical bar.</p>
 
 <div style="text-align: center; margin-top:2ch; margin-bottom:2ch;">
 <video width="100%" controls>
@@ -115,45 +117,23 @@ Your browser does not support the video tag.
 
 <p>This work of composition and subsequent reductions could fall to a single composer. Alternatively, for instance, it could happen that the composer focused exclusively on creating good “transcriptions” for the OPL2 from compositions previously written by other colleagues for the Roland system.</p>
 
-
-<div id="multi-listen">
-  <div>
-    <p>Below is a comparison between the three versions of the same track, taken from the soundtrack of 'Indiana Jones and the Fate of Atlantis'</p>
-    <p>Click play to listen to the music and use the <i>radio button</i> to switch between the three versions.</p>
-    <p>You can also move the playhead if you want to concentrate on a specific music movement.</p>
-  </div>
-    <div>
-      <button id="playButton" onclick="playAudio()">Play</button>
-      <button id="stopButton" onclick="stopAudio()" disabled>Stop</button>
-    </div>
-
-    <div class="track-container">
-      <div class="radio-container">
-        <input type="radio" name="track" value="0" onchange="setSolo(0)" checked>Roland MT-32</input>
-      </div>
-        <div id="waveform0" class="waveform"></div>
-
-    </div>
-    <div class="track-container">
-      <div class="radio-container">
-        <input type="radio" name="track" value="1" onchange="setSolo(1)">AdLib/SoundBlaster (Yamaha YM3812, OPL2)</input>
-      </div>
-        <div id="waveform1" class="waveform"></div>
-
-    </div>
-    <div class="track-container">
-      <div class="radio-container">
-        <input type="radio" name="track" value="2" onchange="setSolo(2)">PC internal speaker</input>
-      </div>
-        <div id="waveform2" class="waveform"></div>
-    </div>
-</div>
-
-
-
 <p>When I learned about this kind of workflow, I was deeply impressed: producing a soundtrack for a video game at that time was essentially triple the work.</p>
 
 <p>I am perhaps even more struck by the fact that much of this work was barely perceived by the gamer. In my experience, for example, belonging to the second category of gamers so to speak, I never had the opportunity to enjoy the compositions in their “original” version for the MT-32, nor was I even aware of their existence.</p>
+
+<?php h("Some Examples"); ?>
+<p>Below you can listen to some comparison between the three versions of the same track, taken from the soundtrack of '<i>Indiana Jones and the Fate of Atlantis</i>'.</p>
+
+<p>Click <i>play</i> to listen to the music and use the <i>radio button</i> to switch between the three versions.</p>
+
+<p>You can also move the playhead if you want to concentrate on a specific music movement.</p>
+
+
+<!-- audio groups DIV will be filled later by javascript ---------------------->
+<div id="audio-groups"></div>
+
+
+
 
 <?php h("MIDI everywhere"); ?>
 
@@ -166,7 +146,6 @@ Your browser does not support the video tag.
 <p>In the next post, I would like to talk about the sound resources of a LucasArts video game and examine them in depth through a concrete example. I would like to start introducing the concepts of Hooks and Markers and share some Python scripts to get our hands a little dirty.</p>
 
 <p>See you very soon, and until next time...</p>
-
 
 
 <!-- LOAD a local CSS inside the head ----------------------------------------->
@@ -185,87 +164,174 @@ Your browser does not support the video tag.
 
 <!-- wavesurfer stuff --------------------------------------------------------->
 <script src="../../js/wavesurfer.min.js"></script>
-<!-- <script src="https://unpkg.com/wavesurfer.js@7"></script> -->
 <script>
-    const tracks = [
-        "sounds/MT32_FOA_sophia_NY_theater.ogg",
-        "sounds/OPL2_FOA_sophia_NY_theater.ogg",
-        "sounds/SPK_FOA_sophia_NY_theater.ogg"
-    ];
 
-    let waveSurfers = [];
-    let soloIndex = 0;
+const trackGroups = [
+  {
+    game: 'Indiana Jones and the fate of Atlantis',
+    room: 'New York, Sophia Hapgood is presenting "the most interesting part" of her speech.',
+    tracks: [
+      "MT32_FOA_sophia_NY_theater.ogg",
+      "OPL2_FOA_sophia_NY_theater.ogg",
+      "SPK_FOA_sophia_NY_theater.ogg"
+    ]
+  },
+  {
+    game: 'Indiana Jones and the fate of Atlantis',
+    room: 'Wits path, Sahara Desert, indy is riding the camel in search for the dig site.',
+    tracks: [
+      "MT32_FOA_sahara_1.ogg",
+      "OPL2_FOA_sahara_1.ogg",
+      "SPK_FOA_sahara_1.ogg"
+    ]
+  },
+  {
+    game: 'Indiana Jones and the fate of Atlantis',
+    room: 'Famous John Williams theme from the videogame introduction.',
+    tracks: [
+      "MT32_FOA_intro_fanfare.ogg",
+      "OPL2_FOA_intro_fanfare.ogg",
+      "SPK_FOA_intro_fanfare.ogg"
+    ]
+  },
+  {
+    game: 'Indiana Jones and the fate of Atlantis',
+    room: 'Nazis is causing some trouble...',
+    tracks: [
+      "MT32_FOA_troubles.ogg",
+      "OPL2_FOA_troubles.ogg",
+      "SPK_FOA_troubles.ogg"
+    ]
+  }
+];
 
-    // Initialize WaveSurfer for each track
-    tracks.forEach((track, index) => {
-        const waveSurfer = WaveSurfer.create({
-            container: `#waveform${index}`,
-            waveColor: '#8c3ca4',
-            progressColor: '#572566',
-            cursorColor: 'red',
-            responsive: true,
-            height: 90,
-            normalize: true // Normalize the waveform
-        });
-        waveSurfer.load(track);
+// Text labels for the radio buttons
+const radioLabels = ["MT-32", "OPL2", "PC Speaker"];
 
-        // Add synchronization event to the waveform
-        waveSurfer.on('click', (progress) => syncPlayhead(progress));
+function createAudioGroup(group, groupIndex) {
+  const groupContainer = document.createElement('div');
+  groupContainer.classList.add('group-container');
 
-        waveSurfers.push(waveSurfer);
+  // Add group information
+  const gameInfo = document.createElement('p');
+  gameInfo.innerHTML = `<b>Game</b>: ${group.game}`;
+  groupContainer.appendChild(gameInfo);
+
+  const roomInfo = document.createElement('p');
+  roomInfo.innerHTML = `<b>Room</b>: ${group.room}`;
+  groupContainer.appendChild(roomInfo);
+
+  const playButton = document.createElement('button');
+  playButton.textContent = 'Play';
+  playButton.id = `playButton${groupIndex}`;
+  playButton.onclick = () => playAudio(groupIndex);
+
+  const stopButton = document.createElement('button');
+  stopButton.textContent = 'Stop';
+  stopButton.id = `stopButton${groupIndex}`;
+  stopButton.onclick = () => stopAudio(groupIndex);
+  stopButton.disabled = true;
+
+  groupContainer.appendChild(playButton);
+  groupContainer.appendChild(stopButton);
+
+  const waveSurfers = [];
+  let soloIndex = 0;
+
+  group.tracks.forEach((track, index) => {
+    const trackContainer = document.createElement('div');
+    trackContainer.classList.add('track-container');
+
+
+    const radioContainer = document.createElement('div');
+    radioContainer.classList.add('radio-container');
+
+
+    const radioInput = document.createElement('input');
+    radioInput.type = 'radio';
+    radioInput.name = `trackGroup_${groupIndex}`;
+    radioInput.value = index;
+    radioInput.checked = index === 0;
+    radioInput.onchange = () => setSolo(index);
+
+    radioContainer.appendChild(radioInput);
+
+    // Add label text for the radio button
+    const labelText = document.createElement('span');
+    labelText.textContent = radioLabels[index];
+    labelText.style.marginLeft = "8px"; // Add some spacing
+    radioContainer.appendChild(labelText);
+
+
+
+    trackContainer.appendChild(radioContainer);
+
+
+    const waveformDiv = document.createElement('div');
+    waveformDiv.id = `waveform_${groupIndex}_${index}`;
+    waveformDiv.classList.add('waveform');
+    trackContainer.appendChild(waveformDiv);
+
+    groupContainer.appendChild(trackContainer);
+
+    // Append the group container to the DOM first
+    document.getElementById('audio-groups').appendChild(groupContainer);
+
+    // Create the WaveSurfer instance after ensuring the container exists
+    const waveSurfer = WaveSurfer.create({
+      container: `#waveform_${groupIndex}_${index}`,
+      waveColor: 'gray',
+      progressColor: 'black',
+      cursorColor: 'red',
+      responsive: true,
+      height: 90,
+      normalize: true
     });
 
-    // Function to synchronize the playhead of all tracks
-    function syncPlayhead(progress) {
-        waveSurfers.forEach((waveSurfer) => {
-            waveSurfer.seekTo(progress); // Move the playhead of all tracks
-        });
-    }
 
-    // Play all tracks, but only listen to the selected track
-    function playAudio() {
-        waveSurfers.forEach((waveSurfer, index) => {
-            if (index === soloIndex) {
-                waveSurfer.setVolume(1);
-            } else {
-                waveSurfer.setVolume(0);
-            }
-            waveSurfer.play();
-        });
-        toggleButtons(true);
-    }
 
-    // Stop all tracks
-    function stopAudio() {
-        waveSurfers.forEach(waveSurfer => waveSurfer.stop());
-        toggleButtons(false);
-    }
+    waveSurfer.load(`sounds/${track}`);
 
-    // Update the "exclusive solo" (only one track is audible)
-    function setSolo(index) {
-        soloIndex = index;
-        waveSurfers.forEach((waveSurfer, i) => {
-            waveSurfer.setVolume(i === soloIndex ? 1 : 0);
-        });
-    }
+    waveSurfer.on('click', (progress) => syncPlayhead(progress));
 
-    // Function to handle button states
-    function toggleButtons(isPlaying) {
-        const playButton = document.getElementById('playButton');
-        const stopButton = document.getElementById('stopButton');
-        playButton.disabled = isPlaying;
-        stopButton.disabled = !isPlaying;
-    }
+    waveSurfers.push(waveSurfer);
+
+  });
+
+
+  function syncPlayhead(progress) {
+    waveSurfers.forEach(waveSurfer => {
+      waveSurfer.seekTo(progress);
+    });
+  }
+
+  function playAudio(groupIndex) {
+    waveSurfers.forEach((waveSurfer, index) => {
+      waveSurfer.setVolume(index === soloIndex ? 1 : 0);
+      waveSurfer.play();
+    });
+    toggleButtons(true);
+  }
+
+  function stopAudio(groupIndex) {
+    waveSurfers.forEach(waveSurfer => waveSurfer.stop());
+    toggleButtons(false);
+  }
+
+  function setSolo(index) {
+    soloIndex = index;
+    waveSurfers.forEach((waveSurfer, i) => {
+      waveSurfer.setVolume(i === soloIndex ? 1 : 0);
+    });
+  }
+
+  function toggleButtons(isPlaying) {
+    playButton.disabled = isPlaying;
+    stopButton.disabled = !isPlaying;
+  }
+
+
+}
+
+trackGroups.forEach((group, groupIndex) => createAudioGroup(group, groupIndex));
 </script>
-
-
-
-<!--
-<hr />
-<h2 id="perchè-credo-sia-importante-conoscere-imuse">Perchè credo sia importante conoscere iMUSE</h2>
-<p>Ritengo che, per chi come me, appassionato di musica per contesti interattivi, studiare il funzionamento di iMuse possa aggiungere al proprio bagaglio di conoscenze una serie di preziosi insegnamenti, da applicare magari anche in altri contesti.</p>
-<p>iMuse è un sistema che vive al margine di diverse discipline, tutte in dialogo tra loro, dalla composizione alla cumputer science al dal sound engineering al sound design.</p>
-<p>Ritengo che iMuse sia un magnifico esempio di un approccio orizzontale, olistico, alle cose, quello di Land nello specifico ma di tutti i compositori e sound designer di quel periodo storico e precedenti. All’epoca chi scriveva musica per videogiochi non era soltanto un musicista ma anche un tecnico e sviluppatore software - tra il resto - con una profonda conoscenza dei sistemi tecnolgici al contorno della loro principale mansione.</p>
-<p>Michael Land non è soltanto un compositore di grande sensibilità e bravura (basti avere giocato “the Dig” solo per citare un gioco fra tutti per accorgersene) ma allo stesso tempo è un tecnico preparato e consapevole.</p>
-<p>In epoche più recenti, sistemi middleware hanno reso i compositori via via sempre più indipendenti dai dettagli implementativi, ma Land faceva ancora parte delle “vecchia scuola” ed è forse per questo che iMuse è stata - ed è tutt’ora ritengo - così efficacie perchè è stato scritto di primo pugno da un “vero addetto ai lavori”.</p>
--->
