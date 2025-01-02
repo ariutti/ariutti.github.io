@@ -184,10 +184,10 @@
 </center><br><br>
 <div style="margin-bottom: 2ch;text-transform: none;">
 September 08, 2024</div>
-<div class='heading'>GENIO system connections</div><hr/>
+<div class='heading' id='genio-system-connections'>GENIO system connections</div><hr/>
 <p>On how, after several attempts, I finally managed to get my acoustic piano to communicate with my laptop in MIDI.</p>
 
-<div class='heading'>Introduction</div><hr/>
+<div class='heading' id='introduction'>Introduction</div><hr/>
 <img loading="lazy" src="images/DSCF0047.JPG" width="960" height="1280" style="width: 40%; height: auto; float:right; margin-bottom: 2ch; margin-right: 1ch; margin-left:2ch;"/>
 <p>When I was younger, I used to spend a lot of time on the piano. In my room, next to my desk, there was an acoustic, upright piano that my parents had bought so that my siblings and I could practise music.</p>
 
@@ -234,7 +234,7 @@ September 08, 2024</div>
 
 <p>There are at least two silencing kits of this kind: one is <i><a href="https://www.adsilent.eu/en/">adsilent</a></i>, made in Germany, and the other is Genio, from the Korean company <a href="https://usrlab.kr/">URSlab</a>. The system installed on our Feurich is a <b>Genio Premium alpha</b>, and it works quite well!</p>
 
-<div class='heading'>My room</div><hr/>
+<div class='heading' id='my-room'>My room</div><hr/>
 <p>As I said, if one of the goals was precisely to record musical performances via MIDI on the PC, I needed to figure out how to connect the <i>Genio</i> to my workstation. Below is the configuration of our home studio.</p>
 
 <div style="text-align: center;">
@@ -249,13 +249,13 @@ September 08, 2024</div>
   <li>Using a long MIDI cable;</li>
 </ol>
 
-<div class='heading'>Using a long USB cable</div><hr/>
+<div class='heading' id='using-a-long-usb-cable'>Using a long USB cable</div><hr/>
 </p>The <i>Genio</i> system can be connected to a PC via a USB cable (port 3 in image below, taken from the <i>Genio Premium alpha</i> user manual<a name="back_3" style="text-decoration: none;" href="#footnote_3"><sup>[3]</sup></a>).<p>
 
 <img loading="lazy" src="images/GENIO-front.png" width="1564" height="486" style="width: 100%; height: auto; margin-bottom: 2ch; margin-top:2ch;"/>
 <p>A USB cable would have been the ideal solution, and while this connection functions well with shorter cable lengths, it wouldn't have been as effective for our situation. The cable would need to stretch over 5 meters, which would lead to a degradation of the digital signal.</p>
 
-<div class='heading'>Making deferred MIDI recordings</div><hr/>
+<div class='heading' id='making-deferred-midi-recordings'>Making deferred MIDI recordings</div><hr/>
 <p>Another option could be to make the recordings on a device connected to the <i>Genio</i> (such as a USB stick to be connected to the USB port named <code>memory</code>, in the picture with the number 4). The USB stick can be used to ferry these recordings from the <i>Genio</i> to the PC from time to time.</p>
 
 <p>While intriguing, despite the deferral between performance and replay of the same on the PC, even this strategy proved also impractical due to what appears to be a curious flaw in the <i>Genio</i>'s firmware.</p>
@@ -290,7 +290,7 @@ September 08, 2024</div>
 
 <p>Also, on a side note, I noticed that some of my USB sticks did not work properly with the <i>Genio</i>: the latter does not recognise them as devices to which it is possible to copy MIDI from the internal memory nor from which any MIDI data can be played.</p>
 
-<div class='heading'>Using a MIDI cable</div><hr/>
+<div class='heading' id='using-a-midi-cable'>Using a MIDI cable</div><hr/>
 <p>At this point, the last resort was to use a MIDI cable to connect the <i>Genio</i> to the PC. The MIDI cable is theoretically not subject to excessive signal degradation over long distances, unlike the USB cable.</p>
 
 <p>To implement this strategy, it was necessary to have a physical 5-pin DIN<a name="back_4" style="text-decoration: none;" href="#footnote_4"><sup>[4]</sup></a> interface on both the <i>Genio</i> system and my PC. This was the opportunity for me, rummaging through some of the technology boxes I have around the house, to exhume an old <b>M-Audio Midisport 1x1</b> interface (you can see it from this connection diagram taken from the <a href="http://www.m-audio.jp/midisport-1x1/">m-audio website</a>).</p>
@@ -317,5 +317,5 @@ September 08, 2024</div>
 
 <img loading="lazy" src="images/connection_diagram_v1.svg" width="1592.7539" height="134.17123" style="width: 100%; height: auto; margin-top: 2ch; margin-bottom: 2ch;"/>
 <p>After initial tests, it seems that this last route is proving successful. I will keep an eye on it in the future and hope not to run into any more strange malfunctions.</p>
-<style type='text/css'>td.ref {  padding-bottom: 0ch; width:0;}</style><div class='heading'>References</div><hr/><p id='paperbox' style='text-align:left;'><table class='references'><tbody style='vertical-align: top;'><tr><td class='ref' style='width:1ch;'><a name="footnote_1"></a><a href="#back_1">^</a></td><td  class='ref' style='width:4ch;'> [1]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://rennerusa.com/">Renner piano mechanics</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_2"></a><a href="#back_2">^</a></td><td  class='ref' style='width:4ch;'> [2]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://www.ciresafiemme.it/en/about-us/">Ciresa soundboards</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_3"></a><a href="#back_3">^</a></td><td  class='ref' style='width:4ch;'> [3]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://www.queens-piano.it/wp-content/uploads/2021/04/GENIO-Premium-manual.pdf">GENIO premium alpha user manual</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_4"></a><a href="#back_4">^</a></td><td  class='ref' style='width:4ch;'> [4]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://en.wikipedia.org/wiki/MIDI#DIN_connector">5-pin DIN MIDI connections </a></td></tr></tbody></table></p> <hr>
+<style type='text/css'>td.ref {  padding-bottom: 0ch; width:0;}</style><div class='heading' id='references'>References</div><hr/><p id='paperbox' style='text-align:left;'><table class='references'><tbody style='vertical-align: top;'><tr><td class='ref' style='width:1ch;'><a name="footnote_1"></a><a href="#back_1">^</a></td><td  class='ref' style='width:4ch;'> [1]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://rennerusa.com/">Renner piano mechanics</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_2"></a><a href="#back_2">^</a></td><td  class='ref' style='width:4ch;'> [2]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://www.ciresafiemme.it/en/about-us/">Ciresa soundboards</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_3"></a><a href="#back_3">^</a></td><td  class='ref' style='width:4ch;'> [3]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://www.queens-piano.it/wp-content/uploads/2021/04/GENIO-Premium-manual.pdf">GENIO premium alpha user manual</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_4"></a><a href="#back_4">^</a></td><td  class='ref' style='width:4ch;'> [4]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://en.wikipedia.org/wiki/MIDI#DIN_connector">5-pin DIN MIDI connections </a></td></tr></tbody></table></p> <hr>
  <center>*

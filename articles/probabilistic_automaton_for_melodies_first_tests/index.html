@@ -184,11 +184,11 @@
 </center><br><br>
 <div style="margin-bottom: 2ch;text-transform: none;">
 October 17, 2024</div>
-<div class='heading'>Probabilistic automaton for creating melodies (first tests)</div><hr/>
+<div class='heading' id='probabilistic-automaton-for-creating-melodies-(first-tests)'>Probabilistic automaton for creating melodies (first tests)</div><hr/>
 <p>Making music by means of designing systems that make music stands at the base of the <i>generative music</i><a name="back_1" style="text-decoration: none;" href="#footnote_1"><sup>[1]</sup></a> concept.</p>
 <p>This article covers my early experiments in building a probabilistic machine for the automatic generation of melodies.</p>
 
-<div class='heading'>Hollos brothers</div><hr/>
+<div class='heading' id='hollos-brothers'>Hollos brothers</div><hr/>
 <p>Some time ago, by chance, I came across the small publishing house <a href="https://abrazol.com/">Abrazol Publishing</a>, which seems to exclusively publish books written by the brothers <a href="https://www.exstrom.com/stefan/stefan.html">Stefan</a> and <a href="https://www.exstrom.com/richard/richard.html">J. Richard</a> Hollos (maybe because they own it?).</p>
 
 <img loading="lazy" src="images/cover_creating_rhythms.png" width="300" height="480" style="width: 20%; height: auto; float:left; margin-bottom: 2ch; margin-right: 2ch; margin-left:1ch;"/><img loading="lazy" src="images/cover_creating_melodies.png" width="300" height="480" style="width: 20%; height: auto; float:left; margin-bottom: 2ch; margin-right: 2ch; margin-left:1ch;"/>
@@ -199,7 +199,7 @@ October 17, 2024</div>
 <p>I read two of their books, the ones that seemed to best combine the engineering, logical-mathematical aspect with the artistic expression of music.</p>
 <p>These are "<a href="https://abrazol.com/books/rhythm1/">Creating Rhythms</a>" and "<a href="https://abrazol.com/books/melody1/">Creating Melodies</a>", both highly recommended.</p>
 
-<div class='heading'>Olson</div><hr/>
+<div class='heading' id='olson'>Olson</div><hr/>
 <p>In particular, there is a chapter in the book "<i>Creating Melodies</i>" where the Hollos brothers describe a probabilistic automaton capable of generating convincing melodies based on prepared material on which the machine is trained.</p>
 
 <img loading="lazy" src="images/cover_music-physics-and-engineering.jpg" width="1200" height="1887" style="width: 20%; height: auto; float:right; margin-bottom: 2ch; margin-right: 1ch; margin-left:2ch;"/>
@@ -212,7 +212,7 @@ October 17, 2024</div>
 <div style="clear:both;"></div>
 
 
-<div class='heading'>What a melody is</div><hr/>
+<div class='heading' id='what-a-melody-is'>What a melody is</div><hr/>
 <p>First of all, what is a melody<a name="back_2" style="text-decoration: none;" href="#footnote_2"><sup>[2]</sup></a>?</p>
 
 <p>It is a musical phrase, a "<i>gesture</i>" composed of a finite sequence of sounds at different pitches (<i>notes</i>) and silences (<i>rests</i>). Each note follows and precedes other notes, thus forming a distinctive and recognizable "<i>contour</i>" from a horizontal perspective.</p>
@@ -223,7 +223,7 @@ October 17, 2024</div>
 
 <p>In short, there are many elements to consider when procedurally creating a melody, but by starting as simply as possible, we can overlook everything except the notes with their pitches and the rests.</p>
 
-<div class='heading'>Dataset preparation</div><hr/>
+<div class='heading' id='dataset-preparation'>Dataset preparation</div><hr/>
 <p>To test the effectiveness of the code, I decided to use a simple and well-known melody: "<i>Old McDonald</i>" (is that the actual name?):</p>
 
 <div style="text-align: center;">
@@ -237,7 +237,7 @@ October 17, 2024</div>
 
 <p>If our algorithm is well designed, I expect the output melody to show more or less significant similarities to the original.</p>
 
-<div class='heading'>First order automaton</div><hr/>
+<div class='heading' id='first-order-automaton'>First order automaton</div><hr/>
 <p>A first analysis we can perform on the given melody is to count how often each note appears. Here’s a heatmap showing the frequency of the notes within our starting melody:</p>
 
 <div style="text-align: center;">
@@ -257,7 +257,7 @@ October 17, 2024</div>
 
 <p>After all, a melody is not just a random sequence of notes. Each note follows another based on the composer’s artistic intention. The composer is like an architect, arranging the notes according to a certain design to express or convey something. How can we account for that?</p>
 
-<div class='heading'>Second order automaton</div><hr/>
+<div class='heading' id='second-order-automaton'>Second order automaton</div><hr/>
 <p>For example, we can build a new automaton capable of selecting the next note based on the previously selected one. This is the <i>second-order</i> automaton, which analyzes the dataset by extracting information about two-note sequences.</p>
 
 <p>Here is a heatmap representing a second-order statistic of our starting melody:</p>
@@ -280,7 +280,7 @@ October 17, 2024</div>
 
 <p>You may notice that as the automaton's order increases, the notes follow one another in a different way, and the profile of this new output melody more closely resembles the original musical material.</p>
 
-<div class='heading'>Higher order automatons</div><hr/>
+<div class='heading' id='higher-order-automatons'>Higher order automatons</div><hr/>
 <p>We could take this reasoning even further by analyzing sequences of 3 notes, thus creating a third-order automaton. This automaton can generate a new note based on the two notes previously played.</p>
 
 <div style="text-align: center;">
@@ -301,7 +301,7 @@ October 17, 2024</div>
 
 <p>and so on...</p>
 
-<div class='heading'>First considerations</div><hr/>
+<div class='heading' id='first-considerations'>First considerations</div><hr/>
 <p>These initial results are interesting in my opinion because they show how, based on statistics and probability, machines can autonomously generate new melodies that still resemble the material provided as the initial dataset.</p>
 <p>I can imagine using them in a multimedia installation context where it’s necessary to produce new, always different, but consistent music within a given style. Music that can be continuously and automatically generated.</p>
 
@@ -312,7 +312,7 @@ October 17, 2024</div>
 <p>As we mentioned before, we have not yet considered other fundamental aspects of melody generation, such as rhythm or dynamics. What results could we obtain if we did?</p>
 <p>What would happen if, for example, our automaton also considered the duration of each note in its statistical analysis of the input score?</p>
 
-<div class='heading'>Adding time | rhythm</div><hr/>
+<div class='heading' id='adding-time-|-rhythm'>Adding time | rhythm</div><hr/>
 <p>If we change the code of our algorithm and add a feature to analyze the duration of each note in addition to its pitch, the first-order heatmap becomes more detailed than the one we encountered earlier. In the melody, notes that share the same pitch now become distinct entities because they have different durations.</p>
 
 <div style="text-align: center;">
@@ -347,7 +347,7 @@ October 17, 2024</div>
 <audio controls="" style="width:80%; margin-bottom: 2ch;"> <source src="sounds/4th_w_duration.ogg" type="audio/ogg"> </audio>
 </div>
 
-<div class='heading'>Considerations, pt2</div><hr/>
+<div class='heading' id='considerations,-pt2'>Considerations, pt2</div><hr/>
 <p>You can hear that, as we increase the automaton’s order, the sound result changes. However, the higher the order, the more the variety of possible outputs decreases, and randomness begins to fade away: the resulting melody, especially at higher orders, becomes almost identical to the one provided as input.</p>
 
 <p>While this demonstrates the effectiveness of the algorithm, it also raises questions about this machine's true capability to be versatile enough to generate "new" music that captivates the listener. The risk of generating excessive repetitiveness and monotony is evident.</p>
@@ -358,7 +358,7 @@ October 17, 2024</div>
 
 <p>I can't wait to continue these experiments by subjecting the algorithm to a larger and more varied dataset.</p>
 
-<div class='heading'>The code</div><hr/>
+<div class='heading' id='the-code'>The code</div><hr/>
 <p>You can find the code I wrote on <a href="https://github.com/ariutti/probabilistic_automaton_for_melody_generation">this GitHub repository</a>.</p>
 
 <p>The code is essentially capable of parsing a MIDI file and performing a series of statistical analyses (via the music21 module) to build as many state machines as desired.</p>
@@ -371,5 +371,5 @@ October 17, 2024</div>
 <img loading="lazy" src="images/algorhythm_diagram.svg" width="1379.6713" height="942.80743" style="width: 80%; height: auto; margin-top: 2ch; margin-bottom: 2ch;"/></div>
 
 <p>That’s all for now. See you in the next experiment!</p>
-<style type='text/css'>td.ref {  padding-bottom: 0ch; width:0;}</style><div class='heading'>References</div><hr/><p id='paperbox' style='text-align:left;'><table class='references'><tbody style='vertical-align: top;'><tr><td class='ref' style='width:1ch;'><a name="footnote_1"></a><a href="#back_1">^</a></td><td  class='ref' style='width:4ch;'> [1]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://teropa.info/loop/#/title">wonderful introduction on generative music by Tero Parviainen</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_2"></a><a href="#back_2">^</a></td><td  class='ref' style='width:4ch;'> [2]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://en.wikipedia.org/wiki/Melody">Melody definition by WikiPedia</a></td></tr></tbody></table></p> <hr>
+<style type='text/css'>td.ref {  padding-bottom: 0ch; width:0;}</style><div class='heading' id='references'>References</div><hr/><p id='paperbox' style='text-align:left;'><table class='references'><tbody style='vertical-align: top;'><tr><td class='ref' style='width:1ch;'><a name="footnote_1"></a><a href="#back_1">^</a></td><td  class='ref' style='width:4ch;'> [1]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://teropa.info/loop/#/title">wonderful introduction on generative music by Tero Parviainen</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_2"></a><a href="#back_2">^</a></td><td  class='ref' style='width:4ch;'> [2]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://en.wikipedia.org/wiki/Melody">Melody definition by WikiPedia</a></td></tr></tbody></table></p> <hr>
  <center>*

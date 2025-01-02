@@ -27,7 +27,7 @@
 
 <p>Land and <b>Peter McConnel</b>, Land’s friend and colleague who had also joined the LucasArts team by then, began working together to implement the new system. The task was challenging: partly due to the ambitious nature of the project and also because they aimed to integrate it into a new game, “<i>Monkey Island 2: LeChuck’s Revenge</i>”<?php footnote("'Monkey Island 2: Le chuck’s revenge' wiki page", "https://en.wikipedia.org/wiki/Monkey_Island_2:_LeChuck%27s_Revenge");?>, which was under development and set for release soon.</p>
 
-<p>In December 1991, “Monkey Island 2” was released, marking the debut of the iMuse system in the video game world.</p>
+<p>Eventually, in December 1991, the game was released, marking the debut of the iMuse system in the video game world.</p>
 
 <div style="clear:both;"></div>
 
@@ -35,6 +35,7 @@
 
 <p>The most frequently cited example, which serves to provide an initial idea of the capabilities of the new audio engine, is the musical accompaniment heard in the introductory part of Monkey Island 2, when the game’s protagonist, Guybrush Threepwood, strolls through the harbor-town of Woodtick.</p>
 
+<p>There is an initial musical accompaniment that is progressively enriched with new arrangements for the main musical theme each time Guybrush enters a new location (<i>room</i>).</p>
 
 <div style="text-align: center; margin-top:2ch; margin-bottom:2ch;">
 <video width="100%" controls>
@@ -45,12 +46,7 @@ Your browser does not support the video tag.
 <p style="font-size: 0.75em; vertical-align:top; text-align:center;">Me stressing the system in the woodtick sequence<br/>. The sounds you hear are rendered by a (virtualized) Roland MT-32.</p>
 </div>
 
-
-<!-- <?php img("images/monkey2-scabb.gif", 80, "margin-bottom: 2ch; margin-top: 0ch");?> -->
-
-<p>There is an initial musical accompaniment that is progressively enriched with new arrangements for the main musical theme each time Guybrush enters a new location (<i>room</i>).</p>
-
-<p>Since video games are not traditional linear media like movies, it is impossible to predict the player’s choices or when they will occur. The composer cannot anticipate these events but must instead prepare all the necessary music material to account for the various possibilities.</p>
+<p>Since it is not possible to predict the player’s choices or when they will occur, video games cannot be trated like traditional linear media like movies. The composer cannot anticipate these events but must instead prepare all the necessary music material to account for the various possibilities.</p>
 
 <p>The composer writes the various musical themes and creates different arrangements for each location. Additional transitional material is then composed to seamlessly lead from one arrangement to another for those unpredictable moments when such changes might occur during gameplay (a massive amount of work).</p>
 
@@ -122,7 +118,7 @@ Your browser does not support the video tag.
 <p>I am perhaps even more struck by the fact that much of this work was barely perceived by the gamer. In my experience, for example, belonging to the second category of gamers so to speak, I never had the opportunity to enjoy the compositions in their “original” version for the MT-32, nor was I even aware of their existence.</p>
 
 <?php h("Some Examples"); ?>
-<p>Below you can listen to some comparison between the three versions of the same track, taken from the soundtrack of '<i>Indiana Jones and the Fate of Atlantis</i>'.</p>
+<p>Below you can listen to some comparison between the three versions of the same <b>song</b>, taken from the soundtrack of '<i>Indiana Jones and the Fate of Atlantis</i>'.</p>
 
 <p>Click <i>play</i> to listen to the music and use the <i>radio button</i> to switch between the three versions.</p>
 
@@ -169,7 +165,7 @@ Your browser does not support the video tag.
 const trackGroups = [
   {
     game: 'Indiana Jones and the fate of Atlantis',
-    room: 'New York, Sophia Hapgood is presenting "the most interesting part" of her speech.',
+    room: 'New York Theatre, Sophia Hapgood is presenting "the most interesting part" of her speech.',
     tracks: [
       "MT32_FOA_sophia_NY_theater.ogg",
       "OPL2_FOA_sophia_NY_theater.ogg",

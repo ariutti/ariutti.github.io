@@ -49,11 +49,29 @@ function footnote_gen_references() {
   echo "</p>";
 }
 
+/*
 function h($text) {
   echo "<div class='heading'>";
   echo $text;
   echo "</div><hr/>";
 }
+*/
+
+/*
+2024-12-25 - modified version of header generation function in order
+to also add the header id. This way it will be easy to link the header directly
+from other articles
+*/
+function h($text) {
+    // Genera l'id sostituendo spazi con trattini
+    $id = strtolower(str_replace(' ', '-', $text));
+
+    // Crea l'output con il div e l'id
+    echo "<div class='heading' id='$id'>";
+    echo $text;
+    echo "</div><hr/>";
+}
+
 
 function getSvgImageSize($path) {
   $xml = simplexml_load_file($path) or die("Cannot load " . $path);
@@ -128,26 +146,22 @@ include("header.php");
 function generate($src_dir) {
   $dst = $src_dir . "/index.html";
   $src = $src_dir . "/src.php";
-  $footer_date = filemtime("footer.php");
-  $header_date = filemtime("header.php");
-
-  /*
-  $generator_date = filemtime("g.php");
+  $footer_date    = filemtime("footer.php");
+  $header_date    = filemtime("header.php");
+  $generator_date = filemtime("gen.php");
 
   if (file_exists($dst)) {
     $src_date = filemtime($src);
     $dst_date = filemtime($dst);
     // Skip if
-    if ($src_date       < $dst_date &&     // Src is older than Dst.
+    if ($src_date       < $dst_date &&  // Src is older than Dst.
         $header_date    < $dst_date &&  // Header is older than Dst.
-        $footer_date    < $dst_date &&   // Footer is older than Dst.
+        $footer_date    < $dst_date &&  // Footer is older than Dst.
         $generator_date < $dst_date) {
-
+      echo("Skipping generation of $dst\n");
       return;
     }
   }
-  */
-
 
   $cwd = getcwd();
   footnotes_reset();
@@ -171,6 +185,7 @@ generate("contact");
 I want all my articles to be collected inside a folder which is named '_posts'
 */
 //generate("articles/test_article");
+//generate("articles/game_audio_series_imuse_pt2");
 generate("articles/game_audio_series_imuse_pt1_intro");
 generate("articles/probabilistic_automaton_for_melodies_first_tests");
 generate("articles/feurich_piano");

@@ -184,7 +184,7 @@
 </center><br><br>
 <div style="margin-bottom: 2ch;text-transform: none;">
 December 23, 2024</div>
-<div class='heading'>Game Audio series: iMuse, pt1 - intro</div><hr/>
+<div class='heading' id='game-audio-series:-imuse,-pt1---intro'>Game Audio series: iMuse, pt1 - intro</div><hr/>
 
 <img loading="lazy" src="images/lucasarts-logo.png" width="442" height="398" style="width: 20%; height: auto; float:right; margin-bottom: 2ch; margin-right: 1ch; margin-left:2ch;"/>
 <p>This post aims to be the first in a series dedicated to a very personal research journey into the technologies involved in the audio of 1990s video games, particularly the adventure games by LucasArts.</p>
@@ -194,7 +194,7 @@ December 23, 2024</div>
 <p>My research does not claim to be exhaustive on the subject, nor do I have any specific goal other than to enjoy the process of learning new things about both the technology and the video games that accompanied me so much during my childhood.</p>
 
 
-<div class='heading'>What is iMuse?</div><hr/>
+<div class='heading' id='what-is-imuse?'>What is iMuse?</div><hr/>
 <img loading="lazy" src="images/iMuse-system-logo.png" width="396" height="90" style="width: 25%; height: auto; float:left; margin-bottom: 2ch; margin-right: 2ch; margin-left:1ch;"/>
 <p>iMuse, acronym for <b>I</b>nteractive <b>Mu</b>sic <b>S</b>treaming <b>E</b>ngine, was a proprietary software system developed for the soundtrack playback of adventure games (and beyond) produced by LucasArts starting in the early 1990s.</p>
 
@@ -208,7 +208,7 @@ December 23, 2024</div>
 
 <p>Land and <b>Peter McConnel</b>, Land’s friend and colleague who had also joined the LucasArts team by then, began working together to implement the new system. The task was challenging: partly due to the ambitious nature of the project and also because they aimed to integrate it into a new game, “<i>Monkey Island 2: LeChuck’s Revenge</i>”<a name="back_3" style="text-decoration: none;" href="#footnote_3"><sup>[3]</sup></a>, which was under development and set for release soon.</p>
 
-<p>In December 1991, “Monkey Island 2” was released, marking the debut of the iMuse system in the video game world.</p>
+<p>Eventually, in December 1991, the game was released, marking the debut of the iMuse system in the video game world.</p>
 
 <div style="clear:both;"></div>
 
@@ -216,6 +216,7 @@ December 23, 2024</div>
 
 <p>The most frequently cited example, which serves to provide an initial idea of the capabilities of the new audio engine, is the musical accompaniment heard in the introductory part of Monkey Island 2, when the game’s protagonist, Guybrush Threepwood, strolls through the harbor-town of Woodtick.</p>
 
+<p>There is an initial musical accompaniment that is progressively enriched with new arrangements for the main musical theme each time Guybrush enters a new location (<i>room</i>).</p>
 
 <div style="text-align: center; margin-top:2ch; margin-bottom:2ch;">
 <video width="100%" controls>
@@ -226,12 +227,7 @@ Your browser does not support the video tag.
 <p style="font-size: 0.75em; vertical-align:top; text-align:center;">Me stressing the system in the woodtick sequence<br/>. The sounds you hear are rendered by a (virtualized) Roland MT-32.</p>
 </div>
 
-
-<!-- <img loading="lazy" src="images/monkey2-scabb.gif" width="320" height="144" style="width: 80%; height: auto; margin-bottom: 2ch; margin-top: 0ch"/> -->
-
-<p>There is an initial musical accompaniment that is progressively enriched with new arrangements for the main musical theme each time Guybrush enters a new location (<i>room</i>).</p>
-
-<p>Since video games are not traditional linear media like movies, it is impossible to predict the player’s choices or when they will occur. The composer cannot anticipate these events but must instead prepare all the necessary music material to account for the various possibilities.</p>
+<p>Since it is not possible to predict the player’s choices or when they will occur, video games cannot be trated like traditional linear media like movies. The composer cannot anticipate these events but must instead prepare all the necessary music material to account for the various possibilities.</p>
 
 <p>The composer writes the various musical themes and creates different arrangements for each location. Additional transitional material is then composed to seamlessly lead from one arrangement to another for those unpredictable moments when such changes might occur during gameplay (a massive amount of work).</p>
 
@@ -256,7 +252,7 @@ Your browser does not support the video tag.
 <p style="font-size: 0.75em; vertical-align:top; text-align:center;">An in-game footage I recorder with ScummVM and OBS<br/>playing in the Voodoo lady swamp room (sound is rendered via a virtual Roland MT-32)</p>
 </div>
 
-<div class='heading'></div><hr/>
+<div class='heading' id=''></div><hr/>
 <p>A few years later, in 1994, Land and McConnel, driven by internal company requirements, filed a patent<a name="back_4" style="text-decoration: none;" href="#footnote_4"><sup>[4]</sup></a> to intellectually protect the newly invented technology (we will frequently refer to this patent later).</p>
 
 <p>From that point on, the iMuse system was expanded, improved, and used in subsequent LucasArts video games.</p>
@@ -265,7 +261,7 @@ Your browser does not support the video tag.
 
 <iframe width="100%" height="360" src="https://www.youtube.com/embed/uHqAG8CLblA?si=o5FLyf9VLM8sGvuN" allowfullscreen></iframe><br/><br/>
 
-<div class='heading'>Let’s dive in</div><hr/>
+<div class='heading' id='let’s-dive-in'>Let’s dive in</div><hr/>
 <p>In the context of LucasArts adventure games, iMuse works hand in hand with the SCUMM interpreter<a name="back_5" style="text-decoration: none;" href="#footnote_5"><sup>[5]</sup></a> and is capable of “intelligently” playing portions of pre-composed music stored in a database of sound resources (in MIDI format) that are specifically “annotated,” so to speak, by the composers.</p>
 
 <p>These annotations, expressed in the form of system exclusive (<b>SysEx</b>) messages, are embedded at specific points in the various MIDI files. iMuse examines these messages and takes corresponding actions depending on the player’s behavior or the events triggered by the game itself, generating smooth transitions and various changes in the soundtrack.</p>
@@ -274,7 +270,7 @@ Your browser does not support the video tag.
 
 <p>A first question we might ask, then, is the following:</p>
 
-<div class='heading'>How sound was actually rendered back in the days?</div><hr/>
+<div class='heading' id='how-sound-was-actually-rendered-back-in-the-days?'>How sound was actually rendered back in the days?</div><hr/>
 <p>We are talking about the 1990s, focusing on the world of personal computers. Gamers who owned a personal computer could be primarily divided into three distinct categories based on the hardware available to them for audio playback (as <a href="https://youtu.be/uHqAG8CLblA?si=DSB2fw6FIPR9010y&amp;t=958">Michael Land mentions</a> in the interview referenced above).</p>
 
 <ol type="1">
@@ -287,7 +283,7 @@ Your browser does not support the video tag.
 
 <p>It is easy to imagine how the three hardware solutions available on the market at the time were far from providing the same auditory experience to the listener. Not to mention the fact that all three technologies had their own distinct requirements and idiosyncrasies in terms of interfacing with the game software.</p>
 
-<div class='heading'>Triple Work</div><hr/>
+<div class='heading' id='triple-work'>Triple Work</div><hr/>
 <p>Composers were therefore required to produce three different solutions, each tailored to a specific technology, taking into account its limitations and strengths, and leveraging, as much as possible depending on the skill of the composer/developer, the unique characteristics of the specific technology.</p>
 
 <p>The process began by crafting a musical sound product of the highest possible quality, then progressively scaling it down for less capable systems while striving to maintain a certain degree of consistency. The compositions were initially conceived, composed, and orchestrated with the goal of sounding optimal on the MT-32. From there, a first reduction was created, considering the limitations of the next technological system, the OPL2. Finally, the last and most drastic reduction was made to adapt the soundtrack to the PC speaker.</p>
@@ -298,7 +294,7 @@ Your browser does not support the video tag.
 
 <p>I am perhaps even more struck by the fact that much of this work was barely perceived by the gamer. In my experience, for example, belonging to the second category of gamers so to speak, I never had the opportunity to enjoy the compositions in their “original” version for the MT-32, nor was I even aware of their existence.</p>
 
-<div class='heading'>Some Examples</div><hr/><p>Below you can listen to some comparison between the three versions of the same track, taken from the soundtrack of '<i>Indiana Jones and the Fate of Atlantis</i>'.</p>
+<div class='heading' id='some-examples'>Some Examples</div><hr/><p>Below you can listen to some comparison between the three versions of the same <b>song</b>, taken from the soundtrack of '<i>Indiana Jones and the Fate of Atlantis</i>'.</p>
 
 <p>Click <i>play</i> to listen to the music and use the <i>radio button</i> to switch between the three versions.</p>
 
@@ -311,12 +307,12 @@ Your browser does not support the video tag.
 
 
 
-<div class='heading'>MIDI everywhere</div><hr/>
+<div class='heading' id='midi-everywhere'>MIDI everywhere</div><hr/>
 <p>Another thing I found interesting is that, regardless of the technology in question, the corresponding “score” always expressed in MIDI format and saved as such within the game’s sound resources.</p>
 
 <p>I want to emphasize this detail because, by studying the workflow of contemporary “<i>id Software</i>,” a proprietary file format called IMF emerges. We will discuss this in a dedicated article. For now, suffice it to say that we can focus on a single “standard” format: the MIDI file.</p>
 
-<div class='heading'>Next steps...</div><hr/>
+<div class='heading' id='next-steps...'>Next steps...</div><hr/>
 <p>In the next post, I would like to talk about the sound resources of a LucasArts video game and examine them in depth through a concrete example. I would like to start introducing the concepts of Hooks and Markers and share some Python scripts to get our hands a little dirty.</p>
 
 <p>See you very soon, and until next time...</p>
@@ -343,7 +339,7 @@ Your browser does not support the video tag.
 const trackGroups = [
   {
     game: 'Indiana Jones and the fate of Atlantis',
-    room: 'New York, Sophia Hapgood is presenting "the most interesting part" of her speech.',
+    room: 'New York Theatre, Sophia Hapgood is presenting "the most interesting part" of her speech.',
     tracks: [
       "MT32_FOA_sophia_NY_theater.ogg",
       "OPL2_FOA_sophia_NY_theater.ogg",
@@ -370,7 +366,7 @@ const trackGroups = [
   },
   {
     game: 'Indiana Jones and the fate of Atlantis',
-    room: 'Nazis is causing some troubles...',
+    room: 'Nazis is causing some trouble...',
     tracks: [
       "MT32_FOA_troubles.ogg",
       "OPL2_FOA_troubles.ogg",
@@ -509,5 +505,5 @@ function createAudioGroup(group, groupIndex) {
 
 trackGroups.forEach((group, groupIndex) => createAudioGroup(group, groupIndex));
 </script>
-<style type='text/css'>td.ref {  padding-bottom: 0ch; width:0;}</style><div class='heading'>References</div><hr/><p id='paperbox' style='text-align:left;'><table class='references'><tbody style='vertical-align: top;'><tr><td class='ref' style='width:1ch;'><a name="footnote_1"></a><a href="#back_1">^</a></td><td  class='ref' style='width:4ch;'> [1]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://mitpress.mit.edu/9780262537773/game-sound/">'Game Sound', Karen Collins, MIT press</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_2"></a><a href="#back_2">^</a></td><td  class='ref' style='width:4ch;'> [2]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://en.wikipedia.org/wiki/The_Secret_of_Monkey_Island">'The Secret of Monkey Island' wiki page</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_3"></a><a href="#back_3">^</a></td><td  class='ref' style='width:4ch;'> [3]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://en.wikipedia.org/wiki/Monkey_Island_2:_LeChuck%27s_Revenge">'Monkey Island 2: Le chuck’s revenge' wiki page</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_4"></a><a href="#back_4">^</a></td><td  class='ref' style='width:4ch;'> [4]</td><td style='width:100%;text-align:left;' class='ref'><a href="resources/US_5315057_A.pdf">iMuse Patent number US_5315057</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_5"></a><a href="#back_5">^</a></td><td  class='ref' style='width:4ch;'> [5]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://ariutti.github.io/articles/scumm_first/index.html">SCUMM: if you know it, you love it!</a></td></tr></tbody></table></p> <hr>
+<style type='text/css'>td.ref {  padding-bottom: 0ch; width:0;}</style><div class='heading' id='references'>References</div><hr/><p id='paperbox' style='text-align:left;'><table class='references'><tbody style='vertical-align: top;'><tr><td class='ref' style='width:1ch;'><a name="footnote_1"></a><a href="#back_1">^</a></td><td  class='ref' style='width:4ch;'> [1]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://mitpress.mit.edu/9780262537773/game-sound/">'Game Sound', Karen Collins, MIT press</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_2"></a><a href="#back_2">^</a></td><td  class='ref' style='width:4ch;'> [2]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://en.wikipedia.org/wiki/The_Secret_of_Monkey_Island">'The Secret of Monkey Island' wiki page</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_3"></a><a href="#back_3">^</a></td><td  class='ref' style='width:4ch;'> [3]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://en.wikipedia.org/wiki/Monkey_Island_2:_LeChuck%27s_Revenge">'Monkey Island 2: Le chuck’s revenge' wiki page</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_4"></a><a href="#back_4">^</a></td><td  class='ref' style='width:4ch;'> [4]</td><td style='width:100%;text-align:left;' class='ref'><a href="resources/US_5315057_A.pdf">iMuse Patent number US_5315057</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_5"></a><a href="#back_5">^</a></td><td  class='ref' style='width:4ch;'> [5]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://ariutti.github.io/articles/scumm_first/index.html">SCUMM: if you know it, you love it!</a></td></tr></tbody></table></p> <hr>
  <center>*

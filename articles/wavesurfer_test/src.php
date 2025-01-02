@@ -41,7 +41,7 @@ So now I would like to try myself in using this very same library here on this t
 
 <br/>
 
-<p><b>Edit 2024/12/24</b>: better to have the <code>js</code> (with the <i>wavesurfer.min.js</i> inside) outside the articles parent folder. This way, if more than one article will need the library, we are not going to have duplicate files inside the website repository.</p>
+<p><b>Edit 2024/12/24</b>: better to have the <code>js</code> folder (with the <i>wavesurfer.min.js</i> file inside) placed outside the articles parent folder. This way, if more than one article will need the library, we are not going to have duplicate files inside the website repository.</p>
 
 <br/>
 

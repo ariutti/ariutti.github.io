@@ -184,7 +184,7 @@
 </center><br><br>
 <div style="margin-bottom: 2ch;text-transform: none;">
 July 19, 2017</div>
-<div class='heading'>SCUMM walk matrices</div><hr/>
+<div class='heading' id='scumm-walk-matrices'>SCUMM walk matrices</div><hr/>
 What are boxes? Everything started when I tried to understand the walking algorithm in SCUMM<br><br>
 
 On every player click, the SCUMM engine identifies a path and the actor starts to move following it, bypassing obstacles along the road and eventually arriving to its destination without any problem. How is all this possible?<br><br>
@@ -202,7 +202,7 @@ The <i>A*</i> algorithm is quite complex and it is very useful in situation wher
 
 SCUMM instead uses a relatively simple system which is pretty elegant in my opinion!
 
-<div class='heading'>Fingolfin docet</div><hr/>
+<div class='heading' id='fingolfin-docet'>Fingolfin docet</div><hr/>
 In order to better understand what we are talking about, let's examine a post by <b>Max "Fingolfin" Horn</b> (an ex-member of the ScummVM development team by now) where he talks about SCUMM pathfinding on the ScummVM forum<a name="back_4" style="text-decoration: none;" href="#footnote_4"><sup>[4]</sup></a>:<br><br>
 
 <blockquote>
@@ -232,7 +232,7 @@ For each pair of boxes, <code>i</code> and <code>j</code>, the matrix contains a
 
 When the actor arrives in box <code>k</code> and this box doesn't correspond to the desired final destination, this process will repeat. On the other hand, when <code>k == j</code> (i.e. boxes <code>i</code> and <code>j</code> are adjacent), the actor is arrived and no more calculation are needed.
 
-<div class='heading'>in practice...</div><hr/>
+<div class='heading' id='in-practice...'>in practice...</div><hr/>
 Let's do a practical example: we can use ScummVM and its debugger to make some tests.<br>
 Let's load a savegame from "<i>Indiana Jone and the Fate of Atlantis</i>":
 
@@ -254,7 +254,7 @@ Let's examine them in depth.
 Pay attention, this is a SCUMM version 5 game and these information may be different for different games.<br/><br/>In addition to that I should mention that these data (walk matrix in particular) can change during the game so, if are using this commands yourself you could get different results.
 </div>
 
-<div class='heading'>Box command</div><hr/>
+<div class='heading' id='box-command'>Box command</div><hr/>
 The <code>box</code> command shows a schematic report about the current room boxes, let's try to insert it at the debugger prompt and see what happens:
 
 <img loading="lazy" src="images/console-01.png" width="563" height="171" style="width: 100%; height: auto; margin-top: 2ch; margin-bottom: 2ch;"/>
@@ -277,7 +277,7 @@ Tracing vertices and lines on the room background image we obtain a visual repre
 <img loading="lazy" src="images/tikal-boxes-02.png" width="720" height="366" style="width: 100%; height: auto; margin-top: 2ch; margin-bottom: 2ch;"/>
 From the image we note indeed an interesting fact: some of these boxes may show up differently than a quadrilateral and solve as a simple segment as it happens for box 7, 8, and 9!
 
-<div class='heading'>Matrix command</div><hr/>
+<div class='heading' id='matrix-command'>Matrix command</div><hr/>
 Now let's try the <code>matrix</code> command instead an see what the debugger shows up:
 
 <img loading="lazy" src="images/console-02.png" width="563" height="171" style="width: 100%; height: auto; margin-top: 2ch; margin-bottom: 2ch;"/>
@@ -460,7 +460,7 @@ The same kind of thinking can be used for all the boxes in the room eventually c
     </tr>
 </table>
 
-<div class='heading'>Practicals</div><hr/>
+<div class='heading' id='practicals'>Practicals</div><hr/>
 Let's pretend we are the SCUMM engine and let's try to solve some SCUMM "<i>real</i>" pathfinding problem!<br><br>
 Here's again the image showing the walkable area:
 
@@ -475,12 +475,12 @@ So one last stroll will suffice for Indy to reach his final destination on box 4
 
 So try youself, imagine the user is clicking near box 6, are you able to find the route using the walk matrix?
 
-<div class='heading'>Other references</div><hr/>
+<div class='heading' id='other-references'>Other references</div><hr/>
 <ul>
   <li><a href="https://en.wikipedia.org/wiki/Spaghetti_code">Spaghetti Code</a> and <a href="https://en.wikipedia.org/wiki/Structured_programming">Structured programming</a>;
   </li>
   <li><a href="https://www.google.com/patents/US5425139?dq=sierra+on-line+path+finding&hl=en&sa=X&ved=0ahUKEwiqyuHVjZXVAhUF7xQKHfecCOYQ6AEIKzAB">Here</a>'s another way of looking at the pathfinding problem by <b>Sierra On-Line</b>;
   </li>
 </ul>
-<style type='text/css'>td.ref {  padding-bottom: 0ch; width:0;}</style><div class='heading'>References</div><hr/><p id='paperbox' style='text-align:left;'><table class='references'><tbody style='vertical-align: top;'><tr><td class='ref' style='width:1ch;'><a name="footnote_1"></a><a href="#back_1">^</a></td><td  class='ref' style='width:4ch;'> [1]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://www.sciencedirect.com/book/9780123747310/artificial-intelligence-for-games">Millington, I., & Funge J. (2009). 'Artificial Intelligence for Games' (2nd ed.). Morgan Kaufmann</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_2"></a><a href="#back_2">^</a></td><td  class='ref' style='width:4ch;'> [2]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://github.com/idmillington/aicore">'Artificial Intelligence for Games' book companion code reposiotry</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_3"></a><a href="#back_3">^</a></td><td  class='ref' style='width:4ch;'> [3]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://www.cs.utexas.edu/users/EWD/ewd02xx/EWD215.PDF">Go-to statement considered harmful</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_4"></a><a href="#back_4">^</a></td><td  class='ref' style='width:4ch;'> [4]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://forums.scummvm.org/viewtopic.php?t=4532">ScummVM Forum pathfinding topic</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_5"></a><a href="#back_5">^</a></td><td  class='ref' style='width:4ch;'> [5]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://wiki.scummvm.org/index.php/SCUMM/Technical_Reference/Box_resources">ScummVM, SCUMM technical reference for Box</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_6"></a><a href="#back_6">^</a></td><td  class='ref' style='width:4ch;'> [6]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://wiki.scummvm.org/index.php/SCUMM/Technical_Reference/Box_resources#BOXM">ScummVM, SCUMM technical reference for Matrix</a></td></tr></tbody></table></p> <hr>
+<style type='text/css'>td.ref {  padding-bottom: 0ch; width:0;}</style><div class='heading' id='references'>References</div><hr/><p id='paperbox' style='text-align:left;'><table class='references'><tbody style='vertical-align: top;'><tr><td class='ref' style='width:1ch;'><a name="footnote_1"></a><a href="#back_1">^</a></td><td  class='ref' style='width:4ch;'> [1]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://www.sciencedirect.com/book/9780123747310/artificial-intelligence-for-games">Millington, I., & Funge J. (2009). 'Artificial Intelligence for Games' (2nd ed.). Morgan Kaufmann</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_2"></a><a href="#back_2">^</a></td><td  class='ref' style='width:4ch;'> [2]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://github.com/idmillington/aicore">'Artificial Intelligence for Games' book companion code reposiotry</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_3"></a><a href="#back_3">^</a></td><td  class='ref' style='width:4ch;'> [3]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://www.cs.utexas.edu/users/EWD/ewd02xx/EWD215.PDF">Go-to statement considered harmful</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_4"></a><a href="#back_4">^</a></td><td  class='ref' style='width:4ch;'> [4]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://forums.scummvm.org/viewtopic.php?t=4532">ScummVM Forum pathfinding topic</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_5"></a><a href="#back_5">^</a></td><td  class='ref' style='width:4ch;'> [5]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://wiki.scummvm.org/index.php/SCUMM/Technical_Reference/Box_resources">ScummVM, SCUMM technical reference for Box</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_6"></a><a href="#back_6">^</a></td><td  class='ref' style='width:4ch;'> [6]</td><td style='width:100%;text-align:left;' class='ref'><a href="http://wiki.scummvm.org/index.php/SCUMM/Technical_Reference/Box_resources#BOXM">ScummVM, SCUMM technical reference for Matrix</a></td></tr></tbody></table></p> <hr>
  <center>*
