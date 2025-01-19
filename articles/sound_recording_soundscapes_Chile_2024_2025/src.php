@@ -41,7 +41,7 @@ La qualità è ovviamente ridotta (sto usando qui il formato ogg rispetto al FLA
 <p>Godetevi questi paesaggi sonori e fatemi sapere cosa ne pensate.</p>
 -->
 
-<?php h("Puerto Varas contry-side")?>
+<?php h("Puerto Varas country-side")?>
 
 <p>Recorded on January 4, 2025, at 11:00 AM.</p>
 
