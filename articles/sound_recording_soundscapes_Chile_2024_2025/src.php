@@ -1,4 +1,4 @@
-<?php genheader("Sound Recording Series: Soundscapes, Chile 2024/2025", "January 10, 2025");?>
+<?php genheader("Sound Recording Series: Soundscapes, Chile 2024/2025", "January 18, 2025");?>
 
 <p>For the Christmas holidays, my wife and I spent a few weeks in her home country, Chile. We stayed in Santiago for a few days before heading south to the Puerto Varas area and the island of Chiloé.</p>
 
