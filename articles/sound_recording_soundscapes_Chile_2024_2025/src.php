@@ -41,7 +41,7 @@ La qualità è ovviamente ridotta (sto usando qui il formato ogg rispetto al FLA
 <p>Godetevi questi paesaggi sonori e fatemi sapere cosa ne pensate.</p>
 -->
 
-
+<?php h("Puerto Varas contry-side")?>
 
 <p>Recorded on January 4, 2025, at 11:00 AM.</p>
 
@@ -178,9 +178,9 @@ La qualità è ovviamente ridotta (sto usando qui il formato ogg rispetto al FLA
 <?php img("images/04.1_Isla_Aucar_Interior/IMG_9307.jpg", 100, "margin-top: 1ch; margin-bottom: 2ch;");?>
 
 
-<?php h("Parque Cucao, pasarela, bosque, ocean")?>
+<?php h("Parque Cucao: mirador, bosque, ocean")?>
 
-<h2>Pasarela</h2>
+<h2>Mirador</h2>
 
 <p>Recorded on January 7, 2025 between 15:38 and 15:50</p>
 
