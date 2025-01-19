@@ -45,7 +45,7 @@ When the player clicks on a point on the screen, the engine acts differnetly acc
 
 If <i>current box</i> and <i>destination box</i> are different, the engine will refer to the <b>box matrix</b> (also called <b>walk matrix</b>) to find the <i>next box</i> the actor has to walk trough in order to reach the destination. The <i>walk matrix</i> is essentially a precomputed matrix made of <code>n x n</code> elements, where <code>n</code> is the total number of boxes inside the room.<br><br>
 
-For each pair of boxes, <code>i</code> and <code>j</code>, the matrix contains a value <code>k</code> which means "<i>If you are in box <b>i</b> now and you want to reach box <b>j</b>, you mast go to box <b>k</b> first!</i>"<br><br>
+For each pair of boxes, <code>i</code> and <code>j</code>, the matrix contains a value <code>k</code> which means "<i>If you are in box <b>i</b> now and you want to reach box <b>j</b>, you must go to box <b>k</b> first!</i>"<br><br>
 
 When the actor arrives in box <code>k</code> and this box doesn't correspond to the desired final destination, this process will repeat. On the other hand, when <code>k == j</code> (i.e. boxes <code>i</code> and <code>j</code> are adjacent), the actor is arrived and no more calculation are needed.
 

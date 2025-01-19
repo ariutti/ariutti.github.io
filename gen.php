@@ -3,6 +3,7 @@
 $footnote_text = array();
 $footnote_url = array();
 $footnote_count = 0;
+
 function footnote($text, $url) {
   global $footnote_text;
   global $footnote_url;
@@ -34,7 +35,8 @@ function footnote_gen_references() {
   echo "<table class='references'><tbody style='vertical-align: top;'>";
   for( $i = 1; $i <= $footnote_count; $i++ ) {
     echo "<tr>";
-    $target = "<a href=\"" . $footnote_url[$i]  . "\">" . $footnote_text[$i] . "</a>";
+    $target = "<a href=\"" . $footnote_url[$i]  . "\" target=\"_blank\" rel=\"noopener noreferrer\">" . $footnote_text[$i] . "</a>";
+
     if ($footnote_url[$i] == "") {
       $target = $footnote_text[$i] . ".";
     }
@@ -186,6 +188,7 @@ I want all my articles to be collected inside a folder which is named '_posts'
 */
 //generate("articles/test_article");
 //generate("articles/game_audio_series_imuse_pt2");
+generate("articles/sound_recording_soundscapes_Chile_2024_2025");
 generate("articles/game_audio_series_imuse_pt1_intro");
 generate("articles/probabilistic_automaton_for_melodies_first_tests");
 generate("articles/feurich_piano");

@@ -7,7 +7,8 @@
 
 <p style="text-align: left;margin-bottom: 1ch;">
 
-<!-- 25/12/2024: <a href="articles/game_audio_series_imuse_pt2/index.html">Game Audio Series: iMuse, pt2</a><br> -->
+<!--18/01/2025: <a href="articles/game_audio_series_imuse_pt2/index.html">Game Audio Series: iMuse, pt2</a><br>-->
+18/01/2025: <a href="articles/sound_recording_soundscapes_Chile_2024_2025/index.html">Sound Recording: Soundscapes Chile 2024-2025</a><br>
 23/12/2024: <a href="articles/game_audio_series_imuse_pt1_intro/index.html">Game Audio Series: iMuse, pt1: introduction</a><br>
 17/10/2024: <a href="articles/probabilistic_automaton_for_melodies_first_tests/index.html">Probabilistic automaton for creating melodies (first tests)</a><br>
 08/09/2024: <a href="articles/feurich_piano/index.html">GENIO system connections</a><br>

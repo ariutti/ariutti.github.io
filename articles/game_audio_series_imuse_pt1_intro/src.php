@@ -68,7 +68,7 @@ Your browser does not support the video tag.
 Your browser does not support the video tag.
 </video>
 
-<p style="font-size: 0.75em; vertical-align:top; text-align:center;">An in-game footage I recorder with ScummVM and OBS<br/>playing in the Voodoo lady swamp room (sound is rendered via a virtual Roland MT-32)</p>
+<p style="font-size: 0.75em; vertical-align:top; text-align:center;">An in-game footage I recorded with ScummVM and OBS<br/>playing in the Voodoo lady swamp room (sound is rendered via a virtual Roland MT-32)</p>
 </div>
 
 <?php h("");?>
@@ -133,7 +133,7 @@ Your browser does not support the video tag.
 
 <?php h("MIDI everywhere"); ?>
 
-<p>Another thing I found interesting is that, regardless of the technology in question, the corresponding “score” always expressed in MIDI format and saved as such within the game’s sound resources.</p>
+<p>Another thing I found interesting is that, regardless of the technology in question, the corresponding “score” is always expressed in MIDI format and saved as such within the game’s sound resources.</p>
 
 <p>I want to emphasize this detail because, by studying the workflow of contemporary “<i>id Software</i>,” a proprietary file format called IMF emerges. We will discuss this in a dedicated article. For now, suffice it to say that we can focus on a single “standard” format: the MIDI file.</p>
 
@@ -328,6 +328,7 @@ function createAudioGroup(group, groupIndex) {
 
 
 }
+
 
 trackGroups.forEach((group, groupIndex) => createAudioGroup(group, groupIndex));
 </script>
