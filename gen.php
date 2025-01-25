@@ -186,16 +186,17 @@ generate("contact");
 /*
 I want all my articles to be collected inside a folder which is named '_posts'
 */
-//generate("articles/test_article");
+generate("articles/scumm_foa_room_images_extraction");
 //generate("articles/game_audio_series_imuse_pt2");
 generate("articles/sound_recording_soundscapes_Chile_2024_2025");
 generate("articles/game_audio_series_imuse_pt1_intro");
 generate("articles/probabilistic_automaton_for_melodies_first_tests");
 generate("articles/feurich_piano");
-generate("articles/wavesurfer_test");
+//generate("articles/wavesurfer_test");
+//generate("articles/first_article");
 generate("articles/scumm_walk_matrices");
 generate("articles/scumm_versions");
 generate("articles/scumm_first");
-generate("articles/first_article");
+//generate("articles/test_article");
 // Add articles here as you write them...
 ?>

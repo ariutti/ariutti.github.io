@@ -1,0 +1,16 @@
+#image_backgrounds_codec1_glitch_table #image_backgrounds_palettes_table {
+  margin-top:50px;
+  margin-bottom:50px;
+  width: 100%;
+  border-collapse: collapse; /* Rimuove gli spazi tra le celle */
+}
+
+th, td {
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #ddd; /* Bordo delle celle */
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f2f2f2; /* Colore alternato per le righe */
+}
