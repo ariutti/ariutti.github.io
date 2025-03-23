@@ -1,0 +1,254 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- <link rel="alternate" type="application/rss+xml"  title="put your RSS title here" href="/rss.xml" /> -->
+  <style type="text/css">
+
+    @font-face {
+      font-family: 'fabfont';
+/*      font-display: optional;*/
+      src: url('/font/DejaVuSansMono.woff2');
+    }
+
+    * {
+       font-size: 16px;
+    }
+
+    html {
+      font-family: fabfont;
+      max-width: 900px;  /* For Desktop PC (see @media for Tablets/Phones) */
+      padding-left: 2%;
+      padding-right: 3%;
+      margin: 0 auto;
+      background: #F5F5F0;
+  	}
+
+  	a {
+      color: black;
+      font-weight: bold;
+    }
+
+    img {
+      border: none;
+    }
+
+    p {
+      margin-top: 0px;
+      text-align: justify;
+    }
+    sup {
+      vertical-align: 0.3em;
+      font-size: 0.65em;
+    }
+
+    pre {
+      font-family: fabfont;
+      background-color: white;
+      border: 1px solid Black;
+      padding-left: 2%;
+      padding-top: 1ch;
+      padding-bottom: 1ch;
+      /* Only take care of X overflow since this is the only part that can be too wide.
+         The Y axis will never overflow.
+      */
+      overflow: hidden;
+    }
+
+    div.heading {
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-top: 4ch;
+    }
+
+    /** {
+      font-size: 16px;
+    }*/
+    @media (max-width: 500px) { /* For small screen decices */
+      * {
+        font-size: 12px;
+      }
+    }
+    .title {
+      text-decoration: none;
+    }
+
+    img.pixel, canvas.pixel {
+      image-rendering: pixelated;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: crisp-edges;
+    }
+
+    blockquote {
+      background-color: #f3f3f3;
+      border: dashed 1px grey;
+      width: 97.5%;
+      font-style: italic;
+      text-align: justify;
+
+      padding: 1ch;
+      padding-top: 2ch;
+      padding-bottom: 2ch;
+
+      margin : 0ch;
+      margin-bottom: 2ch;
+      margin-top: 0ch;
+    }
+
+    blockquote div {
+      text-transform: none;
+      text-align: right;
+      width: 100%;
+    }
+
+  .note {
+    position: relative;
+    background-color: #ffd700;
+    padding: 1em;
+    margin: 1em 0 2em;
+    border-radius: 5px;
+  }
+
+  code {
+    /*font-size: 110%;*/
+    font-weight: bold;
+    background-color: #e1e1e1;
+    border-radius: 0.5ch;
+    padding-left: 0.3ch;
+    padding-right: 0.3ch;
+  }
+
+
+  /* GENERIC TABLE */
+  table {
+    border-collapse: collapse;
+  }
+
+  table td, th {
+    border:1px solid #ccc;
+  }
+
+  /* REFERENCES TABLE - which stands inside the footer*/
+  table.references td {
+    border:none;
+  }
+
+  table.references th {
+    border:none;
+  }
+
+
+  /* TABELLA WALK MATRIX */
+  table.walk-matrix {
+      font-size: 0.8em;
+      width: 70%;
+      margin:auto;
+      border-collapse: collapse;
+  }
+
+  /*
+  table.walk-matrix th {
+      background-color: #ccc;
+      text-align: center;
+      padding: 5px;
+      border:1px solid #fff;
+  }
+  */
+
+  table.walk-matrix td {
+      width: 8%;
+      text-align: center;
+      padding: 5px;
+      border:1px solid #ccc;
+  }
+
+  table.walk-matrix td.gray1{
+      background-color: #ddd;
+  }
+
+  table.walk-matrix td.gray2{
+      background-color: #eee;
+  }
+
+
+  </style>
+  <title>My Loved Song exploration toolkit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=12.0, minimum-scale=1.0, user-scalable=yes">
+</head>
+  <body><br><center>
+    <div style="display: inline-block; vertical-align:middle;">
+<a href="/" class="title"><b>NICOLA ARIUTTI'S WEBSITE</b><br>
+</a><hr/><div style="text-align: justify;display: inline-block; width: 100%;">
+<!--<a class="title" href="/about">ABOUT</a> &nbsp;<a class="title" href="/contact/index.html">EMAIL</a> &nbsp;<a class="title" href="../rss.xml">RSS</a> &nbsp;<a class="title" href="put here your paypal link">DONATE</a></div></div>-->
+<a class="title" href="/about">ABOUT</a> &nbsp;<a class="title" href="/contact/index.html">CONTACT</a> &nbsp;</div></div>
+
+</center><br><br>
+<div style="margin-bottom: 2ch;text-transform: none;">
+March 23, 2025</div>
+<div class='heading' id='my-loved-song-exploration-toolkit'>My Loved Song exploration toolkit</div><hr/>
+<p>On why I've created the toolkit, and on how I'm currently sad.</p>
+
+<div class='heading' id='introduction'>Introduction</div><hr/>
+<p>Some time ago I encountered an interesting challenge for the first time: putting together a playlist of songs to play during a DJ set with some friends.</p>
+
+<p>There are many songs I like, and when I listen to them, I can easily identify the right one to set the mood I have in mind for a particular moment.</p>
+
+<p>However, I’m not the kind of person who can instantly recall the title, artist, or album of a specific track when prompted. I struggle to remember melodies unless I actively reconstruct the context, and I find it difficult to make connections between a musical motif—perhaps just briefly hinted at—and another melody I might have heard in the past.</p>
+
+<p>Lacking these intuitive skills, I decided to create a tool to help me with the task.</p>
+
+<p>I particularly liked the idea of visualizing all my favorite songs in a spatial format—arranging them in an organized way on a two-dimensional plane, making it easier to explore and navigate them in new ways.</p>
+
+<div class='heading' id='the-toolkit'>The toolkit</div><hr/>
+<p>It was from these thoughts that the "<b>My Loved Song Exploration Toolkit</b>" was born. The toolkit, which can be seen in action <a href="https://ariutti.github.io/spotify_myLikedSongs_viz/">here</a> and is also available as open-source code on GitHub<a name="back_1" style="text-decoration: none;" href="#footnote_1"><sup>[1]</sup></a> displays a kind of "<i>Clustered Force Layout graph</i>" within a two-dimensional chart, featuring circular entities of different sizes and colors.</p>
+
+<div style="text-align: center;">
+<img loading="lazy" src="images/viz.png" width="773" height="641" style="width: 80%; height: auto; margin-top: 1ch; margin-bottom: 2ch;"/></div>
+
+<p>Each circle corresponds to a song I have liked on Spotify. Its position in the two-dimensional space is determined by the song's <i>tempo</i> (X-axis) and <i>danceability</i> parameter (Y-axis), while its size and color are mapped to the <i>energy</i> and <i>valence</i> parameters, respectively.</p>
+
+<p>Specifically, by outlining the meaning of each parameter below, we can see that, at least according to Spotify's definition<a name="back_2" style="text-decoration: none;" href="#footnote_2"><sup>[2]</sup></a>:</p>
+
+<p><b>tempo</b>: The overall estimated tempo of a track in beats per minute (BPM). In musical terminology, tempo is the speed or pace of a given piece and derives directly from the average beat duration.</p>
+
+<p><b>valence</b>: A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).</p>
+
+<p><b>danceability</b>: Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0.0 is least danceable and 1.0 is most danceable.</p>
+
+<p><b>energy</b>: Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy.</p>
+
+<p>These four parameters are just some of the indices used in the field of <b>music information retrieval</b><a name="back_3" style="text-decoration: none;" href="#footnote_3"><sup>[3]</sup></a> Other parameters that would have been interesting to analyze in future versions of the toolkit (unfortunately no longer possible, see below) and that were available through Spotify’s API included <i>loudness</i>, <i>key</i>, <i>mode</i>, and <i>time_signature</i>, as well as <i>speechiness</i>, <i>acousticness</i>, and <i>liveness</i>.</p>
+
+<div class='heading' id='filter-section'>Filter section</div><hr/>
+<p>From the <b>filters</b> section of the toolkit, you can refine your search by focusing only on tracks that fall within the defined characteristic ranges.</p>
+
+<div style="text-align: center;">
+<img loading="lazy" src="images/filters.png" width="1270" height="384" style="width: 80%; height: auto; margin-top: 1ch; margin-bottom: 2ch;"/></div>
+
+<p>Alternatively, using the search field, you can find all tracks that belong to a specific artist, a particular album, or share the same word in the title!</p>
+
+<p>In my opinion, the search field is essential for answering that classic question: "<i>What was the name of that track by artist XY? I'm sure I had saved it among my favorites...</i>"</p>
+
+<div class='heading' id='playlist-creation'>playlist creation</div><hr/>
+<p>By hovering the mouse over each circle, you can listen to a preview of the track (made available via the Spotify API). Finally, by clicking, you can "select" the given track.</p>
+
+<p>The selected track will appear at the bottom of the site as a row in the table labeled "<i>Selected Songs</i>". Here, you can collect a subset of songs to later export in JSON format for future post-processing.</p>
+
+<div class='heading' id='deprecated'>Deprecated</div><hr/>
+<p>Unfortunately, I've just discovered that the tool will never be updated again, nor will the display of my liked songs be able to include the new tracks that, over the past two years, I've added to my liked song Spotify playlist.</p>
+
+<p>This is due to Spotify's decision<a name="back_4" style="text-decoration: none;" href="#footnote_4"><sup>[4]</sup></a><a name="back_5" style="text-decoration: none;" href="#footnote_5"><sup>[5]</sup></a> to discontinue certain APIs on which the tool relied.</p>
+
+<p>This makes me a little sad because I would have been curious to continue with this personal experiment, perhaps even using it in the future to build new playlists for other DJ sets.</p>
+
+<p>However, I'm glad to preserve a sort of "snapshot" of my favorite songs as they were during my last push.</p>
+
+<div class='heading' id='further-elements-to-explore-on-the-topic'>Further elements to explore on the topic</div><hr/>
+<p>A non-exhaustive list of things I would like to explore regarding the topic of Music Information Retrieval:</p>
+
+<ul>
+<li><a href="https://librosa.org/doc/latest/index.html">librosa</a> - a python package for music and audio analysis. It provides the building blocks necessary to create music information retrieval systems.</li>
+<li><a href="https://essentia.upf.edu/">essentia</a> - Open-source library and tools for audio and music analysis, description and synthesis by PompeuFabra university <3</li>
+<li><a href="https://www.flucoma.org/">FluCoMa</a> - Fluid Corpus Manipulation project</li>
+</ul>
+<style type='text/css'>td.ref {  padding-bottom: 0ch; width:0;}</style><div class='heading' id='references'>References</div><hr/><p id='paperbox' style='text-align:left;'><table class='references'><tbody style='vertical-align: top;'><tr><td class='ref' style='width:1ch;'><a name="footnote_1"></a><a href="#back_1">^</a></td><td  class='ref' style='width:4ch;'> [1]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://github.com/ariutti/spotify_myLikedSongs_viz" target="_blank" rel="noopener noreferrer">My Loved Song Exploration Toolkit Github repo</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_2"></a><a href="#back_2">^</a></td><td  class='ref' style='width:4ch;'> [2]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://developer.spotify.com/documentation/web-api/reference/get-audio-features" target="_blank" rel="noopener noreferrer">Spotify reference: audio features</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_3"></a><a href="#back_3">^</a></td><td  class='ref' style='width:4ch;'> [3]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://en.wikipedia.org/wiki/Music_information_retrieval" target="_blank" rel="noopener noreferrer">Music Information Retrieval (MIR) wiki page</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_4"></a><a href="#back_4">^</a></td><td  class='ref' style='width:4ch;'> [4]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://developer.spotify.com/blog/2024-11-27-changes-to-the-web-api " target="_blank" rel="noopener noreferrer">Spotify Audio features deprecation</a></td></tr><tr><td class='ref' style='width:1ch;'><a name="footnote_5"></a><a href="#back_5">^</a></td><td  class='ref' style='width:4ch;'> [5]</td><td style='width:100%;text-align:left;' class='ref'><a href="https://github.com/spotipy-dev/spotipy/issues/1172" target="_blank" rel="noopener noreferrer">Spotify Audio features deprecation - discussion</a></td></tr></tbody></table></p> <hr>
+ <center>*

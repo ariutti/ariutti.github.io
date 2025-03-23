@@ -186,6 +186,7 @@ generate("contact");
 /*
 I want all my articles to be collected inside a folder which is named '_posts'
 */
+generate("articles/2025_03_my_liked_songs");
 generate("articles/scumm_foa_room_images_extraction");
 //generate("articles/game_audio_series_imuse_pt2");
 generate("articles/sound_recording_soundscapes_Chile_2024_2025");

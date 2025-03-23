@@ -284,7 +284,7 @@ La qualità è ovviamente ridotta (sto usando qui il formato ogg rispetto al FLA
   <li><a href="https://es.wikipedia.org/wiki/Theristicus_caudatus">Bandurria Comun</a> (Theristicus caudatus);</li>
   <li><a href="https://es.wikipedia.org/wiki/Daptrius_chimango">Tiuque</a> (Daptrius_chimango);</li>
   <li><a href="https://es.wikipedia.org/wiki/Vanellus_chilensis">Queltehues</a> (Vanellus chilensis);</li>
-  <li><a href="https://es.wikipedia.org/wiki/Scaptia_lata">Coliguachos</a> (Scaptia Lata), annoying insect that infests water areas in southern Chile between January and February);</li>
+  <li><a href="https://es.wikipedia.org/wiki/Scaptia_lata">Coliguachos</a> (Scaptia Lata), annoying insect that infests water areas in southern Chile between January and February;</li>
 </ul>
 
 <?php h("Licence");?>

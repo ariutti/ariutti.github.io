@@ -10,7 +10,7 @@
 
 <hr />
 
-<p>Below a table with alle the room images and palettes extracted with the tool:</p>
+<p>Below a table with all the room images and palettes extracted with the tool:</p>
 
 <table id="image_backgrounds_palettes_table">
 	<tr>
@@ -308,6 +308,14 @@
 	</tr>
 
 	<tr><td>33</td><td>lab-crete</td>
+	<td>
+	<?php img("images/backgrounds/room33_off3687016.png", 80, "margin-top: 1ch; margin-bottom:1ch;");?>
+	</td>
+	<td>
+	<?php img("images/palettes/room33_off3687016.png", 100, "margin-top: 2ch; margin-bottom:2ch;");?>
+	</td>
+	</tr>
+
 	<td>
 	<?php img("images/backgrounds/room33_off3687016.png", 80, "margin-top: 1ch; margin-bottom:1ch;");?>
 	</td>
@@ -884,6 +892,16 @@
 	</tr>
 
 </table>
+
+<?php h("Curiosities");?>
+
+<ul>
+  <li>The game data does not include rooms 34 and 38;</li>
+  <li>The room 15 (<i>sop-study</i>) contains a section that will never be visited within the game;</li>
+  <li>I suspect that room 51 (<i>catacombs</i>) is never visited during the game, as if it were a work-in-progress that was mistakenly saved in the resources;</li>
+  <li>What are the these three vertical strips 89, 90, and 98?</li>
+</ul>
+
 
 <?php h("Glitches");?>
 
@@ -1474,15 +1492,6 @@ while pixel_left > 0:
 	</tr>
 
 </table>
-
-<?php h("Curiosities");?>
-
-<ul>
-  <li>The game data does not include rooms 34 and 38;</li>
-  <li>The room 15 (<i>sop-study</i>) contains a section that will never be visited within the game;</li>
-  <li>I suspect that room 51 (<i>catacombs</i>) is never visited during the game, as if it were a work-in-progress that was mistakenly saved in the resources;</li>
-  <li>What are the these three vertical strips 89, 90, and 98?</li>
-</ul>
 
 <?php h("Main references and inspirations");?>
 
