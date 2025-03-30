@@ -124,6 +124,10 @@
     border-collapse: collapse;
   }
 
+  td {
+    vertical-align: middle;
+  }
+
   table td, th {
     border:1px solid #ccc;
   }

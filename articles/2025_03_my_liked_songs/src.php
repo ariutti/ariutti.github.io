@@ -30,11 +30,11 @@
 
 <p><b>tempo</b>: The overall estimated tempo of a track in beats per minute (BPM). In musical terminology, tempo is the speed or pace of a given piece and derives directly from the average beat duration.</p>
 
-<p><b>valence</b>: A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).</p>
-
 <p><b>danceability</b>: Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0.0 is least danceable and 1.0 is most danceable.</p>
 
 <p><b>energy</b>: Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy.</p>
+
+<p><b>valence</b>: A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).</p>
 
 <p>These four parameters are just some of the indices used in the field of <b>music information retrieval</b><?php footnote("Music Information Retrieval (MIR) wiki page", "https://en.wikipedia.org/wiki/Music_information_retrieval");?> Other parameters that would have been interesting to analyze in future versions of the toolkit (unfortunately no longer possible, see below) and that were available through Spotify’s API included <i>loudness</i>, <i>key</i>, <i>mode</i>, and <i>time_signature</i>, as well as <i>speechiness</i>, <i>acousticness</i>, and <i>liveness</i>.</p>
 

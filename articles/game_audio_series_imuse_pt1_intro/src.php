@@ -85,7 +85,7 @@ Your browser does not support the video tag.
 
 <p>In the context of LucasArts adventure games, iMuse works hand in hand with the SCUMM interpreter<?php footnote("SCUMM: if you know it, you love it!", "https://ariutti.github.io/articles/scumm_first/index.html");?> and is capable of “intelligently” playing portions of pre-composed music stored in a database of sound resources (in MIDI format) that are specifically “annotated,” so to speak, by the composers.</p>
 
-<p>These annotations, expressed in the form of system exclusive (<b>SysEx</b>) messages, are embedded at specific points in the various MIDI files. iMuse examines these messages and takes corresponding actions depending on the player’s behavior or the events triggered by the game itself, generating smooth transitions and various changes in the soundtrack.</p>
+<p>These annotations, expressed in the form of system exclusive messages (<b>SysEx</b>), are embedded at specific points in the various MIDI files. iMuse examines these messages and takes corresponding actions depending on the player’s behavior or the events triggered by the game itself, generating smooth transitions and various changes in the soundtrack.</p>
 
 <p>We know that a MIDI file is not an audio file but rather a musical score, a list of instructions (<i>performance data</i>) to be sent to some kind of device capable of interpreting them and ultimately rendering them as audible sound vibrations. It is within this device, we might say, that the actual “timbres” reside, which will play the musical notes and interpret the score as conceived by the composers.</p>
 

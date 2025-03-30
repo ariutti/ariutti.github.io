@@ -123,6 +123,10 @@
     border-collapse: collapse;
   }
 
+  td {
+    vertical-align: middle;
+  }
+
   table td, th {
     border:1px solid #ccc;
   }
@@ -192,14 +196,16 @@ March 23, 2025</div>
 
 <p>There are many songs I like, and when I listen to them, I can easily identify the right one to set the mood I have in mind for a particular moment.</p>
 
-<p>However, I’m not the kind of person who can instantly recall the title, artist, or album of a specific track when prompted. I struggle to remember melodies unless I actively reconstruct the context, and I find it difficult to make connections between a musical motif—perhaps just briefly hinted at—and another melody I might have heard in the past.</p>
+<p>However, I’m not the kind of person who can instantly recall the title, artist, or album of a specific track when prompted. I struggle to remember melodies unless I actively reconstruct the context, and I find it difficult to make connections between a musical motif - perhaps just briefly hinted at - and another melody I might have heard in the past.</p>
 
 <p>Lacking these intuitive skills, I decided to create a tool to help me with the task.</p>
 
-<p>I particularly liked the idea of visualizing all my favorite songs in a spatial format—arranging them in an organized way on a two-dimensional plane, making it easier to explore and navigate them in new ways.</p>
+<p>I particularly liked the idea of visualizing all my favorite songs in a spatial format, arranging them in an organized way on a two-dimensional plane, making it easier to explore and navigate them in new ways.</p>
 
 <div class='heading' id='the-toolkit'>The toolkit</div><hr/>
-<p>It was from these thoughts that the "<b>My Loved Song Exploration Toolkit</b>" was born. The toolkit, which can be seen in action <a href="https://ariutti.github.io/spotify_myLikedSongs_viz/">here</a> and is also available as open-source code on GitHub<a name="back_1" style="text-decoration: none;" href="#footnote_1"><sup>[1]</sup></a> displays a kind of "<i>Clustered Force Layout graph</i>" within a two-dimensional chart, featuring circular entities of different sizes and colors.</p>
+<p>It was from these thoughts that the "<b>My Loved Song Exploration Toolkit</b>" was born.</p>
+
+<p>The toolkit, which can be seen in action <a href="https://ariutti.github.io/spotify_myLikedSongs_viz/">here</a> and is also available as open-source code on GitHub<a name="back_1" style="text-decoration: none;" href="#footnote_1"><sup>[1]</sup></a> displays a kind of "<i>Clustered Force Layout graph</i>" within a two-dimensional chart, featuring circular entities of different sizes and colors.</p>
 
 <div style="text-align: center;">
 <img loading="lazy" src="images/viz.png" width="773" height="641" style="width: 80%; height: auto; margin-top: 1ch; margin-bottom: 2ch;"/></div>
@@ -210,11 +216,11 @@ March 23, 2025</div>
 
 <p><b>tempo</b>: The overall estimated tempo of a track in beats per minute (BPM). In musical terminology, tempo is the speed or pace of a given piece and derives directly from the average beat duration.</p>
 
-<p><b>valence</b>: A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).</p>
-
 <p><b>danceability</b>: Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0.0 is least danceable and 1.0 is most danceable.</p>
 
 <p><b>energy</b>: Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy.</p>
+
+<p><b>valence</b>: A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).</p>
 
 <p>These four parameters are just some of the indices used in the field of <b>music information retrieval</b><a name="back_3" style="text-decoration: none;" href="#footnote_3"><sup>[3]</sup></a> Other parameters that would have been interesting to analyze in future versions of the toolkit (unfortunately no longer possible, see below) and that were available through Spotify’s API included <i>loudness</i>, <i>key</i>, <i>mode</i>, and <i>time_signature</i>, as well as <i>speechiness</i>, <i>acousticness</i>, and <i>liveness</i>.</p>
 
@@ -234,7 +240,7 @@ March 23, 2025</div>
 <p>The selected track will appear at the bottom of the site as a row in the table labeled "<i>Selected Songs</i>". Here, you can collect a subset of songs to later export in JSON format for future post-processing.</p>
 
 <div class='heading' id='deprecated'>Deprecated</div><hr/>
-<p>Unfortunately, I've just discovered that the tool will never be updated again, nor will the display of my liked songs be able to include the new tracks that, over the past two years, I've added to my liked song Spotify playlist.</p>
+<p>Unfortunately, I've just realized that the tool will never be updated again, nor will the display of my liked songs be able to include the new tracks that, over the past two years, I've added to my liked song Spotify playlist.</p>
 
 <p>This is due to Spotify's decision<a name="back_4" style="text-decoration: none;" href="#footnote_4"><sup>[4]</sup></a><a name="back_5" style="text-decoration: none;" href="#footnote_5"><sup>[5]</sup></a> to discontinue certain APIs on which the tool relied.</p>
 

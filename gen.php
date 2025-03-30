@@ -184,8 +184,9 @@ generate("contact");
 
 
 /*
-I want all my articles to be collected inside a folder which is named '_posts'
+I want all my articles to be collected inside a folder which is named 'articles'
 */
+generate("articles/2025_03_stephen_foster_probabilistic_machine");
 generate("articles/2025_03_my_liked_songs");
 generate("articles/scumm_foa_room_images_extraction");
 //generate("articles/game_audio_series_imuse_pt2");

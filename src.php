@@ -8,8 +8,8 @@
 <p style="text-align: left;margin-bottom: 1ch;">
 
 
-
-23/03/2025: <a href="articles/2025_03_my_liked_songs/index.html">My Loved Song exploration toolkit (deprecated)</a><br> 
+30/03/2025: <a href="articles/2025_03_stephen_foster_probabilistic_machine/index.html">Stephen Foster automaton</a><br>
+23/03/2025: <a href="articles/2025_03_my_liked_songs/index.html">My Loved Song exploration toolkit (deprecated)</a><br>
 25/01/2025: <a href="articles/scumm_foa_room_images_extraction/index.html">SCUMM: FOA room background images and palettes extraction tool</a><br>
 <!--25/01/2025: <a href="articles/game_audio_series_imuse_pt2/index.html">Game Audio Series: iMuse, pt2</a><br>-->
 18/01/2025: <a href="articles/sound_recording_soundscapes_Chile_2024_2025/index.html">Sound Recording: Soundscapes Chile 2024-2025</a><br>

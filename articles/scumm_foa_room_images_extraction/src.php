@@ -316,14 +316,6 @@
 	</td>
 	</tr>
 
-	<td>
-	<?php img("images/backgrounds/room33_off3687016.png", 80, "margin-top: 1ch; margin-bottom:1ch;");?>
-	</td>
-	<td>
-	<?php img("images/palettes/room33_off3687016.png", 100, "margin-top: 2ch; margin-bottom:2ch;");?>
-	</td>
-	</tr>
-
 	<tr><td>35</td><td>a1-2-bot_</td>
 	<td>
 	<?php img("images/backgrounds/room35_off3784435.png", 80, "margin-top: 1ch; margin-bottom:1ch;");?>

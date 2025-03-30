@@ -80,7 +80,9 @@
 
 <p>So far, so good. The algorithm works, but with such a simple automaton, the result still sounds musically quite rudimentary. Let’s try to make things a bit more complex and ask ourselves a few more questions.</p>
 
-<p>After all, a melody is not just a random sequence of notes. Each note follows another based on the composer’s artistic intention. The composer is like an architect, arranging the notes according to a certain design to express or convey something. How can we account for that?</p>
+<p>After all, a melody is not just a random sequence of notes. Each note follows another based on the composer’s artistic intention. The composer is like an architect, arranging the notes according to a certain design to express or convey something.</p>
+
+<p>Just as the Hollos brothers themselves say in their book "<li>a  melody is characterized more by how the notes follow each other than it is by the simply frequency of the notes</li>". How can we account for that?</p>
 
 <?php h("Second order automaton");?>
 
